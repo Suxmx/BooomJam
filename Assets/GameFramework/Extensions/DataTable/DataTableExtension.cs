@@ -1,5 +1,6 @@
 ﻿using System;
 using GameFramework.DataTable;
+using GameMain;
 using UnityGameFramework.Runtime;
 
 namespace GameFramework.Extensions
@@ -33,7 +34,7 @@ namespace GameFramework.Extensions
 
             string name = splitedNames.Length > 1 ? splitedNames[1] : null;
             DataTableBase dataTable = dataTableComponent.CreateDataTable(dataRowType, name);
-            dataTable.ReadData(dataTableAssetName, 100, userData);//TODO:设置优先级
+            dataTable.ReadData(dataTableAssetName, Constant.AssetPriority.DataTableAsset, userData);//TODO:设置优先级
         }
     }
 }
