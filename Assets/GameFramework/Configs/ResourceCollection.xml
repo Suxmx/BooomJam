@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<UnityGameFramework>
+  <ResourceCollection>
+    <Resources>
+      <Resource Name="Configs/Test" LoadType="0" Packed="True" />
+    </Resources>
+    <Assets>
+      <Asset Guid="1d969f5eb70d84447aafa6963865d198" ResourceName="Configs/Test" />
+      <Asset Guid="bb470d1c6cec4794f90f281f7cbe89a1" ResourceName="Configs/Test" />
+      <Asset Guid="dc6288772a0d5384085cfada0092d37f" ResourceName="Configs/Test" />
+    </Assets>
+  </ResourceCollection>
+</UnityGameFramework>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<UnityGameFramework>
+  <BuildReport>
+    <Summary>
+      <ProductName>J-Jam</ProductName>
+      <CompanyName>DefaultCompany</CompanyName>
+      <GameIdentifier>com.DefaultCompany.J-Jam</GameIdentifier>
+      <GameFrameworkVersion>2021.05.31</GameFrameworkVersion>
+      <UnityVersion>2021.3.37f1</UnityVersion>
+      <ApplicableGameVersion>1.0</ApplicableGameVersion>
+      <InternalResourceVersion>0</InternalResourceVersion>
+      <Platforms>Windows, Windows64</Platforms>
+      <AssetBundleCompression>LZ4</AssetBundleCompression>
+      <CompressionHelperTypeName>UnityGameFramework.Runtime.DefaultCompressionHelper</CompressionHelperTypeName>
+      <AdditionalCompressionSelected>True</AdditionalCompressionSelected>
+      <ForceRebuildAssetBundleSelected>False</ForceRebuildAssetBundleSelected>
+      <BuildEventHandlerTypeName>
+      </BuildEventHandlerTypeName>
+      <OutputDirectory>D:/UnityProject/J-Jam/AssetBundle</OutputDirectory>
+      <BuildAssetBundleOptions>DeterministicAssetBundle, ChunkBasedCompression</BuildAssetBundleOptions>
+    </Summary>
+    <Resources Count="1">
+      <Resource Name="Configs/Test" Extension="dat" LoadType="0" Packed="True">
+        <Assets Count="1">
+          <Asset Guid="1d969f5eb70d84447aafa6963865d198" Name="Assets/GameMain/Configs/Test.csv" Length="210" HashCode="108911543" />
+        </Assets>
+        <Codes>
+          <Windows Length="1272" HashCode="-1455657386" CompressedLength="1043" CompressedHashCode="1980056485" />
+          <Windows64 Length="1272" HashCode="367754204" CompressedLength="1042" CompressedHashCode="444489926" />
+        </Codes>
+      </Resource>
+    </Resources>
+  </BuildReport>
+</UnityGameFramework>

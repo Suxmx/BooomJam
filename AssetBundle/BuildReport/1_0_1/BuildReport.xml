@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<UnityGameFramework>
+  <BuildReport>
+    <Summary>
+      <ProductName>J-Jam</ProductName>
+      <CompanyName>DefaultCompany</CompanyName>
+      <GameIdentifier>com.DefaultCompany.J-Jam</GameIdentifier>
+      <GameFrameworkVersion>2021.05.31</GameFrameworkVersion>
+      <UnityVersion>2021.3.37f1</UnityVersion>
+      <ApplicableGameVersion>1.0</ApplicableGameVersion>
+      <InternalResourceVersion>1</InternalResourceVersion>
+      <Platforms>Windows, Windows64</Platforms>
+      <AssetBundleCompression>LZ4</AssetBundleCompression>
+      <CompressionHelperTypeName>UnityGameFramework.Runtime.DefaultCompressionHelper</CompressionHelperTypeName>
+      <AdditionalCompressionSelected>True</AdditionalCompressionSelected>
+      <ForceRebuildAssetBundleSelected>False</ForceRebuildAssetBundleSelected>
+      <BuildEventHandlerTypeName>
+      </BuildEventHandlerTypeName>
+      <OutputDirectory>D:/UnityProject/J-Jam/AssetBundle</OutputDirectory>
+      <BuildAssetBundleOptions>DeterministicAssetBundle, ChunkBasedCompression</BuildAssetBundleOptions>
+    </Summary>
+    <Resources Count="1">
+      <Resource Name="Configs/Test" Extension="dat" LoadType="0" Packed="True">
+        <Assets Count="3">
+          <Asset Guid="1d969f5eb70d84447aafa6963865d198" Name="Assets/GameMain/Configs/Test.csv" Length="210" HashCode="108911543" />
+          <Asset Guid="bb470d1c6cec4794f90f281f7cbe89a1" Name="Assets/GameMain/Configs/Test 1.csv" Length="210" HashCode="108911543" />
+          <Asset Guid="dc6288772a0d5384085cfada0092d37f" Name="Assets/GameMain/Configs/Test 2.csv" Length="210" HashCode="108911543" />
+        </Assets>
+        <Codes>
+          <Windows Length="1365" HashCode="1202869021" CompressedLength="1130" CompressedHashCode="-1798853077" />
+          <Windows64 Length="1365" HashCode="1387706025" CompressedLength="1131" CompressedHashCode="1993865964" />
+        </Codes>
+      </Resource>
+    </Resources>
+  </BuildReport>
+</UnityGameFramework>
