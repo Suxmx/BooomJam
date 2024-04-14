@@ -1,4 +1,5 @@
-﻿using GameFramework.DataTable;
+﻿using System;
+using GameFramework.DataTable;
 using GameFramework.Event;
 using GameFramework.Extensions.Sound;
 using GameFramework.Procedure;
@@ -44,7 +45,6 @@ namespace GameMain
             GameEntry.Base.ResetNormalGameSpeed();
 
             int sceneId = procedureOwner.GetData<VarInt32>("NextSceneId");
-            m_ChangeToMenu = sceneId == MenuSceneId;
             IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
             DRScene drScene = dtScene.GetDataRow(sceneId);
             if (drScene == null)
@@ -53,6 +53,7 @@ namespace GameMain
                 return;
             }
 
+            m_ChangeToMenu = String.Compare(drScene.AssetName, "Menu", StringComparison.Ordinal) == 0;
             GameEntry.Scene.LoadScene(AssetUtility.GetSceneAsset(drScene.AssetName), Constant.AssetPriority.SceneAsset, this);
             m_BackgroundMusicId = drScene.BackgroundMusicId;
         }
@@ -65,14 +66,10 @@ namespace GameMain
                 return;
             }
 
-            // if (m_ChangeToMenu)
-            // {
-            //     ChangeState<ProcedureMenu>(procedureOwner);
-            // }
-            // else
-            // {
-            //     ChangeState<ProcedureMain>(procedureOwner);
-            // }
+            if (!m_ChangeToMenu)
+            {
+                ChangeState<ProcedureMainGame>(procedureOwner);
+            }
         }
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
         {

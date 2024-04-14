@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: DownPlayer
+    uniqueID: 2840616673
+    locked: 0
+  - name: Player
+    uniqueID: 3337965221
+    locked: 0
+  - name: UpPlayer
+    uniqueID: 151894745
+    locked: 0

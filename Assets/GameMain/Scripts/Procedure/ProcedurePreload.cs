@@ -37,7 +37,7 @@ namespace GameMain
             }
 
             Log.Info("Load Complete");
-            procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Menu"));
+            procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Main"));
             ChangeState<ProcedureChangeScene>(procedureOwner);
         }
 
@@ -56,6 +56,9 @@ namespace GameMain
         {
             LoadConfig("DefaultConfig");
             LoadDataTable("Scene");
+            LoadDataTable("Player");
+            LoadDataTable("Weapon");
+            LoadDataTable("Entity");
         }
 
         private void LoadConfig(string configAssetName)
@@ -68,7 +71,7 @@ namespace GameMain
         private void OnLoadConfigSuccess(object sender, GameEventArgs e)
         {
             LoadConfigSuccessEventArgs ne = (LoadConfigSuccessEventArgs)e;
-            if (ne.UserData != this)
+            if (ne.UserData != this) 
             {
                 return;
             }
