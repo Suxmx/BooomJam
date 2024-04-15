@@ -1,4 +1,6 @@
 #Id,AssetName
 1000,Player
 2001,ShotGun
+2002,Bow
 2101,Bullet
+2102,Arrow

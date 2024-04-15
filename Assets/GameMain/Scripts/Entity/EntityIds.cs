@@ -9,6 +9,7 @@
         ShotGun=2001,
         Bow=2002,
         Bullet=2101,
+        Arrow=2102
     }
 
     public enum EUIForm : int

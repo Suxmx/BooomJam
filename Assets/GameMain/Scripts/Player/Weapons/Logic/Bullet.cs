@@ -4,7 +4,7 @@ using UnityGameFramework.Runtime;
 
 namespace GameMain
 {
-    public class Bullet : MonoBehaviour,IMyObject<Bullet>
+    public class Bullet : MonoBehaviour,IMyObject
     {
         protected bool m_ThroughAble;
         protected int m_Damage;
@@ -14,12 +14,12 @@ namespace GameMain
         protected float m_AliveTimer;
         protected Vector3 m_OriginalScale;
 
-        public void OnInit(object userData)
+        public virtual void OnInit(object userData)
         {
             m_OriginalScale = transform.localScale;
         }
 
-        public void OnShow(object userData)
+        public virtual void OnShow(object userData)
         {
             BulletData data = (BulletData)userData;
             m_ThroughAble = data.ThroughAble;
@@ -33,7 +33,7 @@ namespace GameMain
             transform.right = m_Direction;
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             m_AliveTimer += Time.deltaTime;
             transform.Translate(Vector2.right * (m_Speed * Time.deltaTime));
@@ -43,7 +43,7 @@ namespace GameMain
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        protected virtual void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Ground"))
             {
@@ -61,9 +61,9 @@ namespace GameMain
             }
         }
 
-        public Action<Bullet> RecycleAction { get; set; }
+        public Action<object> RecycleAction { get; set; }
 
-        public void RecycleSelf()
+        public virtual void RecycleSelf()
         {
             RecycleAction(this);
             m_AliveTimer = 0;

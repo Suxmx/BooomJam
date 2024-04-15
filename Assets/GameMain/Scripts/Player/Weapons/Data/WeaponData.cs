@@ -12,7 +12,8 @@ namespace GameMain
         public float MaxChargeTime;
         public Type LogicType;
 
-        public WeaponData(int entityId, int typeId, int damage, float fireInterval,Type logicType) : base(entityId, typeId)
+        public WeaponData(int entityId, int typeId, int damage, float fireInterval, Type logicType) : base(entityId,
+            typeId)
         {
             Damage = damage;
             FireInterval = fireInterval;
@@ -33,9 +34,10 @@ namespace GameMain
             {
                 return new ShotGunData(GameEntry.Entity.GenerateSerialId(), (int)EWeapon.ShotGun, drWeapon);
             }
-            
-            //TODO:
-            return new ShotGunData(GameEntry.Entity.GenerateSerialId(), (int)EWeapon.ShotGun, drWeapon);
+            else //BOW
+            {
+                return new BowData(GameEntry.Entity.GenerateSerialId(), (int)EWeapon.Bow, drWeapon);
+            }
         }
     }
 }

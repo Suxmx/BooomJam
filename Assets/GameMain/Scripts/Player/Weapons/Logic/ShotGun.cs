@@ -10,24 +10,17 @@ namespace GameMain
 {
     public class ShotGun : WeaponBase, IHasObjectPool
     {
-        protected Transform m_Muzzle;
-        protected int m_Damage;
-        protected float m_FireInterval;
-        protected float m_FireTimer;
         protected int m_MinBulletNumPerFire;
         protected int m_MaxBulletNumPerFire;
         protected float m_BulletIntervalAngle;
-        protected float m_BulletRandomAngle;
-        protected float m_BulletSpeed;
         protected float m_MaxScaleFactor;
-        protected GameObject m_BulletTemplate;
         protected ObjectPool<MyObjectBase, Bullet> m_BulletPool;
 
         protected override void OnInit(object userData)
         {
             base.OnInit(userData);
             ShotGunData data = (ShotGunData)userData;
-            m_Damage = data.Damage;
+            Damage = data.Damage;
             m_FireInterval = data.FireInterval;
             m_MinBulletNumPerFire = data.MinBulletNumPerFire;
             m_MaxBulletNumPerFire = data.MaxBulletNumPerFire;
@@ -44,13 +37,14 @@ namespace GameMain
             );
 
             m_Muzzle = transform.Find("Muzzle");
-            m_BulletPool = new ObjectPool<MyObjectBase, Bullet>(240, "ShotgunPool", this);
+            m_BulletPool = new ObjectPool<MyObjectBase, Bullet>(240, "ShotgunBulletPool", this);
         }
 
-        protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
+        protected override void Update()
         {
-            base.OnUpdate(elapseSeconds, realElapseSeconds);
-            m_FireTimer += elapseSeconds;
+            base.Update();
+            m_FireTimer += Time.deltaTime;
+            Log.Info("Shotgun update");
         }
 
         public override void Fire(Player player, float chargeTime)
@@ -72,15 +66,15 @@ namespace GameMain
             else
             {
                 bulletNum = (int)(m_MinBulletNumPerFire +
-                                  (m_MaxBulletNumPerFire - m_MinBulletNumPerFire) * (chargeTime / m_MaxChargeTime));
-                scaleFactor = 1 + (m_MaxScaleFactor - 1) * (chargeTime / m_MaxChargeTime);
+                                  (m_MaxBulletNumPerFire - m_MinBulletNumPerFire) * GetChargePercent());
+                scaleFactor = 1 + (m_MaxScaleFactor - 1) * GetChargePercent();
             }
 
             //生成霰弹
             for (int i = 1; i <= bulletNum; i++)
             {
                 BulletData data = new BulletData(GameEntry.Entity.GenerateSerialId(), (int)EWeapon.Bullet, false,
-                    m_Damage, m_BulletSpeed, 5, scaleFactor);
+                    Damage, m_BulletSpeed, 5, scaleFactor);
                 data.Position = m_Muzzle.position;
                 Vector2 d;
                 if (bulletNum % 2 == 0)

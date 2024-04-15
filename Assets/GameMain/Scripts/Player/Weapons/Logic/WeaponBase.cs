@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Pool;
 using UnityGameFramework.Runtime;
 using ObjectBase = GameFramework.ObjectPool.ObjectBase;
@@ -7,12 +8,18 @@ namespace GameMain
 {
     public abstract class WeaponBase : EntityLogic
     {
-        public int Damage { get; private set; }
+        public int Damage { get; protected set; }
 
         protected Vector3 m_OriginalScale;
         protected Vector2 m_FireDirection;
+        protected float m_FireInterval;
+        protected float m_FireTimer;
         protected float m_ChargeTime;
         protected float m_MaxChargeTime;
+        protected float m_BulletRandomAngle;
+        protected float m_BulletSpeed;
+        protected GameObject m_BulletTemplate;
+        protected Transform m_Muzzle;
 
         protected override void OnInit(object userData)
         {
@@ -27,13 +34,12 @@ namespace GameMain
         }
         public abstract void Fire(Player player, float chargeTime);
 
-        protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
+        protected  virtual void Update()
         {
-            base.OnUpdate(elapseSeconds, realElapseSeconds);
             ChangeDirection();
         }
 
-        protected void ChangeDirection()
+        public void ChangeDirection()
         {
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             m_FireDirection = mouseWorldPos - (Vector2)transform.position;
@@ -49,7 +55,7 @@ namespace GameMain
             }
         }
 
-        public void Charge(float deltaTime)
+        public virtual void Charge(float deltaTime)
         {
             m_ChargeTime += deltaTime;
             m_ChargeTime = m_ChargeTime > m_MaxChargeTime ? m_MaxChargeTime : m_ChargeTime;

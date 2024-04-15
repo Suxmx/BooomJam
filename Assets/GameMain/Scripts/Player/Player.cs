@@ -16,6 +16,7 @@ namespace GameMain
         private WeaponBase m_CurrentWeapon;
         private PlayerStatusInfo m_PlayerStatusInfo;
         private Image m_HpImage;
+        private int m_CurrentWeaponIndex;
 
         private int m_WeaponToLoad;
         private bool m_Inited;
@@ -65,7 +66,31 @@ namespace GameMain
             if (m_Inited == false) return;
             base.OnUpdate(elapseSeconds, realElapseSeconds);
             GetMoveInput();
+            ChangeWeapon();
             GetFireInput(elapseSeconds);
+        }
+
+        private void ChangeWeapon()
+        {
+            int cache = m_CurrentWeaponIndex;
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                m_CurrentWeaponIndex = m_CurrentWeaponIndex - 1 >= 0 ? m_CurrentWeaponIndex - 1 : m_Weapons.Count-1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                m_CurrentWeaponIndex = m_CurrentWeaponIndex + 1 > m_Weapons.Count - 1 ? 0 : m_CurrentWeaponIndex + 1;
+            }
+
+            if (cache != m_CurrentWeaponIndex)
+            {
+                m_Weapons[cache].Entity.Logic.Visible = false;
+                m_CurrentWeapon = m_Weapons[m_CurrentWeaponIndex];
+                m_CurrentWeapon.ChangeDirection();
+                m_CurrentWeapon.Entity.Logic.Visible = true;
+                
+            }
         }
 
         private void GetMoveInput()
@@ -110,6 +135,11 @@ namespace GameMain
             }
         }
 
+        public void Teleport(Vector2 position)
+        {
+            transform.position = position;
+        }
+
         private void OnShowWeaponSuccess(object sender, GameEventArgs e)
         {
             ShowEntitySuccessEventArgs ne = (ShowEntitySuccessEventArgs)e;
@@ -120,6 +150,7 @@ namespace GameMain
                 GameEntry.Entity.AttachEntity(ne.Entity, Entity, "Weapons");
                 if (m_CurrentWeapon == null)
                 {
+                    m_CurrentWeaponIndex = 0;
                     m_CurrentWeapon = (WeaponBase)ne.Entity.Logic;
                 }
                 else ne.Entity.Logic.Visible = false;

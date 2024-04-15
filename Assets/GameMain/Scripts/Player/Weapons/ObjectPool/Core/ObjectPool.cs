@@ -12,7 +12,7 @@ namespace GameMain
     /// </summary>
     /// <typeparam name="T1">继承自ObjectBase的对象，若无特殊需求可以直接使用MyObjectBase</typeparam>
     /// <typeparam name="T2">ObjectBase中具体存储的Target对象，限定为Mono，需要继承IMyObject</typeparam>
-    public class ObjectPool<T1, T2> where T1 : MyObjectBase, new() where T2 : MonoBehaviour,IMyObject<T2>
+    public class ObjectPool<T1, T2> where T1 : MyObjectBase, new() where T2 : MonoBehaviour,IMyObject
     {
         protected int m_Capacity;
         protected string m_PoolName;
@@ -66,7 +66,7 @@ namespace GameMain
             return target;
         }
 
-        public void Unspawn(T2 target)
+        public void Unspawn(object target)
         {
             m_Pool.Unspawn(target);
         }

@@ -2,11 +2,11 @@
 
 namespace GameMain
 {
-    public interface IMyObject<T>
+    public interface IMyObject
     {
         public void OnInit(object userData);
         public void OnShow(object userData);
-        public Action<T> RecycleAction { get; set; }
+        public Action<object> RecycleAction { get; set; }
         public void RecycleSelf();
     }
 }
