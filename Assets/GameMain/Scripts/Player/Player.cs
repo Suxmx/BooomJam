@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using GameFramework.Event;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityGameFramework.Runtime;
 
 namespace GameMain
 {
-    public enum EPlayerType : int
-    {
-        Default = 1000
-    }
-
     public class Player : EntityLogic
     {
         private SpriteRenderer m_SpriteRenderer;
@@ -19,6 +15,7 @@ namespace GameMain
         private List<WeaponBase> m_Weapons;
         private WeaponBase m_CurrentWeapon;
         private PlayerStatusInfo m_PlayerStatusInfo;
+        private Image m_HpImage;
 
         private int m_WeaponToLoad;
         private bool m_Inited;
@@ -37,8 +34,15 @@ namespace GameMain
             {
                 GameEntry.Entity.ShowWeapon(weapon);
             }
+
             m_Rigidbody = GetComponent<Rigidbody2D>();
             m_SpriteRenderer = GetComponent<SpriteRenderer>();
+            var hpObj = GameObject.Find("Hp");
+            if (hpObj)
+            {
+                m_HpImage = hpObj.transform.Find("HpInside").GetComponent<Image>();
+                m_HpImage.fillAmount = 0;
+            }
         }
 
         protected override void OnRecycle()
@@ -49,7 +53,6 @@ namespace GameMain
         protected override void OnShow(object userData)
         {
             base.OnShow(userData);
-            
         }
 
         protected override void OnHide(bool isShutdown, object userData)
@@ -62,7 +65,7 @@ namespace GameMain
             if (m_Inited == false) return;
             base.OnUpdate(elapseSeconds, realElapseSeconds);
             GetMoveInput();
-            GetFireInput();
+            GetFireInput(elapseSeconds);
         }
 
         private void GetMoveInput()
@@ -79,12 +82,31 @@ namespace GameMain
             }
         }
 
-        private void GetFireInput()
+        private void GetFireInput(float deltaTime)
         {
             //TODO:换枪
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
-                m_CurrentWeapon?.Fire(this);
+                m_CurrentWeapon.Charge(deltaTime);
+                if (m_HpImage)
+                {
+                    m_HpImage.fillAmount = m_CurrentWeapon.GetChargePercent();
+                    if (Mathf.Abs(m_HpImage.fillAmount - 1) < 1e-5)
+                    {
+                        m_HpImage.color = new Color(0, 1, 0, 1);
+                    }
+                }
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (m_CurrentWeapon != null)
+                    m_CurrentWeapon.Fire(this);
+                if (m_HpImage)
+                {
+                    m_HpImage.fillAmount = 0;
+                    m_HpImage.color = new Color(1, 0, 0, 1);
+                }
             }
         }
 
@@ -105,7 +127,7 @@ namespace GameMain
                 if (m_WeaponToLoad == 0)
                 {
                     m_Inited = true;
-                    GameEntry.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId,OnShowWeaponSuccess);
+                    GameEntry.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowWeaponSuccess);
                 }
             }
         }

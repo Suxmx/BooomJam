@@ -2,10 +2,14 @@
 
 namespace GameMain
 {
+    /// <summary>
+    /// 在游戏流程中打包给武器的数据包
+    /// </summary>
     public abstract class WeaponData : EntityData
     {
         public int Damage;
         public float FireInterval;
+        public float MaxChargeTime;
         public Type LogicType;
 
         public WeaponData(int entityId, int typeId, int damage, float fireInterval,Type logicType) : base(entityId, typeId)

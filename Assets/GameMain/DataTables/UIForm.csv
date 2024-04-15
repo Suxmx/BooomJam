@@ -1,0 +1,2 @@
+#Id,资源名称,UIGroup,是否允许多个同时存在,是否暂停遮挡住的UI
+10001,Hp,HUD,TRUE,FALSE

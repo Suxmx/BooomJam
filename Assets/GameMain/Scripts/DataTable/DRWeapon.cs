@@ -4,6 +4,9 @@ using UnityGameFramework.Runtime;
 
 namespace GameMain
 {
+    /// <summary>
+    /// 从CSV文件中读取出来的数据配表
+    /// </summary>
     public class DRWeapon : DataRowBase
     {
         private int m_Id = 0;

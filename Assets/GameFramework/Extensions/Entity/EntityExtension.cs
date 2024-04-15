@@ -29,13 +29,15 @@ namespace GameMain
             entityComponent.HideEntity(entity.Entity);
         }
 
-        public static void AttachEntity(this EntityComponent entityComponent, Entity entity, int ownerId, string parentTransformPath = null, object userData = null)
+        public static void AttachEntity(this EntityComponent entityComponent, Entity entity, int ownerId,
+            string parentTransformPath = null, object userData = null)
         {
             entityComponent.AttachEntity(entity.Entity, ownerId, parentTransformPath, userData);
         }
-        
 
-        private static void ShowEntity(this EntityComponent entityComponent, Type logicType, string entityGroup, int priority, EntityData data)
+
+        private static void ShowEntity(this EntityComponent entityComponent, Type logicType, string entityGroup,
+            int priority, EntityData data)
         {
             if (data == null)
             {
@@ -51,7 +53,8 @@ namespace GameMain
                 return;
             }
 
-            entityComponent.ShowEntity(data.Id, logicType, AssetUtility.GetEntityAsset(drEntity.AssetName), entityGroup, priority, data);
+            entityComponent.ShowEntity(data.Id, logicType, AssetUtility.GetEntityAsset(drEntity.AssetName), entityGroup,
+                priority, data);
         }
 
         public static int GenerateSerialId(this EntityComponent entityComponent)
@@ -61,12 +64,17 @@ namespace GameMain
 
         public static void ShowPlayer(this EntityComponent entityComponent, PlayerData data)
         {
-            entityComponent.ShowEntity(typeof(Player),"Player",100,data);
+            entityComponent.ShowEntity(typeof(Player), "Player", 100, data);
         }
 
         public static void ShowWeapon(this EntityComponent entityComponent, WeaponData data)
         {
-            entityComponent.ShowEntity(data.LogicType,"Weapon",100,data);
+            entityComponent.ShowEntity(data.LogicType, "Weapon", 100, data);
+        }
+
+        public static void ShowBullet(this EntityComponent entityComponent, BulletData data)
+        {
+            entityComponent.ShowEntity(typeof(Bullet), "Bullet", 100, data);
         }
     }
 }
