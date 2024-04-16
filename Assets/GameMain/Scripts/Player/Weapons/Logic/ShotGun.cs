@@ -44,7 +44,6 @@ namespace GameMain
         {
             base.Update();
             m_FireTimer += Time.deltaTime;
-            Log.Info("Shotgun update");
         }
 
         public override void Fire(Player player, float chargeTime)

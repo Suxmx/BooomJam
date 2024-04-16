@@ -59,6 +59,7 @@ namespace GameMain
             LoadDataTable("Player");
             LoadDataTable("Weapon");
             LoadDataTable("Entity");
+            LoadDataTable("Level");
         }
 
         private void LoadConfig(string configAssetName)

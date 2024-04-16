@@ -18,6 +18,7 @@ namespace GameMain
         public int MaxHp;
         public int Damage;
         public float MoveSpeed;
+        public float ChangeSceneInterval;
         public List<int> WeaponDataIds;
 
         public override bool ParseDataRow(string dataRowString, object userData)
@@ -29,6 +30,7 @@ namespace GameMain
             MaxHp = int.Parse(columnStrings[index++]);
             Damage = int.Parse(columnStrings[index++]);
             MoveSpeed = float.Parse(columnStrings[index++]);
+            ChangeSceneInterval = float.Parse(columnStrings[index++]);
             WeaponDataIds = new List<int>();
             for (; index < columnStrings.Length; index++)
             {

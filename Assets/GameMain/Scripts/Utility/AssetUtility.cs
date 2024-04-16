@@ -38,5 +38,9 @@ namespace GameMain
         {
             return Utility.Text.Format("Assets/GameMain/UI/UIForms/{0}.prefab", assetName);
         }
+        public static string GetGameSceneAsset(string assetName)
+        {
+            return Utility.Text.Format("Assets/GameMain/Prefabs/GameScenes/{0}.prefab", assetName);
+        }
     }
 }

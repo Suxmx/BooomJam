@@ -128,5 +128,6 @@ namespace GameMain
             UI = UnityGameFramework.Runtime.GameEntry.GetComponent<UIComponent>();
             WebRequest = UnityGameFramework.Runtime.GameEntry.GetComponent<WebRequestComponent>();
         }
+        
     }
 }

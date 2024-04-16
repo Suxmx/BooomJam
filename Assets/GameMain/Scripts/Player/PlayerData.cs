@@ -7,13 +7,15 @@ namespace GameMain
         public int MaxHp;
         public int Damage;
         public float MoveSpeed;
+        public float ChangeSceneInterval;
         public List<WeaponData> WeaponsDatas;
         
-        public PlayerData(int entityId, int typeId, int maxHp, int damage, float moveSpeed, List<WeaponData> weaponsDatas) : base(entityId, typeId)
+        public PlayerData(int entityId, int typeId, int maxHp, int damage, float moveSpeed,float changeSceneInterval, List<WeaponData> weaponsDatas) : base(entityId, typeId)
         {
             MaxHp = maxHp;
             Damage = damage;
             MoveSpeed = moveSpeed;
+            ChangeSceneInterval = changeSceneInterval;
             WeaponsDatas = weaponsDatas;
         }
     }

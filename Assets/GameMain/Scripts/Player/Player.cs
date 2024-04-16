@@ -17,6 +17,8 @@ namespace GameMain
         private PlayerStatusInfo m_PlayerStatusInfo;
         private Image m_HpImage;
         private int m_CurrentWeaponIndex;
+        private float m_ChangeSceneInterval;
+        private float m_ChangeSceneTimer;
 
         private int m_WeaponToLoad;
         private bool m_Inited;
@@ -28,6 +30,7 @@ namespace GameMain
             base.OnInit(userData);
             PlayerData data = (PlayerData)userData;
             m_PlayerStatusInfo = new PlayerStatusInfo(data.MaxHp, data.MoveSpeed);
+            m_ChangeSceneInterval = data.ChangeSceneInterval;
             m_WeaponToLoad = data.WeaponsDatas.Count;
             m_Weapons = new List<WeaponBase>();
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowWeaponSuccess);
@@ -44,53 +47,35 @@ namespace GameMain
                 m_HpImage = hpObj.transform.Find("HpInside").GetComponent<Image>();
                 m_HpImage.fillAmount = 0;
             }
+
+            m_ChangeSceneTimer = m_ChangeSceneInterval;
         }
 
-        protected override void OnRecycle()
+        protected void Update()
         {
-            base.OnRecycle();
-        }
+            if (m_Inited == false || GameBase.Instance.Inited == false) return;
+            m_ChangeSceneTimer += Time.deltaTime;
 
-        protected override void OnShow(object userData)
-        {
-            base.OnShow(userData);
-        }
-
-        protected override void OnHide(bool isShutdown, object userData)
-        {
-            base.OnHide(isShutdown, userData);
-        }
-
-        protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
-        {
-            if (m_Inited == false) return;
-            base.OnUpdate(elapseSeconds, realElapseSeconds);
             GetMoveInput();
-            ChangeWeapon();
-            GetFireInput(elapseSeconds);
+            GetFireInput(Time.deltaTime);
         }
 
-        private void ChangeWeapon()
+        public void ChangeWeapon()
         {
+            m_ChangeSceneTimer = 0;
             int cache = m_CurrentWeaponIndex;
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                m_CurrentWeaponIndex = m_CurrentWeaponIndex - 1 >= 0 ? m_CurrentWeaponIndex - 1 : m_Weapons.Count-1;
-            }
+            m_CurrentWeaponIndex = m_CurrentWeaponIndex - 1 >= 0 ? m_CurrentWeaponIndex - 1 : m_Weapons.Count - 1;
 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                m_CurrentWeaponIndex = m_CurrentWeaponIndex + 1 > m_Weapons.Count - 1 ? 0 : m_CurrentWeaponIndex + 1;
-            }
+            m_Weapons[cache].Entity.Logic.Visible = false;
+            m_CurrentWeapon = m_Weapons[m_CurrentWeaponIndex];
+            m_CurrentWeapon.ChangeDirection();
+            m_CurrentWeapon.Entity.Logic.Visible = true;
+        }
 
-            if (cache != m_CurrentWeaponIndex)
-            {
-                m_Weapons[cache].Entity.Logic.Visible = false;
-                m_CurrentWeapon = m_Weapons[m_CurrentWeaponIndex];
-                m_CurrentWeapon.ChangeDirection();
-                m_CurrentWeapon.Entity.Logic.Visible = true;
-                
-            }
+        public bool CanChangeWeapon()
+        {
+            if (m_ChangeSceneTimer < m_ChangeSceneInterval) return false;
+            return true;
         }
 
         private void GetMoveInput()
