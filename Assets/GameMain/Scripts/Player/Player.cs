@@ -147,5 +147,10 @@ namespace GameMain
                 }
             }
         }
+
+        public void Recoil(RecoilData data)
+        {
+            
+        }
     }
 }

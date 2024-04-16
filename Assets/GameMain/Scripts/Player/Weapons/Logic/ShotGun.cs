@@ -92,6 +92,9 @@ namespace GameMain
                 data.Direction = Quaternion.AngleAxis(0, Vector3.forward) * d;
                 m_BulletPool.Spawn(data);
             }
+
+            var recoilData = new RecoilData();
+            player.Recoil(recoilData);
         }
 
         public GameObject CreateObject()
