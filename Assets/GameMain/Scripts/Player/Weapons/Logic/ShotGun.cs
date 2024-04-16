@@ -30,6 +30,7 @@ namespace GameMain
             m_BulletSpeed = data.BulletSpeed;
             m_MaxChargeTime = data.MaxChargeTime;
             m_MaxScaleFactor = data.ChargeScaleFactor;
+            m_RecoilValue = data.RecoilValue;
             
             GameEntry.Resource.LoadAsset(AssetUtility.GetEntityAsset("Bullet"), typeof(GameObject), 100,
                 new LoadAssetCallbacks(
@@ -95,7 +96,7 @@ namespace GameMain
                 m_BulletPool.Spawn(data);
             }
 
-            var recoilData = new RecoilData(m_FireDirection);
+            var recoilData = new RecoilData(m_FireDirection,m_RecoilValue);
             player.Recoil(recoilData);
         }
 
