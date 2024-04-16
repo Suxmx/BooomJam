@@ -150,7 +150,7 @@ namespace GameMain
 
         public void Recoil(RecoilData data)
         {
-            m_Rigidbody.AddForce(-data.FireDirection * data.RecoilValue ,ForceMode2D.Impulse);
+            m_Rigidbody.AddForce(-data.FireDirection * data.RecoilValue, ForceMode2D.Impulse);
         }
     }
 }
