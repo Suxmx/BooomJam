@@ -14,7 +14,7 @@ namespace GameMain
         protected int m_MaxBulletNumPerFire;
         protected float m_BulletIntervalAngle;
         protected float m_MaxScaleFactor;
-        protected float m_RecoilValue;
+        protected float m_RecoilCoefficient;
         protected ObjectPool<MyObjectBase, Bullet> m_BulletPool;
 
         protected override void OnInit(object userData)
@@ -30,7 +30,7 @@ namespace GameMain
             m_BulletSpeed = data.BulletSpeed;
             m_MaxChargeTime = data.MaxChargeTime;
             m_MaxScaleFactor = data.ChargeScaleFactor;
-            m_RecoilValue = data.RecoilValue;
+            m_RecoilCoefficient = data.RecoilCoefficient;
             
             GameEntry.Resource.LoadAsset(AssetUtility.GetEntityAsset("Bullet"), typeof(GameObject), 100,
                 new LoadAssetCallbacks(
@@ -64,6 +64,7 @@ namespace GameMain
             {
                 bulletNum = m_MaxBulletNumPerFire;
                 scaleFactor = m_MaxScaleFactor;
+                chargeTime = m_MaxChargeTime;
             }
             else
             {
@@ -96,7 +97,7 @@ namespace GameMain
                 m_BulletPool.Spawn(data);
             }
 
-            var recoilData = new RecoilData(m_FireDirection,m_RecoilValue);
+            var recoilData = new RecoilData(m_FireDirection,m_RecoilCoefficient,chargeTime);
             player.Recoil(recoilData);
         }
 
