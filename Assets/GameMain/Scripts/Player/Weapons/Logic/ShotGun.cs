@@ -14,6 +14,7 @@ namespace GameMain
         protected int m_MaxBulletNumPerFire;
         protected float m_BulletIntervalAngle;
         protected float m_MaxScaleFactor;
+        protected float m_RecoilValue;
         protected ObjectPool<MyObjectBase, Bullet> m_BulletPool;
 
         protected override void OnInit(object userData)
@@ -29,6 +30,7 @@ namespace GameMain
             m_BulletSpeed = data.BulletSpeed;
             m_MaxChargeTime = data.MaxChargeTime;
             m_MaxScaleFactor = data.ChargeScaleFactor;
+            
             GameEntry.Resource.LoadAsset(AssetUtility.GetEntityAsset("Bullet"), typeof(GameObject), 100,
                 new LoadAssetCallbacks(
                     (assetName, asset, duration, userData) => { m_BulletTemplate = (GameObject)asset; },
@@ -93,7 +95,7 @@ namespace GameMain
                 m_BulletPool.Spawn(data);
             }
 
-            var recoilData = new RecoilData();
+            var recoilData = new RecoilData(m_FireDirection);
             player.Recoil(recoilData);
         }
 

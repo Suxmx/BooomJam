@@ -11,6 +11,8 @@ namespace GameMain
         public float BulletRandomAngle;
         public float BulletSpeed;
         public float ChargeScaleFactor;
+        public float RecoilValue;
+        
         public ShotGunData(int entityId, int typeId, DRWeapon drWeapon) : base(entityId, typeId, drWeapon)
         {
             Damage = drWeapon.IntParams[0];
@@ -23,7 +25,7 @@ namespace GameMain
             BulletSpeed = drWeapon.FloatParams[3];
             MaxChargeTime = drWeapon.FloatParams[4];
             ChargeScaleFactor = drWeapon.FloatParams[5];
-
+            RecoilValue = drWeapon.FloatParams[6];
         }
     }
 }
