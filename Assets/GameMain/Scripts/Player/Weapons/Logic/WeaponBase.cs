@@ -20,6 +20,7 @@ namespace GameMain
         protected float m_BulletSpeed;
         protected GameObject m_BulletTemplate;
         protected Transform m_Muzzle;
+        protected WeaponHUD m_ChargeHUD;
 
         protected override void OnInit(object userData)
         {
@@ -59,6 +60,7 @@ namespace GameMain
         {
             m_ChargeTime += deltaTime;
             m_ChargeTime = m_ChargeTime > m_MaxChargeTime ? m_MaxChargeTime : m_ChargeTime;
+            m_ChargeHUD.Charge(GetChargePercent());
         }
 
         public float GetChargePercent()
