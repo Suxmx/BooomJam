@@ -14,6 +14,8 @@ namespace GameMain
         protected int m_MaxBulletNumPerFire;
         protected float m_BulletIntervalAngle;
         protected float m_MaxScaleFactor;
+        protected float m_MinRecoilValue;
+        protected float m_MaxRecoilValue;
         protected ObjectPool<MyObjectBase, Bullet> m_BulletPool;
 
         protected override void OnInit(object userData)
@@ -29,6 +31,9 @@ namespace GameMain
             m_BulletSpeed = data.BulletSpeed;
             m_MaxChargeTime = data.MaxChargeTime;
             m_MaxScaleFactor = data.ChargeScaleFactor;
+            m_MinRecoilValue = data.MinRecoilValue;
+            m_MaxRecoilValue = data.MaxRecoilValue;
+            
             GameEntry.Resource.LoadAsset(AssetUtility.GetEntityAsset("Bullet"), typeof(GameObject), 100,
                 new LoadAssetCallbacks(
                     (assetName, asset, duration, userData) => { m_BulletTemplate = (GameObject)asset; },
@@ -57,16 +62,20 @@ namespace GameMain
             //计算蓄力影响
             int bulletNum;
             float scaleFactor;
+            float RecoilValue;
             if (chargeTime >= m_MaxChargeTime)
             {
                 bulletNum = m_MaxBulletNumPerFire;
                 scaleFactor = m_MaxScaleFactor;
+                RecoilValue = m_MaxRecoilValue;
             }
             else
             {
                 bulletNum = (int)(m_MinBulletNumPerFire +
                                   (m_MaxBulletNumPerFire - m_MinBulletNumPerFire) * GetChargePercent());
                 scaleFactor = 1 + (m_MaxScaleFactor - 1) * GetChargePercent();
+                RecoilValue = (m_MinRecoilValue + 
+                                  (m_MaxRecoilValue - m_MinRecoilValue ) * GetChargePercent());
             }
 
             //生成霰弹
@@ -93,7 +102,7 @@ namespace GameMain
                 m_BulletPool.Spawn(data);
             }
 
-            var recoilData = new RecoilData();
+            var recoilData = new RecoilData(m_FireDirection,RecoilValue);
             player.Recoil(recoilData);
         }
 
