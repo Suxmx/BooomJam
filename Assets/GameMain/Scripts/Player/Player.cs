@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using GameFramework.Event;
 using UnityEngine;
@@ -148,9 +149,24 @@ namespace GameMain
             }
         }
 
-        public void Recoil(RecoilData data)
+        public virtual void RecoilForce()
         {
-            m_Rigidbody.AddForce(-data.FireDirection * data.RecoilValue, ForceMode2D.Impulse);
+            
+        }
+        
+        public IEnumerator Recoil(RecoilData data)
+        {
+            for (int i = 1; i <= 2; i++)
+            {
+                transform.Translate(-data.FireDirection * data.RecoilValue );
+                yield return new WaitForFixedUpdate();
+            }
+
+            for (int i = 1; i <= 6; i++)
+            {
+                transform.Translate(-data.FireDirection * data.RecoilValue);
+                yield return new WaitForFixedUpdate();
+            }
         }
     }
 }
