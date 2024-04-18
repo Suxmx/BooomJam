@@ -43,6 +43,14 @@ namespace GameMain
 
             m_Muzzle = transform.Find("Muzzle");
             m_BulletPool = new ObjectPool<MyObjectBase, Bullet>(240, "ShotgunBulletPool", this);
+            var hudTrans = transform.Find("HUDCanvas");
+            if(hudTrans)
+            {
+                m_ChargeHUD = hudTrans.GetComponentInChildren<ShotGunHUD>();
+                float minAngle = (m_MinBulletNumPerFire - 1) * m_BulletIntervalAngle;
+                float maxAngle = (m_MaxBulletNumPerFire - 1) * m_BulletIntervalAngle;
+                ((ShotGunHUD)m_ChargeHUD).Init(minAngle,maxAngle,m_Muzzle.position);
+            }
         }
 
         protected override void Update()
@@ -53,6 +61,7 @@ namespace GameMain
 
         public override void Fire(Player player, float chargeTime)
         {
+            m_ChargeHUD.Hide();
             //重置开火间隔
             if (m_FireTimer < m_FireInterval) return;
             m_FireTimer = 0;
@@ -104,6 +113,7 @@ namespace GameMain
 
             var recoilData = new RecoilData(m_FireDirection,RecoilValue);
             player.Recoil(recoilData);
+            
         }
 
         public GameObject CreateObject()

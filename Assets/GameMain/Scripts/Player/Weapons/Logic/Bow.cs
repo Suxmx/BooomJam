@@ -36,6 +36,15 @@ namespace GameMain
                     (assetName, asset, duration, userData) => { Log.Error("加载Arrow预制体失败!"); }
                 )
             );
+            var hudTrans = transform.Find("HUDCanvas");
+            if (hudTrans)
+            {
+                m_ChargeHUD = hudTrans.GetComponentInChildren<BowHUD>();
+                float minLength = m_BulletSpeed * m_MinArrowAliveTime;
+                float maxLength = m_BulletSpeed * m_MaxArrowAliveTime;
+                ((BowHUD)m_ChargeHUD).Init(minLength, maxLength,m_MinRandomAngle,m_MaxRandomAngle, m_Muzzle.position);
+                m_ChargeHUD.Hide();
+            }
         }
 
         protected override void Update()
@@ -55,6 +64,7 @@ namespace GameMain
 
         public override void Fire(Player player, float chargeTime)
         {
+            m_ChargeHUD.Hide();
             //重置开火间隔
             if (m_FireTimer < m_FireInterval) return;
             m_FireTimer = 0;
@@ -70,10 +80,6 @@ namespace GameMain
             data.Position = m_Muzzle.position;
             data.Player = player;
             m_ArrowPool.Spawn(data);
-        }
-
-        private void OnDrawGizmos()
-        {
         }
 
         public GameObject CreateObject()

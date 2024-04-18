@@ -40,6 +40,11 @@ namespace GameMain
             ChangeDirection();
         }
 
+        protected void LateUpdate()
+        {
+            
+        }
+
         public void ChangeDirection()
         {
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -49,10 +54,12 @@ namespace GameMain
             if (mouseWorldPos.x > transform.position.x)
             {
                 transform.localScale = m_OriginalScale;
+                m_ChargeHUD.Flip = false;
             }
             else
             {
                 transform.localScale = new Vector3(m_OriginalScale.x, -m_OriginalScale.y, m_OriginalScale.z);
+                m_ChargeHUD.Flip = true;
             }
         }
 
@@ -60,7 +67,9 @@ namespace GameMain
         {
             m_ChargeTime += deltaTime;
             m_ChargeTime = m_ChargeTime > m_MaxChargeTime ? m_MaxChargeTime : m_ChargeTime;
+            m_ChargeHUD.Show();
             m_ChargeHUD.Charge(GetChargePercent());
+            m_ChargeHUD.SetDirection(m_FireDirection);
         }
 
         public float GetChargePercent()

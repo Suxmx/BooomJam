@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace GameMain
@@ -7,11 +8,18 @@ namespace GameMain
     {
         protected Image m_HUDImage;
 
+        protected virtual void Awake()
+        {
+            m_HUDImage = GetComponent<Image>();
+        }
+
         public abstract float ChargePercent
         {
             get;
             set;
         }
+
+        public bool Flip;
 
         public abstract void Charge(float percent);
 
@@ -19,7 +27,6 @@ namespace GameMain
         {
             transform.right = direction;
         }
-        public abstract void Init();
 
         public void Show()
         {
@@ -29,7 +36,9 @@ namespace GameMain
         public void Hide()
         {
             m_HUDImage.gameObject.SetActive(false);
+            m_HUDImage.color = new Color(1, 0, 0, 0.15f);
         }
+        
 
     }
 }

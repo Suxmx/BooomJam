@@ -40,7 +40,7 @@ namespace GameMain
             }
 
             m_Rigidbody = GetComponent<Rigidbody2D>();
-            m_SpriteRenderer = GetComponent<SpriteRenderer>();
+            m_SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
             var hpObj = GameObject.Find("Hp");
             if (hpObj)
             {
