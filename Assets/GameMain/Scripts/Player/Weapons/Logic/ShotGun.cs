@@ -101,9 +101,9 @@ namespace GameMain
                 data.Direction = Quaternion.AngleAxis(0, Vector3.forward) * d;
                 m_BulletPool.Spawn(data);
             }
-
+            
+            player.RecoilForce();
             var recoilData = new RecoilData(m_FireDirection,RecoilValue);
-            player.
             StartCoroutine(player.Recoil(recoilData));
         }
 

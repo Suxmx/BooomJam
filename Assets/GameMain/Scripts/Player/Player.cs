@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using GameFramework.Event;
 using UnityEngine;
 using UnityEngine.UI;
@@ -151,7 +152,8 @@ namespace GameMain
 
         public virtual void RecoilForce()
         {
-            
+            var source = GetComponent<CinemachineImpulseSource>();
+            source.GenerateImpulse(new Vector3(100, 100, 100));
         }
         
         public IEnumerator Recoil(RecoilData data)
