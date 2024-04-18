@@ -160,15 +160,20 @@ namespace GameMain
         {
             for (int i = 1; i <= 2; i++)
             {
-                transform.Translate(-data.FireDirection * data.RecoilValue );
+                transform.Translate(-data.FireDirection/2 * data.RecoilValue );
                 yield return new WaitForFixedUpdate();
             }
 
             for (int i = 1; i <= 6; i++)
             {
-                transform.Translate(-data.FireDirection * data.RecoilValue);
+                transform.Translate(-data.FireDirection/6 * data.RecoilValue);
                 yield return new WaitForFixedUpdate();
             }
+        }
+
+        protected void SafeTranslate()
+        {
+            // Physics2D.Raycast()
         }
     }
 }
