@@ -153,24 +153,20 @@ namespace GameMain
                 }
             }
         }
-
-        public virtual void RecoilForce()
-        {
-            var source = GetComponent<CinemachineImpulseSource>();
-            source.GenerateImpulse(new Vector3(100, 100, 100));
-        }
-
+        
         public IEnumerator Recoil(RecoilData data)
-        {
+        {   
+            var source = GetComponent<CinemachineImpulseSource>();
             for (int i = 1; i <= 2; i++)
             {
                 SafeTranslate(-data.FireDirection / 2 * data.RecoilValue);
+                //SafeTranslate(Vector3.up/60 * data.Jump);
                 yield return new WaitForFixedUpdate();
             }
-
+            
             for (int i = 1; i <= 6; i++)
             {
-                SafeTranslate(-data.FireDirection / 6 * data.RecoilValue);
+                source.GenerateImpulse(data.FireDirection *((data.RecoilValue)- 0.2f));
                 yield return new WaitForFixedUpdate();
             }
         }

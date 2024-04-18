@@ -111,7 +111,7 @@ namespace GameMain
                 m_BulletPool.Spawn(data);
             }
 
-            var recoilData = new RecoilData(m_FireDirection,RecoilValue);
+            var recoilData = new RecoilData(m_FireDirection,RecoilValue,1f);
             StartCoroutine(player.Recoil(recoilData));
         }
 
