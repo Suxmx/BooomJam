@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using GameFramework.Event;
 using UnityEngine;
 using UnityEngine.UI;
@@ -148,9 +150,25 @@ namespace GameMain
             }
         }
 
-        public void Recoil(RecoilData data)
+        public virtual void RecoilForce()
         {
-            m_Rigidbody.AddForce(-data.FireDirection * data.RecoilValue, ForceMode2D.Impulse);
+            var source = GetComponent<CinemachineImpulseSource>();
+            source.GenerateImpulse(new Vector3(100, 100, 100));
+        }
+        
+        public IEnumerator Recoil(RecoilData data)
+        {
+            for (int i = 1; i <= 2; i++)
+            {
+                transform.Translate(-data.FireDirection * data.RecoilValue );
+                yield return new WaitForFixedUpdate();
+            }
+
+            for (int i = 1; i <= 6; i++)
+            {
+                transform.Translate(-data.FireDirection * data.RecoilValue);
+                yield return new WaitForFixedUpdate();
+            }
         }
     }
 }

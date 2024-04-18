@@ -112,8 +112,7 @@ namespace GameMain
             }
 
             var recoilData = new RecoilData(m_FireDirection,RecoilValue);
-            player.Recoil(recoilData);
-            
+            StartCoroutine(player.Recoil(recoilData));
         }
 
         public GameObject CreateObject()
