@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 288998213306788268}
   - component: {fileID: 288998213306788259}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightFence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 288998213873470932}
   - component: {fileID: 288998213873470923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftFence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 288998213947013447}
   - component: {fileID: 288998213947013446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DownFence
   m_TagString: Untagged
   m_Icon: {fileID: 0}

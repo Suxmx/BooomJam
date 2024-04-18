@@ -17,10 +17,12 @@ namespace GameMain
         private List<WeaponBase> m_Weapons;
         private WeaponBase m_CurrentWeapon;
         private PlayerStatusInfo m_PlayerStatusInfo;
+        private CapsuleCollider2D m_Collider;
         private Image m_HpImage;
         private int m_CurrentWeaponIndex;
         private float m_ChangeSceneInterval;
         private float m_ChangeSceneTimer;
+        private int m_ObstacleMask;
 
         private int m_WeaponToLoad;
         private bool m_Inited;
@@ -51,6 +53,8 @@ namespace GameMain
             }
 
             m_ChangeSceneTimer = m_ChangeSceneInterval;
+            m_Collider = GetComponent<CapsuleCollider2D>();
+            m_ObstacleMask = LayerMask.GetMask("Ground");
         }
 
         protected void Update()
@@ -155,25 +159,33 @@ namespace GameMain
             var source = GetComponent<CinemachineImpulseSource>();
             source.GenerateImpulse(new Vector3(100, 100, 100));
         }
-        
+
         public IEnumerator Recoil(RecoilData data)
         {
             for (int i = 1; i <= 2; i++)
             {
-                transform.Translate(-data.FireDirection/2 * data.RecoilValue );
+                SafeTranslate(-data.FireDirection / 2 * data.RecoilValue);
                 yield return new WaitForFixedUpdate();
             }
 
             for (int i = 1; i <= 6; i++)
             {
-                transform.Translate(-data.FireDirection/6 * data.RecoilValue);
+                SafeTranslate(-data.FireDirection / 6 * data.RecoilValue);
                 yield return new WaitForFixedUpdate();
             }
         }
 
-        protected void SafeTranslate()
+        protected void SafeTranslate(Vector2 direction)
         {
-            // Physics2D.Raycast()
+            var hit = Physics2D.Raycast(transform.position, direction, direction.magnitude + m_Collider.size.x,
+                m_ObstacleMask);
+            if (hit.collider is null)
+                transform.Translate(direction);
+            else
+            {
+                Log.Warning("Obstacle!");
+                transform.Translate(direction.normalized * m_Collider.size.x / 10);
+            }
         }
     }
 }
