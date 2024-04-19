@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using GameFramework.Event;
+using MyTimer;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;
@@ -19,9 +20,9 @@ namespace GameMain
         private PlayerStatusInfo m_PlayerStatusInfo;
         private CapsuleCollider2D m_Collider;
         private Image m_HpImage;
+        private CountdownTimer m_InvincibleTimer;
+        private CountdownTimer m_ChangeSceneTimer;
         private int m_CurrentWeaponIndex;
-        private float m_ChangeSceneInterval;
-        private float m_ChangeSceneTimer;
         private int m_ObstacleMask;
 
         private int m_WeaponToLoad;
@@ -34,7 +35,6 @@ namespace GameMain
             base.OnInit(userData);
             PlayerData data = (PlayerData)userData;
             m_PlayerStatusInfo = new PlayerStatusInfo(data.MaxHp, data.MoveSpeed);
-            m_ChangeSceneInterval = data.ChangeSceneInterval;
             m_WeaponToLoad = data.WeaponsDatas.Count;
             m_Weapons = new List<WeaponBase>();
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowWeaponSuccess);
@@ -52,7 +52,12 @@ namespace GameMain
                 m_HpImage.fillAmount = 0;
             }
 
-            m_ChangeSceneTimer = m_ChangeSceneInterval;
+            m_InvincibleTimer = new CountdownTimer();
+            m_ChangeSceneTimer = new CountdownTimer();
+            m_ChangeSceneTimer.Initialize(data.ChangeSceneInterval);
+            m_InvincibleTimer.Initialize(data.InvincibleTime);
+            m_ChangeSceneTimer.ForceComplete();
+            m_InvincibleTimer.ForceComplete();
             m_Collider = GetComponent<CapsuleCollider2D>();
             m_ObstacleMask = LayerMask.GetMask("Ground");
         }
@@ -60,15 +65,14 @@ namespace GameMain
         protected void Update()
         {
             if (m_Inited == false || GameBase.Instance.Inited == false) return;
-            m_ChangeSceneTimer += Time.deltaTime;
-
+            
             GetMoveInput();
             GetFireInput(Time.deltaTime);
         }
 
         public void ChangeWeapon()
         {
-            m_ChangeSceneTimer = 0;
+            m_ChangeSceneTimer.Restart();
             int cache = m_CurrentWeaponIndex;
             m_CurrentWeaponIndex = m_CurrentWeaponIndex - 1 >= 0 ? m_CurrentWeaponIndex - 1 : m_Weapons.Count - 1;
 
@@ -80,8 +84,7 @@ namespace GameMain
 
         public bool CanChangeWeapon()
         {
-            if (m_ChangeSceneTimer < m_ChangeSceneInterval) return false;
-            return true;
+            return m_ChangeSceneTimer.Completed;
         }
 
         private void GetMoveInput()
@@ -100,7 +103,6 @@ namespace GameMain
 
         private void GetFireInput(float deltaTime)
         {
-            //TODO:换枪
             if (Input.GetMouseButton(0))
             {
                 m_CurrentWeapon.Charge(deltaTime);

@@ -161,5 +161,10 @@ namespace GameMain
                 m_InitDict["Player"] = true;
             }
         }
+
+        public Player GetPlayer()
+        {
+            return m_Player;
+        }
     }
 }
