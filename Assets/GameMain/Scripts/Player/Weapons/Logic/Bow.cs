@@ -1,6 +1,7 @@
 ﻿using System;
 using GameFramework.Resource;
 using GameMain.Scripts.Player.Weapons.ObjectPool;
+using MyTimer;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using Random = UnityEngine.Random;
@@ -20,7 +21,8 @@ namespace GameMain
             base.OnInit(userData);
             BowData data = (BowData)userData;
             Damage = data.Damage;
-            m_FireInterval = data.FireInterval;
+            m_FireCountdownTimer = new CountdownTimer();
+            m_FireCountdownTimer.Initialize(data.FireInterval);
             m_MaxChargeTime = data.MaxChargeTime;
             m_MinArrowAliveTime = data.MinArrowAliveTime;
             m_MaxArrowAliveTime = data.MaxArrowAliveTime;
@@ -50,7 +52,6 @@ namespace GameMain
         protected override void Update()
         {
             base.Update();
-            m_FireTimer += Time.deltaTime;
             Debug.DrawRay(m_Muzzle.position,
                 transform.right * (m_BulletSpeed * (m_MinArrowAliveTime +
                                                     (m_MaxArrowAliveTime - m_MinArrowAliveTime) * GetChargePercent())),
@@ -66,8 +67,8 @@ namespace GameMain
         {
             m_ChargeHUD.Hide();
             //重置开火间隔
-            if (m_FireTimer < m_FireInterval) return;
-            m_FireTimer = 0;
+            if (!m_FireCountdownTimer.Completed) return;
+            m_FireCountdownTimer.Restart();
             //计算蓄力影响
             float aliveTime = m_MinArrowAliveTime +
                               (m_MaxArrowAliveTime - m_MinArrowAliveTime) * GetChargePercent();

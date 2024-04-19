@@ -1,4 +1,5 @@
 ﻿using System;
+using MyTimer;
 using UnityEngine;
 using UnityEngine.Pool;
 using UnityGameFramework.Runtime;
@@ -12,8 +13,6 @@ namespace GameMain
 
         protected Vector3 m_OriginalScale;
         protected Vector2 m_FireDirection;
-        protected float m_FireInterval;
-        protected float m_FireTimer;
         protected float m_ChargeTime;
         protected float m_MaxChargeTime;
         protected float m_BulletRandomAngle;
@@ -21,6 +20,7 @@ namespace GameMain
         protected GameObject m_BulletTemplate;
         protected Transform m_Muzzle;
         protected WeaponHUD m_ChargeHUD;
+        protected CountdownTimer m_FireCountdownTimer;
 
         protected override void OnInit(object userData)
         {
@@ -76,6 +76,12 @@ namespace GameMain
         {
             if (Mathf.Abs(m_ChargeTime - m_MaxChargeTime) < 1e-5) return 1;
             else return m_ChargeTime / m_MaxChargeTime;
+        }
+
+        protected override void OnHide(bool isShutdown, object userData)
+        {
+            base.OnHide(isShutdown, userData);
+            m_FireCountdownTimer.Paused = true;
         }
     }
 }

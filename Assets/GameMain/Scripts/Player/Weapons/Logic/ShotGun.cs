@@ -3,6 +3,7 @@ using GameFramework.ObjectPool;
 using GameFramework.Resource;
 using GameMain.Scripts.Player.Weapons.ObjectPool;
 using GameMain.Weapons.ObjectPool;
+using MyTimer;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -23,7 +24,8 @@ namespace GameMain
             base.OnInit(userData);
             ShotGunData data = (ShotGunData)userData;
             Damage = data.Damage;
-            m_FireInterval = data.FireInterval;
+            m_FireCountdownTimer = new CountdownTimer();
+            m_FireCountdownTimer.Initialize(data.FireInterval);
             m_MinBulletNumPerFire = data.MinBulletNumPerFire;
             m_MaxBulletNumPerFire = data.MaxBulletNumPerFire;
             m_BulletIntervalAngle = data.BulletIntervalAngle;
@@ -56,15 +58,14 @@ namespace GameMain
         protected override void Update()
         {
             base.Update();
-            m_FireTimer += Time.deltaTime;
         }
 
         public override void Fire(Player player, float chargeTime)
         {
             m_ChargeHUD.Hide();
             //重置开火间隔
-            if (m_FireTimer < m_FireInterval) return;
-            m_FireTimer = 0;
+            if (!m_FireCountdownTimer.Completed) return;
+            m_FireCountdownTimer.Restart();
             //弹道随机偏移
             float randomFireAngle = Random.Range(-m_BulletRandomAngle / 2, m_BulletRandomAngle / 2);
             Vector2 fireDirection = Quaternion.AngleAxis(randomFireAngle, Vector3.forward) * m_FireDirection;
