@@ -141,6 +141,7 @@ namespace GameMain
                 m_Weapons.Add((WeaponBase)ne.Entity.Logic);
                 m_WeaponToLoad--;
                 GameEntry.Entity.AttachEntity(ne.Entity, Entity, "Weapons");
+                ne.Entity.transform.position=Vector3.zero;
                 if (m_CurrentWeapon == null)
                 {
                     m_CurrentWeaponIndex = 0;
@@ -159,7 +160,7 @@ namespace GameMain
         public IEnumerator Recoil(RecoilData data)
         {      
             var source = GetComponent<CinemachineImpulseSource>();
-            //source.GenerateImpulse();
+            source.GenerateImpulse();
             for (int i = 1; i <= 2; i++)
             {
                 SafeTranslate(-data.FireDirection / 2 * data.RecoilValue);
@@ -171,7 +172,6 @@ namespace GameMain
             {   
                 SafeTranslate(-data.FireDirection / 6 * data.RecoilValue);
                 SafeTranslate(Vector3.up / 60 * data.Jump);
-                source.GenerateImpulse(data.FireDirection * ((data.RecoilValue) - 0.2f));
                 yield return new WaitForFixedUpdate();
             }
         }
@@ -184,7 +184,6 @@ namespace GameMain
                 transform.Translate(direction);
             else
             {
-                Log.Warning("Obstacle!");
                 transform.Translate(direction.normalized * m_Collider.size.x / 10);
             }
         }

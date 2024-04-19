@@ -30,6 +30,7 @@ namespace GameMain
         public override void Charge(float percent)
         {
             ChargePercent = percent;
+            
         }
 
         public void Init(float minLength, float maxLength, float minRandomAngle, float maxRandomAngle, Vector2 muzzle)
