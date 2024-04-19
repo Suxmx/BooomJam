@@ -13,6 +13,7 @@ namespace GameMain
         public float ChargeScaleFactor;
         public float MinRecoilValue;
         public float MaxRecoilValue;
+        public float Jump;
         
         public ShotGunData(int entityId, int typeId, DRWeapon drWeapon) : base(entityId, typeId, drWeapon)
         {
@@ -28,6 +29,7 @@ namespace GameMain
             ChargeScaleFactor = drWeapon.FloatParams[5];
             MinRecoilValue = drWeapon.FloatParams[6];
             MaxRecoilValue = drWeapon.FloatParams[7];
+            Jump = drWeapon.FloatParams[8];
         }
     }
 }
