@@ -37,7 +37,8 @@ namespace MyTimer
             {
                 if (IsPlayerInMagicCircle())
                 {
-                    m_timer.Restart();
+                    //m_timer.Restart();
+                    OnTimerComplete();
                 }
             }
             else
@@ -64,7 +65,8 @@ namespace MyTimer
         
         private void OnTimerComplete()
         {
-            
+            Destroy(gameObject);
+            m_timer.Paused = true;
         }
     }
 }
