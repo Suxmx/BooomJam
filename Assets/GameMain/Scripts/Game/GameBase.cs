@@ -3,6 +3,8 @@ using Cinemachine;
 using GameFramework.DataTable;
 using GameFramework.Event;
 using GameFramework.Resource;
+using MyTimer;
+using Pathfinding;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -18,6 +20,7 @@ namespace GameMain
     public class GameBase
     {
         public static GameBase Instance;
+
         public GameBase(GameMode gameMode)
         {
             GameMode = gameMode;
@@ -38,20 +41,24 @@ namespace GameMain
         protected bool m_Inited;
         protected Player m_Player;
         protected List<GameScene> m_GameScenes;
+        protected List<NavGraph> m_Graphs;
         protected int m_CurrentGameSceneIndex;
-        protected GameScene m_CurrentGameScene=>m_GameScenes[m_CurrentGameSceneIndex];
+        protected GameScene m_CurrentGameScene => m_GameScenes[m_CurrentGameSceneIndex];
         protected CinemachineVirtualCamera vcam1;
+        protected AstarPath m_AstarPath;
 
 
         public virtual void Init()
         {
             m_InitDict = new();
             m_GameScenes = new() { null, null };
+            m_Graphs = new() { null, null };
             LoadGameScene();
             LoadPlayer();
         }
 
         #region Initialize
+
         protected void CheckInitState()
         {
             if (m_Inited) return;
@@ -66,6 +73,7 @@ namespace GameMain
 
             m_Inited = true;
         }
+
         private void LoadGameScene()
         {
             //读取关卡场景
@@ -75,6 +83,15 @@ namespace GameMain
             string gameScene2 = AssetUtility.GetGameSceneAsset(drLevel.GameScene2);
             m_InitDict.Add(gameScene1, false);
             m_InitDict.Add(gameScene2, false);
+            GameEntry.Resource.LoadAsset(AssetUtility.GetEntityAsset("PathGraphScanner"), typeof(GameObject), 999, new LoadAssetCallbacks(
+                (assetName, asset, duration, userData) =>
+                {
+                    GameObject obj = (GameObject)asset;
+                    obj = GameEntry.InstantiateHelper(obj);
+                    m_AstarPath = obj.GetComponent<AstarPath>();
+                },
+                (assetName, asset, duration, userData) => { Log.Error($"Load AstarPath Failure!"); }
+            ));
             GameEntry.Resource.LoadAsset(gameScene1, typeof(GameObject), 100, new LoadAssetCallbacks
             ((assetName, asset, duration, userData) =>
                 {
@@ -82,17 +99,25 @@ namespace GameMain
                     m_InitDict[gameScene1] = true;
                     obj = GameEntry.InstantiateHelper(obj);
                     m_GameScenes[0] = obj.GetComponent<GameScene>();
+                    m_AstarPath.Scan(m_AstarPath.graphs[0]);
+                    m_Graphs[0] = m_AstarPath.graphs[0];
                 },
                 (assetName, asset, duration, userData) => { Log.Error($"Load GameScene{assetName} Failure!"); }
             ));
-            GameEntry.Resource.LoadAsset(gameScene2, typeof(GameObject), 100, new LoadAssetCallbacks
+            GameEntry.Resource.LoadAsset(gameScene2, typeof(GameObject), 90, new LoadAssetCallbacks
             ((assetName, asset, duration, userData) =>
                 {
                     GameObject obj = (GameObject)asset;
                     m_InitDict[gameScene2] = true;
                     obj = GameEntry.InstantiateHelper(obj);
                     m_GameScenes[1] = obj.GetComponent<GameScene>();
+                    //预扫描NavGraph并存储
+                    m_GameScenes[0].gameObject.SetActive(false);
+                    m_AstarPath.Scan(m_AstarPath.graphs[1]);
+                    m_GameScenes[0].gameObject.SetActive(true);
+                    m_Graphs[1] = m_AstarPath.graphs[1];
                     ((GameObject)asset).SetActive(false);
+                    m_AstarPath.data.graphs = new[] { m_Graphs[0] };
                 },
                 (assetName, asset, duration, userData) => { Log.Error($"Load GameScene{assetName} Failure!"); }
             ));
@@ -129,9 +154,9 @@ namespace GameMain
             CheckInitState();
             if (!m_Inited) return;
             ChangeScene();
+            
         }
 
-        
 
         protected void ChangeScene()
         {
@@ -142,9 +167,14 @@ namespace GameMain
                 m_Player.ChangeWeapon();
                 m_CurrentGameScene.OnChangeSceneToAnother();
                 m_CurrentGameSceneIndex = m_CurrentGameSceneIndex == 0 ? 1 : 0;
+                //更换当前预烘焙的NavGraph
+                m_AstarPath.data.graphs = new[] { m_Graphs[m_CurrentGameSceneIndex] };
+                //更新PathFinder Gizmos
+                AstarPath.active.hierarchicalGraph.RecalculateIfNecessary();
                 m_CurrentGameScene.OnChangeSceneToThis();
             }
         }
+        
 
         public virtual void OnGameEnd()
         {

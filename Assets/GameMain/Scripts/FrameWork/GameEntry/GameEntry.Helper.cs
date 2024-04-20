@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace GameMain
 {
@@ -8,5 +9,6 @@ namespace GameMain
         {
             return Instantiate(template);
         }
+
     }
 }

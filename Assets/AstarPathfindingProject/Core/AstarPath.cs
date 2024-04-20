@@ -583,7 +583,7 @@ public class AstarPath : VersionedMonoBehaviour {
 	readonly GraphUpdateProcessor graphUpdates;
 
 	/// <summary>Holds a hierarchical graph to speed up some queries like if there is a path between two nodes</summary>
-	internal readonly HierarchicalGraph hierarchicalGraph = new HierarchicalGraph();
+	public readonly HierarchicalGraph hierarchicalGraph = new HierarchicalGraph();
 
 	/// <summary>
 	/// Handles navmesh cuts.
