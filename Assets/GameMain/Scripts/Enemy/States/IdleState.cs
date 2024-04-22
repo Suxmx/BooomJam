@@ -3,7 +3,7 @@ using UnityGameFramework.Runtime;
 
 namespace GameMain.States
 {
-    public class IdleState : FsmState<Enemy>
+    public class IdleState : EnemyState
     {
         protected override void OnEnter(IFsm<Enemy> fsm)
         {
@@ -23,6 +23,9 @@ namespace GameMain.States
             base.OnLeave(fsm, isShutdown);
         }
 
-        
+        public override void OnHurt(IFsm<Enemy> fsm)
+        {
+            ChangeState<HurtState>(fsm);
+        }
     }
 }
