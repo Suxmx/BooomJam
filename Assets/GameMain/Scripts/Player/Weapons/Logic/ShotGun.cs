@@ -11,8 +11,8 @@ namespace GameMain
 {
     public class ShotGun : WeaponBase, IHasObjectPool
     {
-        protected int m_MinBulletNumPerFire;
-        protected int m_MaxBulletNumPerFire;
+        protected float[] m_BulletChargePercentList;
+        protected int[] m_BulletNumPerFireList;
         protected float m_BulletIntervalAngle;
         protected float m_MaxScaleFactor;
         protected float m_MinRecoilValue;
@@ -27,8 +27,13 @@ namespace GameMain
             Damage = data.Damage;
             m_FireCountdownTimer = new CountdownTimer();
             m_FireCountdownTimer.Initialize(data.FireInterval);
-            m_MinBulletNumPerFire = data.MinBulletNumPerFire;
-            m_MaxBulletNumPerFire = data.MaxBulletNumPerFire;
+            m_BulletNumPerFireList = new int[4];
+            m_BulletChargePercentList = new float[4];
+            for (int i = 0; i < 4; i++)
+            {
+                m_BulletNumPerFireList[i] = data.BulletNumPerFireList[i];
+                m_BulletChargePercentList[i] = data.BulletChargePercentList[i];
+            }
             m_BulletIntervalAngle = data.BulletIntervalAngle;
             m_BulletRandomAngle = data.BulletRandomAngle;
             m_BulletSpeed = data.BulletSpeed;
@@ -51,9 +56,9 @@ namespace GameMain
             if(hudTrans)
             {
                 m_ChargeHUD = hudTrans.GetComponentInChildren<ShotGunHUD>();
-                float minAngle = (m_MinBulletNumPerFire - 1) * m_BulletIntervalAngle;
-                float maxAngle = (m_MaxBulletNumPerFire - 1) * m_BulletIntervalAngle;
-                ((ShotGunHUD)m_ChargeHUD).Init(minAngle,maxAngle,m_Muzzle.position);
+                float minAngle = (m_BulletNumPerFireList[0] - 1) * m_BulletIntervalAngle;
+                float maxAngle = (m_BulletNumPerFireList[3] - 1) * m_BulletIntervalAngle;
+                ((ShotGunHUD)m_ChargeHUD).Init(minAngle,maxAngle,m_BulletChargePercentList,m_Muzzle.position);
             }
         }
 
@@ -72,19 +77,25 @@ namespace GameMain
             float randomFireAngle = Random.Range(-m_BulletRandomAngle / 2, m_BulletRandomAngle / 2);
             Vector2 fireDirection = Quaternion.AngleAxis(randomFireAngle, Vector3.forward) * m_FireDirection;
             //计算蓄力影响
-            int bulletNum;
+            int bulletNum=0;
             float scaleFactor;
             float RecoilValue;
             if (chargeTime >= m_MaxChargeTime)
             {
-                bulletNum = m_MaxBulletNumPerFire;
+                bulletNum = m_BulletNumPerFireList[3];
                 scaleFactor = m_MaxScaleFactor;
                 RecoilValue = m_MaxRecoilValue;
             }
             else
             {
-                bulletNum = (int)(m_MinBulletNumPerFire +
-                                  (m_MaxBulletNumPerFire - m_MinBulletNumPerFire) * GetChargePercent());
+                for (int i = 3; i >= 0; i--)
+                {
+                    if (GetChargePercent() >= m_BulletChargePercentList[i])
+                    {
+                        bulletNum = m_BulletNumPerFireList[i];
+                        break;
+                    }
+                }
                 scaleFactor = 1 + (m_MaxScaleFactor - 1) * GetChargePercent();
                 RecoilValue = (m_MinRecoilValue + 
                                   (m_MaxRecoilValue - m_MinRecoilValue ) * GetChargePercent());

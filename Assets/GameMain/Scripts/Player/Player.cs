@@ -164,14 +164,14 @@ namespace GameMain
             for (int i = 1; i <= 2; i++)
             {
                 SafeTranslate(-data.FireDirection / 2 * data.RecoilValue);
-                SafeTranslate(Vector3.up/20 * data.Jump);
+                SafeTranslate(Vector3.up/20 * 0.5f);
                 yield return new WaitForFixedUpdate();
             }
             
             for (int i = 1; i <= 6; i++)
             {   
                 SafeTranslate(-data.FireDirection / 6 * data.RecoilValue);
-                SafeTranslate(Vector3.up / 60 * data.Jump);
+                SafeTranslate(Vector3.up / 60 * 0.5f);
                 yield return new WaitForFixedUpdate();
             }
         }

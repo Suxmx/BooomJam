@@ -8,32 +8,39 @@ namespace GameMain
         public override float ChargePercent
         {
             get => m_HUDImage.fillAmount;
-            set
-            {
-                m_HUDImage.fillAmount = value;
-                
-            }
+            set { m_HUDImage.fillAmount = value; }
         }
 
         protected float m_MinAngle;
         protected float m_MaxAngle;
+        protected float[] m_ChargePercentList;
+
+        protected Color[] m_ChargeColorList = new[]
+        {
+            new Color(0, 1, 0, 0.15f), new Color(0.33f, 0.66f, 0, 0.15f),
+            new Color(0.66f, 0.33f, 0, 0.15f), new Color(1, 0, 0, 0.15f)
+        };
 
         public override void Charge(float percent)
         {
-            if (Mathf.Abs(percent - 1) < 1e-5)
-            {
-                m_HUDImage.color = new Color(0, 1, 0, 0.15f);
-            }
+            for (int i = 3; i >= 0; i--)
+                if (percent > m_ChargePercentList[i])
+                {
+                    m_HUDImage.color = m_ChargeColorList[i];
+                    break;
+                }
+
             percent = (m_MinAngle + (m_MaxAngle - m_MinAngle) * percent) / 360f;
-            
+
             ChargePercent = percent;
         }
 
-        public void Init(float min, float max, Vector2 muzzle)
+        public void Init(float min, float max, float[] chargePercentList, Vector2 muzzle)
         {
             m_HUDImage = GetComponent<Image>();
             m_MinAngle = min;
             m_MaxAngle = max;
+            m_ChargePercentList = chargePercentList;
             transform.position = muzzle;
             Hide();
         }

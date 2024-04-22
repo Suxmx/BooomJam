@@ -7,6 +7,7 @@ namespace GameMain
     public abstract class WeaponHUD : MonoBehaviour
     {
         protected Image m_HUDImage;
+        protected Color m_InitColor=new Color(0, 1, 0, 0.15f);
 
         protected virtual void Awake()
         {
@@ -36,7 +37,7 @@ namespace GameMain
         public void Hide()
         {
             m_HUDImage.gameObject.SetActive(false);
-            m_HUDImage.color = new Color(1, 0, 0, 0.15f);
+            m_HUDImage.color = m_InitColor;
         }
         
 

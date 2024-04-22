@@ -46,6 +46,7 @@ namespace GameMain
         public Action<object> RecycleAction { get; set; }
         public void RecycleSelf()
         {
+            RecycleAction(this);
             GameEntry.Fsm.DestroyFsm(m_Fsm);
         }
 
@@ -94,6 +95,11 @@ namespace GameMain
         {
             // Log.Info( m_Animator.GetCurrentAnimatorStateInfo(0).);
             return m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+        }
+
+        public void OnDie()
+        {
+            RecycleSelf();
         }
 
     }
