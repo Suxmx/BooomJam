@@ -711,6 +711,7 @@ GameObject:
   - component: {fileID: 7926119648953733182}
   - component: {fileID: 4335549789564847749}
   - component: {fileID: 311111204489180970}
+  - component: {fileID: 7654551422890431300}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -771,11 +772,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1454350623
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 11f3fc0b50877644fac8f94afdb16637, type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Color: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -803,6 +804,22 @@ MonoBehaviour:
   directionY: 6
   player: {fileID: 5755636683420172595, guid: a7237355af44b184a81e842d5684ceec, type: 3}
   spriteRenderer: {fileID: 4335549789564847749}
+--- !u!58 &7654551422890431300
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903315314280413473}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &6055436872046807465
 GameObject:
   m_ObjectHideFlags: 0
