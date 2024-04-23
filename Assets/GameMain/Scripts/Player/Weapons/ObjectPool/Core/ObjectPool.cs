@@ -53,7 +53,9 @@ namespace GameMain
             else
             {
                 obj = ReferencePool.Acquire<T1>();
-                target = m_Owner.CreateObject().AddComponent<T2>();
+                GameObject go  = m_Owner.CreateObject();
+                if (!go.TryGetComponent<T2>(out target))
+                    target = go.AddComponent<T2>();
                 target.transform.SetParent(m_TargetsTransform);
                 obj.SetTarget(target);
                 m_Pool.Register(obj, true);

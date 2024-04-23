@@ -17,6 +17,7 @@ namespace GameMain
         protected CharacterStatusInfo m_StatusInfo;
         protected Animator m_Animator;
         protected Rigidbody2D m_Rigidbody;
+        protected bool recycled=false;
 
         protected Player player => GameBase.Instance.GetPlayer();
         public float m_IdleDist = 1;
@@ -24,35 +25,33 @@ namespace GameMain
 
         public void OnInit(object userData)
         {
-        }
-
-        private void Awake()
-        {
             //TODO:用EnemyData读取数据
             m_StatusInfo = new CharacterStatusInfo(10, 2);
             m_AIPath = GetComponent<AIPath>();
             m_Animator = GetComponent<Animator>();
             m_AIDestinationSetter = GetComponent<AIDestinationSetter>();
             m_AIPath.maxSpeed = m_StatusInfo.MoveSpeed;
-            DisableAIPath();
-            PlayAnim("TestSpawn");
-            // m_States = new List<FsmState<Enemy>>() { new IdleState(), new TrackState(),new HurtState() };
-        }
-
-        private void Start()
-        {
-            SetAIPathTarget(GameBase.Instance.GetPlayer().transform);
+            Debug.Log("init");
         }
 
         public void OnShow(object userData)
         {
+            SetAIPathTarget(GameBase.Instance.GetPlayer().transform);
+            DisableAIPath();
+            PlayAnim("TestSpawn");
+            recycled = false;
         }
 
         public Action<object> RecycleAction { get; set; }
 
         public void RecycleSelf()
         {
-            RecycleAction(this);
+            if (!recycled)
+            {
+                recycled = true;
+                gameObject.SetActive(false);
+                RecycleAction(this);
+            }
         }
 
         /// <summary>
@@ -60,6 +59,7 @@ namespace GameMain
         /// </summary>
         public void EnableAIPath()
         {
+            // m_AIPath = GetComponent<AIPath>();
             m_AIPath.enabled = true;
         }
 
@@ -78,8 +78,8 @@ namespace GameMain
 
         public void OnDead()
         {
-            // RecycleSelf();
-            Destroy(gameObject);
+            RecycleSelf();
+            // Destroy(gameObject);
         }
 
         public void OnAttacked(AttackData data)
@@ -121,6 +121,7 @@ namespace GameMain
                 transform.Translate(direction / 6 * 0.8f);
                 yield return new WaitForFixedUpdate();
             }
+
             EnableAIPath();
         }
     }

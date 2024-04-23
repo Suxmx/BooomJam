@@ -13,6 +13,7 @@ namespace GameMain
         protected float m_AliveTime;
         protected float m_AliveTimer;
         protected Vector3 m_OriginalScale;
+        private bool recycled = false;
 
         public virtual void OnInit(object userData)
         {
@@ -31,6 +32,7 @@ namespace GameMain
             transform.localScale = m_OriginalScale * data.ScaleFactor;
             
             transform.right = m_Direction;
+            recycled = false;
         }
 
         protected virtual void Update()
@@ -65,9 +67,12 @@ namespace GameMain
 
         public virtual void RecycleSelf()
         {
-            RecycleAction(this);
+            if (recycled) return;
+            recycled = true;
             m_AliveTimer = 0;
             gameObject.SetActive(false);
+            RecycleAction(this);
+            
         }
     }
 }
