@@ -1,14 +1,14 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using GameFramework.Fsm;
-using GameMain.States;
 using Pathfinding;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
 namespace GameMain
 {
-    public class Enemy : MonoBehaviour, IAttackable//,IMyObject
+    public class Enemy : MonoBehaviour, IAttackable, IMyObject
     {
         protected IFsm<Enemy> m_Fsm;
         protected List<FsmState<Enemy>> m_States;
@@ -17,37 +17,42 @@ namespace GameMain
         protected CharacterStatusInfo m_StatusInfo;
         protected Animator m_Animator;
         protected Rigidbody2D m_Rigidbody;
-        
+
         protected Player player => GameBase.Instance.GetPlayer();
         public float m_IdleDist = 1;
         public float m_TrackDist = 3;
-        
-        // public void OnInit(object userData)
+
+        public void OnInit(object userData)
+        {
+        }
+
         private void Awake()
         {
             //TODO:用EnemyData读取数据
-            m_StatusInfo = new CharacterStatusInfo(10, 4);
+            m_StatusInfo = new CharacterStatusInfo(10, 2);
             m_AIPath = GetComponent<AIPath>();
-            m_Animator = transform.Find("Animator").GetComponent<Animator>();
+            m_Animator = GetComponent<Animator>();
             m_AIDestinationSetter = GetComponent<AIDestinationSetter>();
             m_AIPath.maxSpeed = m_StatusInfo.MoveSpeed;
-
-            m_States = new List<FsmState<Enemy>>() { new IdleState(), new TrackState(),new HurtState() };
+            DisableAIPath();
+            PlayAnim("TestSpawn");
+            // m_States = new List<FsmState<Enemy>>() { new IdleState(), new TrackState(),new HurtState() };
         }
 
-       
-
-        // public void OnShow(object userData)
         private void Start()
         {
-            m_Fsm = GameEntry.Fsm.CreateFsm<Enemy>(FsmUtility.GetFsmName<Enemy>(), this, m_States);
-            m_Fsm.Start<TrackState>();
+            SetAIPathTarget(GameBase.Instance.GetPlayer().transform);
         }
+
+        public void OnShow(object userData)
+        {
+        }
+
         public Action<object> RecycleAction { get; set; }
+
         public void RecycleSelf()
         {
             RecycleAction(this);
-            GameEntry.Fsm.DestroyFsm(m_Fsm);
         }
 
         /// <summary>
@@ -73,17 +78,13 @@ namespace GameMain
 
         public void OnDead()
         {
-        }
-
-        public float CalculatePlayerDist()
-        {
-            return Vector2.Distance(player.transform.position, transform.position);
+            // RecycleSelf();
+            Destroy(gameObject);
         }
 
         public void OnAttacked(AttackData data)
         {
-            m_StatusInfo.Hp -= data.Damage;
-            ((EnemyState)(m_Fsm.CurrentState)).OnHurt(m_Fsm);
+            OnDead();
         }
 
         public void PlayAnim(string animName)
@@ -91,16 +92,36 @@ namespace GameMain
             m_Animator.Play(animName);
         }
 
-        public float GetAnimTime()
+        public void GetBeaten(Vector2 force)
         {
-            // Log.Info( m_Animator.GetCurrentAnimatorStateInfo(0).);
-            return m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+            DisableAIPath();
+            StartCoroutine(Recoil(force));
         }
 
-        public void OnDie()
+        private void OnCollisionEnter2D(Collision2D other)
         {
-            RecycleSelf();
+            if (other.gameObject.CompareTag("Player"))
+            {
+                other.gameObject.GetComponent<IAttackable>()
+                    .OnAttacked(new AttackData(1, transform.position - other.transform.position));
+            }
         }
 
+        IEnumerator Recoil(Vector2 direction)
+        {
+            transform.right = Vector2.right;
+            for (int i = 1; i <= 2; i++)
+            {
+                transform.Translate(direction / 2 * 0.8f);
+                yield return new WaitForFixedUpdate();
+            }
+
+            for (int i = 1; i <= 6; i++)
+            {
+                transform.Translate(direction / 6 * 0.8f);
+                yield return new WaitForFixedUpdate();
+            }
+            EnableAIPath();
+        }
     }
 }

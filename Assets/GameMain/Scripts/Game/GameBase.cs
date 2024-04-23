@@ -187,7 +187,7 @@ namespace GameMain
             if (ne.EntityLogicType == typeof(Player))
             {
                 m_Player = (Player)ne.Entity.Logic;
-                vcam1.Follow = m_Player.transform;
+                // vcam1.Follow = m_Player.transform;
                 m_InitDict["Player"] = true;
             }
         }

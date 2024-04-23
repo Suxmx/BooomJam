@@ -10,7 +10,7 @@ using UnityGameFramework.Runtime;
 
 namespace GameMain
 {
-    public class Player : EntityLogic
+    public class Player : EntityLogic, IAttackable
     {
         private SpriteRenderer m_SpriteRenderer;
         private Rigidbody2D m_Rigidbody;
@@ -22,8 +22,15 @@ namespace GameMain
         private Image m_HpImage;
         private CountdownTimer m_InvincibleTimer;
         private CountdownTimer m_ChangeSceneTimer;
+        private Coroutine m_IRecoil;
+        public Lock m_InvincibleLock;
         private int m_CurrentWeaponIndex;
         private int m_ObstacleMask;
+
+        private bool Invincible
+        {
+            get { return !m_InvincibleLock.Unlocked; }
+        }
 
         private int m_WeaponToLoad;
         private bool m_Inited;
@@ -55,9 +62,18 @@ namespace GameMain
             m_InvincibleTimer = new CountdownTimer();
             m_ChangeSceneTimer = new CountdownTimer();
             m_ChangeSceneTimer.Initialize(data.ChangeSceneInterval);
-            m_InvincibleTimer.Initialize(data.InvincibleTime);
+            m_InvincibleTimer.Initialize(data.InvincibleTime, false);
+            m_InvincibleLock = new();
+            m_InvincibleLock.OnLock += () =>
+            {
+                transform.Find("PlayerImage").GetComponent<SpriteRenderer>().color = Color.yellow;
+            };
+            m_InvincibleLock.OnUnlock += () =>
+            {
+                transform.Find("PlayerImage").GetComponent<SpriteRenderer>().color = Color.red;
+            };
+            m_InvincibleTimer.OnComplete += () => { m_InvincibleLock--; };
             m_ChangeSceneTimer.ForceComplete();
-            m_InvincibleTimer.ForceComplete();
             m_Collider = GetComponent<CapsuleCollider2D>();
             m_ObstacleMask = LayerMask.GetMask("Ground");
         }
@@ -65,7 +81,7 @@ namespace GameMain
         protected void Update()
         {
             if (m_Inited == false || GameBase.Instance.Inited == false) return;
-            
+
             GetMoveInput();
             GetFireInput(Time.deltaTime);
         }
@@ -141,7 +157,7 @@ namespace GameMain
                 m_Weapons.Add((WeaponBase)ne.Entity.Logic);
                 m_WeaponToLoad--;
                 GameEntry.Entity.AttachEntity(ne.Entity, Entity, "Weapons");
-                ne.Entity.transform.position=Vector3.zero;
+                ne.Entity.transform.position = Vector3.zero;
                 if (m_CurrentWeapon == null)
                 {
                     m_CurrentWeaponIndex = 0;
@@ -156,20 +172,27 @@ namespace GameMain
                 }
             }
         }
-        
-        public IEnumerator Recoil(RecoilData data)
-        {      
-            var source = GetComponent<CinemachineImpulseSource>();
-            source.GenerateImpulse();
+
+        public void CauseRecoil(RecoilData data, CinemachineImpulseSource source = null)
+        {
+            if (m_IRecoil != null) StopCoroutine(m_IRecoil);
+            StartCoroutine(Recoil(data, source));
+        }
+
+        private IEnumerator Recoil(RecoilData data, CinemachineImpulseSource source = null)
+        {
+            // var source = GetComponent<CinemachineImpulseSource>();
+            if (source is not null)
+                source.GenerateImpulse();
             for (int i = 1; i <= 2; i++)
             {
                 SafeTranslate(-data.FireDirection / 2 * data.RecoilValue);
-                SafeTranslate(Vector3.up/20 * 0.5f);
+                SafeTranslate(Vector3.up / 20 * 0.5f);
                 yield return new WaitForFixedUpdate();
             }
-            
+
             for (int i = 1; i <= 6; i++)
-            {   
+            {
                 SafeTranslate(-data.FireDirection / 6 * data.RecoilValue);
                 SafeTranslate(Vector3.up / 60 * 0.5f);
                 yield return new WaitForFixedUpdate();
@@ -186,6 +209,24 @@ namespace GameMain
             {
                 transform.Translate(direction.normalized * m_Collider.size.x / 10);
             }
+        }
+
+        public void OnAttacked(AttackData data)
+        {
+            if (Invincible) return;
+            m_PlayerStatusInfo.Hp -= data.Damage;
+            m_InvincibleLock++;
+            m_InvincibleTimer.Restart();
+            Collider2D[] targetEnemies = Physics2D.OverlapCircleAll(transform.position,
+                1f, LayerMask.GetMask("Enemy"));
+            Debug.Log(targetEnemies.Length);
+            foreach (var e in targetEnemies)
+            {
+                e.GetComponent<Enemy>().GetBeaten((e.transform.position - transform.position).normalized);
+                
+            }
+
+            CauseRecoil(new RecoilData(data.AttackDirection, 0.2f, 0));
         }
     }
 }

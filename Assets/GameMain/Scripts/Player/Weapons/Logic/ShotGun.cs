@@ -1,4 +1,5 @@
-﻿using GameFramework.Event;
+﻿using Cinemachine;
+using GameFramework.Event;
 using GameFramework.ObjectPool;
 using GameFramework.Resource;
 using GameMain.Scripts.Player.Weapons.ObjectPool;
@@ -18,6 +19,7 @@ namespace GameMain
         protected float m_MinRecoilValue;
         protected float m_MaxRecoilValue;
         protected float m_Jump;
+        private CinemachineImpulseSource m_Source;
         protected ObjectPool<MyObjectBase, Bullet> m_BulletPool;
 
         protected override void OnInit(object userData)
@@ -60,7 +62,9 @@ namespace GameMain
                 float maxAngle = (m_BulletNumPerFireList[3] - 1) * m_BulletIntervalAngle;
                 ((ShotGunHUD)m_ChargeHUD).Init(minAngle,maxAngle,m_BulletChargePercentList,m_Muzzle.position);
             }
+            m_Source = GetComponent<CinemachineImpulseSource>();
         }
+        
 
         protected override void Update()
         {
@@ -126,7 +130,7 @@ namespace GameMain
             }
 
             var recoilData = new RecoilData(m_FireDirection, RecoilValue, m_Jump);
-            StartCoroutine(player.Recoil(recoilData));
+            player.CauseRecoil(recoilData,m_Source);
         }
 
         public GameObject CreateObject()

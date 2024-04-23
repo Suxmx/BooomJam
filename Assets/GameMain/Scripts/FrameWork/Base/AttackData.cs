@@ -1,21 +1,21 @@
-﻿namespace GameMain
+﻿using UnityEngine;
+
+namespace GameMain
 {
     public class AttackData
     {
-        protected int m_Damage;
+        public int Damage;
+        public Vector2 AttackDirection;
 
         public AttackData(int damage)
         {
-            m_Damage = damage;
+            Damage = damage;
         }
 
-        public int Damage
+        public AttackData(int damage, Vector2 attackDirection)
         {
-            get => m_Damage;
-            protected set
-            {
-                m_Damage = value;
-            }
+            Damage = damage;
+            AttackDirection = attackDirection.normalized;
         }
     }
 }
