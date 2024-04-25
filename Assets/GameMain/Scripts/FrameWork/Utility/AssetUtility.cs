@@ -30,7 +30,7 @@ namespace GameMain
             return Utility.Text.Format("Assets/GameMain/Scenes/{0}.unity", assetName);
         }
 
-        public static string GetEntityAsset(string assetName)
+        public static string GetPrefabAsset(string assetName)
         {
             return Utility.Text.Format("Assets/GameMain/Prefabs/{0}.prefab", assetName);
         }

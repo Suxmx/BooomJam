@@ -17,6 +17,7 @@ namespace GameMain
         protected CharacterStatusInfo m_StatusInfo;
         protected Animator m_Animator;
         protected Rigidbody2D m_Rigidbody;
+        protected bool spawnSuccess = false;
         protected bool recycled=false;
 
         protected Player player => GameBase.Instance.GetPlayer();
@@ -31,7 +32,6 @@ namespace GameMain
             m_Animator = GetComponent<Animator>();
             m_AIDestinationSetter = GetComponent<AIDestinationSetter>();
             m_AIPath.maxSpeed = m_StatusInfo.MoveSpeed;
-            Debug.Log("init");
         }
 
         public void OnShow(object userData)
@@ -39,6 +39,7 @@ namespace GameMain
             SetAIPathTarget(GameBase.Instance.GetPlayer().transform);
             DisableAIPath();
             PlayAnim("TestSpawn");
+            spawnSuccess = false;
             recycled = false;
         }
 
@@ -52,6 +53,12 @@ namespace GameMain
                 gameObject.SetActive(false);
                 RecycleAction(this);
             }
+        }
+
+        public void OnSpawnSuccess()
+        {
+            spawnSuccess = true;
+            EnableAIPath();
         }
 
         /// <summary>
@@ -78,6 +85,7 @@ namespace GameMain
 
         public void OnDead()
         {
+            if (!spawnSuccess) return;
             RecycleSelf();
             // Destroy(gameObject);
         }

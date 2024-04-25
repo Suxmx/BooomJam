@@ -16,9 +16,8 @@ namespace GameMain
         protected float m_MinRandomAngle;
         protected ObjectPool<MyObjectBase, Arrow> m_ArrowPool;
 
-        protected override void OnInit(object userData)
+        public override void Init(object userData)
         {
-            base.OnInit(userData);
             BowData data = (BowData)userData;
             Damage = data.Damage;
             m_FireCountdownTimer = new CountdownTimer();
@@ -32,7 +31,7 @@ namespace GameMain
 
             m_Muzzle = transform.Find("Muzzle");
             m_ArrowPool = new ObjectPool<MyObjectBase, Arrow>(240, "BowArrowPool", this);
-            GameEntry.Resource.LoadAsset(AssetUtility.GetEntityAsset("Bullet"), typeof(GameObject), 100,
+            GameEntry.Resource.LoadAsset(AssetUtility.GetPrefabAsset("Bullet"), typeof(GameObject), 100,
                 new LoadAssetCallbacks(
                     (assetName, asset, duration, userData) => { m_BulletTemplate = (GameObject)asset; },
                     (assetName, asset, duration, userData) => { Log.Error("加载Arrow预制体失败!"); }

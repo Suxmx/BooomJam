@@ -12,7 +12,7 @@ namespace GameMain
 {
     public class ProcedurePreload : ProcedureBase
     {
-        private Dictionary<string, bool> m_LoadedFlag = new();
+        private Dictionary<string, bool> m_LoadedDataFlag = new();
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
@@ -21,24 +21,24 @@ namespace GameMain
             GameEntry.Event.Subscribe(LoadConfigFailureEventArgs.EventId, OnLoadConfigFailure);
             GameEntry.Event.Subscribe(LoadDataTableSuccessEventArgs.EventId, OnLoadDataTableSuccess);
             GameEntry.Event.Subscribe(LoadDataTableFailureEventArgs.EventId, OnLoadDataTableFailure);
-            Preload();
+            
+            PreloadData();
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
-            foreach (KeyValuePair<string, bool> loadedFlag in m_LoadedFlag)
+            foreach (KeyValuePair<string, bool> loadedFlag in m_LoadedDataFlag)
             {
                 if (!loadedFlag.Value)
                 {
-                    Log.Info(loadedFlag.Key);
                     return;
                 }
             }
 
-            Log.Info("Load Complete");
+            Log.Info("Load Datas Complete");
             procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Main"));
-            ChangeState<ProcedureChangeScene>(procedureOwner);
+            ChangeState<ProcedurePreloadMainGame>(procedureOwner);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -52,7 +52,7 @@ namespace GameMain
             
         }
 
-        private void Preload()
+        private void PreloadData()
         {
             LoadConfig("DefaultConfig");
             LoadDataTable("Scene");
@@ -65,7 +65,7 @@ namespace GameMain
         private void LoadConfig(string configAssetName)
         {
             configAssetName = AssetUtility.GetConfigAsset(configAssetName);
-            m_LoadedFlag.Add(configAssetName, false);
+            m_LoadedDataFlag.Add(configAssetName, false);
             GameEntry.Config.ReadData(configAssetName, this);
         }
 
@@ -77,7 +77,7 @@ namespace GameMain
                 return;
             }
 
-            m_LoadedFlag[ne.ConfigAssetName] = true;
+            m_LoadedDataFlag[ne.ConfigAssetName] = true;
             Log.Info("Load config '{0}' OK.", ne.ConfigAssetName);
         }
 
@@ -96,7 +96,7 @@ namespace GameMain
         private void LoadDataTable(string dataTableName)
         {
             string dataTableAssetName = AssetUtility.GetDataTableAsset(dataTableName);
-            m_LoadedFlag.Add(dataTableAssetName, false);
+            m_LoadedDataFlag.Add(dataTableAssetName, false);
             GameEntry.DataTable.LoadDataTable(dataTableName, dataTableAssetName, this);
         }
 
@@ -108,7 +108,7 @@ namespace GameMain
                 return;
             }
 
-            m_LoadedFlag[ne.DataTableAssetName] = true;
+            m_LoadedDataFlag[ne.DataTableAssetName] = true;
             Log.Info("Load data table '{0}' OK.", ne.DataTableAssetName);
         }
 

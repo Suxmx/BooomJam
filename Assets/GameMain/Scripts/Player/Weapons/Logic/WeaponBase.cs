@@ -7,7 +7,7 @@ using ObjectBase = GameFramework.ObjectPool.ObjectBase;
 
 namespace GameMain
 {
-    public abstract class WeaponBase : EntityLogic
+    public abstract class WeaponBase : MonoBehaviour
     {
         public int Damage { get; protected set; }
 
@@ -22,11 +22,12 @@ namespace GameMain
         protected WeaponHUD m_ChargeHUD;
         protected CountdownTimer m_FireCountdownTimer;
 
-        protected override void OnInit(object userData)
+        private void Awake()
         {
-            base.OnInit(userData);
             m_OriginalScale = transform.localScale;
         }
+
+        public abstract void Init(object userData);
 
         public void Fire(Player player)
         {
@@ -38,11 +39,6 @@ namespace GameMain
         protected  virtual void Update()
         {
             ChangeDirection();
-        }
-
-        protected void LateUpdate()
-        {
-            
         }
 
         public void ChangeDirection()
@@ -78,10 +74,10 @@ namespace GameMain
             else return m_ChargeTime / m_MaxChargeTime;
         }
 
-        protected override void OnHide(bool isShutdown, object userData)
+        private void OnDestroy()
         {
-            base.OnHide(isShutdown, userData);
             m_FireCountdownTimer.Paused = true;
         }
+        
     }
 }

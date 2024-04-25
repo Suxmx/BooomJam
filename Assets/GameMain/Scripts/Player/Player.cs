@@ -10,7 +10,7 @@ using UnityGameFramework.Runtime;
 
 namespace GameMain
 {
-    public class Player : EntityLogic, IAttackable
+    public class Player : MonoBehaviour, IAttackable
     {
         private SpriteRenderer m_SpriteRenderer;
         private Rigidbody2D m_Rigidbody;
@@ -23,9 +23,11 @@ namespace GameMain
         private CountdownTimer m_InvincibleTimer;
         private CountdownTimer m_ChangeSceneTimer;
         private Coroutine m_IRecoil;
+        private Coroutine m_IMoveTowards;
         public Lock m_InvincibleLock;
         private int m_CurrentWeaponIndex;
         private int m_ObstacleMask;
+        public bool m_IsMovingToward = false;
 
         private bool Invincible
         {
@@ -37,17 +39,23 @@ namespace GameMain
 
         private float m_MoveSpeed => m_PlayerStatusInfo.MoveSpeed;
 
-        protected override void OnInit(object userData)
+        public void Init(PlayerData data)
         {
-            base.OnInit(userData);
-            PlayerData data = (PlayerData)userData;
             m_PlayerStatusInfo = new PlayerStatusInfo(data.MaxHp, data.MoveSpeed);
             m_WeaponToLoad = data.WeaponsDatas.Count;
             m_Weapons = new List<WeaponBase>();
-            GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowWeaponSuccess);
             foreach (var weapon in data.WeaponsDatas)
             {
-                GameEntry.Entity.ShowWeapon(weapon);
+                var obj = Instantiate(weapon.WeaponPrefab, transform, true);
+                var weaponBase = obj.GetComponent<WeaponBase>();
+                weaponBase.Init(weapon);
+                m_Weapons.Add(weaponBase);
+                if (m_CurrentWeapon == null)
+                {
+                    m_CurrentWeaponIndex = 0;
+                    m_CurrentWeapon = weaponBase;
+                }
+                else obj.SetActive(false);
             }
 
             m_Rigidbody = GetComponent<Rigidbody2D>();
@@ -78,10 +86,9 @@ namespace GameMain
             m_ObstacleMask = LayerMask.GetMask("Ground");
         }
 
+
         protected void Update()
         {
-            if (m_Inited == false || GameBase.Instance.Inited == false) return;
-
             GetMoveInput();
             GetFireInput(Time.deltaTime);
         }
@@ -92,10 +99,10 @@ namespace GameMain
             int cache = m_CurrentWeaponIndex;
             m_CurrentWeaponIndex = m_CurrentWeaponIndex - 1 >= 0 ? m_CurrentWeaponIndex - 1 : m_Weapons.Count - 1;
 
-            m_Weapons[cache].Entity.Logic.Visible = false;
+            m_Weapons[cache].gameObject.SetActive(false);
             m_CurrentWeapon = m_Weapons[m_CurrentWeaponIndex];
             m_CurrentWeapon.ChangeDirection();
-            m_CurrentWeapon.Entity.Logic.Visible = true;
+            m_CurrentWeapon.gameObject.SetActive(true);
         }
 
         public bool CanChangeWeapon()
@@ -146,31 +153,31 @@ namespace GameMain
 
         public void Teleport(Vector2 position)
         {
-            transform.position = position;
+            // transf(position);
+            // transform.position = position;
+            if (m_IMoveTowards is not null)
+            {
+                StopCoroutine(m_IMoveTowards);
+                if (m_IsMovingToward)
+                    m_InvincibleLock--;
+            }
+
+            m_IMoveTowards = StartCoroutine(MoveToPosition(position));
         }
 
-        private void OnShowWeaponSuccess(object sender, GameEventArgs e)
+        IEnumerator MoveToPosition(Vector2 target)
         {
-            ShowEntitySuccessEventArgs ne = (ShowEntitySuccessEventArgs)e;
-            if (ne.EntityLogicType.IsSubclassOf(typeof(WeaponBase)))
+            int count = 0;
+            m_IsMovingToward = true;
+            m_InvincibleLock++;
+            while (Vector2.Distance(transform.position, target) > 1e-3f && count++ < 20)
             {
-                m_Weapons.Add((WeaponBase)ne.Entity.Logic);
-                m_WeaponToLoad--;
-                GameEntry.Entity.AttachEntity(ne.Entity, Entity, "Weapons");
-                ne.Entity.transform.position = Vector3.zero;
-                if (m_CurrentWeapon == null)
-                {
-                    m_CurrentWeaponIndex = 0;
-                    m_CurrentWeapon = (WeaponBase)ne.Entity.Logic;
-                }
-                else ne.Entity.Logic.Visible = false;
-
-                if (m_WeaponToLoad == 0)
-                {
-                    m_Inited = true;
-                    GameEntry.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowWeaponSuccess);
-                }
+                transform.position = Vector2.MoveTowards(transform.position, target, 1);
+                yield return new WaitForFixedUpdate();
             }
+
+            m_IsMovingToward = false;
+            m_InvincibleLock--;
         }
 
         public void CauseRecoil(RecoilData data, CinemachineImpulseSource source = null)
@@ -218,12 +225,10 @@ namespace GameMain
             m_InvincibleLock++;
             m_InvincibleTimer.Restart();
             Collider2D[] targetEnemies = Physics2D.OverlapCircleAll(transform.position,
-                1f, LayerMask.GetMask("Enemy"));
-            Debug.Log(targetEnemies.Length);
+                2f, LayerMask.GetMask("Enemy"));
             foreach (var e in targetEnemies)
             {
                 e.GetComponent<Enemy>().GetBeaten((e.transform.position - transform.position).normalized);
-                
             }
 
             CauseRecoil(new RecoilData(data.AttackDirection, 0.2f, 0));

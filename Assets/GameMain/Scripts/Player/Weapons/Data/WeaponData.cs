@@ -1,29 +1,19 @@
 ﻿using System;
+using UnityEngine;
 
 namespace GameMain
 {
     /// <summary>
     /// 在游戏流程中打包给武器的数据包
     /// </summary>
-    public abstract class WeaponData : EntityData
+    public abstract class WeaponData
     {
+        public string name;
         public int Damage;
         public float FireInterval;
         public float MaxChargeTime;
-        public Type LogicType;
+        public GameObject WeaponPrefab;
 
-        public WeaponData(int entityId, int typeId, int damage, float fireInterval, Type logicType) : base(entityId,
-            typeId)
-        {
-            Damage = damage;
-            FireInterval = fireInterval;
-            LogicType = logicType;
-        }
-
-        public WeaponData(int entityId, int typeId, DRWeapon drWeapon) : base(entityId, typeId)
-        {
-            LogicType = drWeapon.LogicType;
-        }
     }
 
     public static class WeaponFactory
@@ -32,11 +22,11 @@ namespace GameMain
         {
             if (drWeapon.LogicType == typeof(ShotGun))
             {
-                return new ShotGunData(GameEntry.Entity.GenerateSerialId(), (int)EWeapon.ShotGun, drWeapon);
+                return new ShotGunData(drWeapon);
             }
             else //BOW
             {
-                return new BowData(GameEntry.Entity.GenerateSerialId(), (int)EWeapon.Bow, drWeapon);
+                return new BowData(drWeapon);
             }
         }
     }

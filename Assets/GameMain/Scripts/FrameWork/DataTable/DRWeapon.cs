@@ -9,6 +9,11 @@ namespace GameMain
     /// </summary>
     public class DRWeapon : DataRowBase
     {
+        public static Dictionary<string, int> WeaponName2Id = new Dictionary<string, int>()
+        {
+            {"ShotGun",(int)EWeapon.ShotGun},
+            {"Bow",(int)EWeapon.Bow}
+        };
         private int m_Id = 0;
 
         public override int Id

@@ -15,7 +15,8 @@ namespace GameMain
         {
             base.OnEnter(procedureOwner);
             m_GameBase = new GameBase(GameMode.Level, 0);
-            m_GameBase.Init();
+            object data = procedureOwner.GetData<VarObject>("GameData").Value;
+            m_GameBase.Init((GameBaseData)data);
             GameBase.Instance = m_GameBase;
         }
 

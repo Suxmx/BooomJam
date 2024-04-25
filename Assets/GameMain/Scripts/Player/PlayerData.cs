@@ -2,7 +2,7 @@
 
 namespace GameMain
 {
-    public class PlayerData : EntityData
+    public class PlayerData
     {
         public int MaxHp;
         public int Damage;
@@ -11,7 +11,7 @@ namespace GameMain
         public float InvincibleTime = 0.3f;
         public List<WeaponData> WeaponsDatas;
         
-        public PlayerData(int entityId, int typeId, int maxHp, int damage, float moveSpeed,float changeSceneInterval, List<WeaponData> weaponsDatas) : base(entityId, typeId)
+        public PlayerData(int maxHp, int damage, float moveSpeed,float changeSceneInterval, List<WeaponData> weaponsDatas)
         {
             MaxHp = maxHp;
             Damage = damage;

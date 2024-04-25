@@ -8,8 +8,9 @@
         public float MinRandomAngle;
         public float BulletSpeed;
         
-        public BowData(int entityId, int typeId, DRWeapon drWeapon) : base(entityId, typeId, drWeapon)
+        public BowData(DRWeapon drWeapon)
         {
+            name = "Bow";
             Damage = drWeapon.IntParams[0];
             MaxChargeTime = drWeapon.FloatParams[0];
             FireInterval = drWeapon.FloatParams[1];

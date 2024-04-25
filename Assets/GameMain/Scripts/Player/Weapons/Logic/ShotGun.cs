@@ -22,9 +22,8 @@ namespace GameMain
         private CinemachineImpulseSource m_Source;
         protected ObjectPool<MyObjectBase, Bullet> m_BulletPool;
 
-        protected override void OnInit(object userData)
+        public override void Init(object userData)
         {
-            base.OnInit(userData);
             ShotGunData data = (ShotGunData)userData;
             Damage = data.Damage;
             m_FireCountdownTimer = new CountdownTimer();
@@ -45,7 +44,7 @@ namespace GameMain
             m_MaxRecoilValue = data.MaxRecoilValue;
             m_Jump = data.Jump;
             
-            GameEntry.Resource.LoadAsset(AssetUtility.GetEntityAsset("Bullet"), typeof(GameObject), 100,
+            GameEntry.Resource.LoadAsset(AssetUtility.GetPrefabAsset("Bullet"), typeof(GameObject), 100,
                 new LoadAssetCallbacks(
                     (assetName, asset, duration, userData) => { m_BulletTemplate = (GameObject)asset; },
                     (assetName, asset, duration, userData) => { Log.Error("加载Bullet预制体失败!"); }

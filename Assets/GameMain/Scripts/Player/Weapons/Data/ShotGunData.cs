@@ -16,8 +16,9 @@ namespace GameMain
         public float MaxRecoilValue;
         public float Jump;
         
-        public ShotGunData(int entityId, int typeId, DRWeapon drWeapon) : base(entityId, typeId, drWeapon)
+        public ShotGunData(DRWeapon drWeapon)
         {
+            name = "ShotGun";
             BulletNumPerFireList = new int[4];
             BulletChargePercentList = new float[4];
             Damage = drWeapon.IntParams[0];
