@@ -31,12 +31,13 @@ namespace GameMain
 
             m_Muzzle = transform.Find("Muzzle");
             m_ArrowPool = new ObjectPool<MyObjectBase, Arrow>(240, "BowArrowPool", this);
-            GameEntry.Resource.LoadAsset(AssetUtility.GetPrefabAsset("Bullet"), typeof(GameObject), 100,
-                new LoadAssetCallbacks(
-                    (assetName, asset, duration, userData) => { m_BulletTemplate = (GameObject)asset; },
-                    (assetName, asset, duration, userData) => { Log.Error("加载Arrow预制体失败!"); }
-                )
-            );
+            // GameEntry.Resource.LoadAsset(AssetUtility.GetPrefabAsset("Bullet"), typeof(GameObject), 100,
+            //     new LoadAssetCallbacks(
+            //         (assetName, asset, duration, userData) => { m_BulletTemplate = (GameObject)asset; },
+            //         (assetName, asset, duration, userData) => { Log.Error("加载Arrow预制体失败!"); }
+            //     )
+            // );
+            m_BulletTemplate = data.BulletPrefab;
             var hudTrans = transform.Find("HUDCanvas");
             if (hudTrans)
             {

@@ -13,7 +13,8 @@ namespace GameMain
         public float FireInterval;
         public float MaxChargeTime;
         public GameObject WeaponPrefab;
-
+        public GameObject BulletPrefab;
+        public GameObject BulletExplodePrefab;
     }
 
     public static class WeaponFactory

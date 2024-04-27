@@ -18,7 +18,7 @@ namespace GameMain
 
     public class GameBaseData
     {
-        public Dictionary<string, GameObject> Prefabs=new();
+        public Dictionary<string, GameObject> Prefabs = new();
         public PlayerData PlayerData;
     }
 
@@ -40,9 +40,10 @@ namespace GameMain
 
         public GameMode GameMode { get; }
         public int Level { get; }
-        
+
         protected bool m_Inited;
         protected Player m_Player;
+        protected PublicObjectPool m_PublicObjectPool;
         protected List<GameScene> m_GameScenes;
         protected List<NavGraph> m_Graphs;
         protected int m_CurrentGameSceneIndex;
@@ -76,6 +77,9 @@ namespace GameMain
             m_Graphs[1] = m_AstarPath.graphs[1];
             scene2.SetActive(false);
             m_AstarPath.data.graphs = new[] { m_Graphs[0] };
+            //生成对象池
+            m_PublicObjectPool = Object.Instantiate(data.Prefabs["PublicObjectPool"]).GetComponent<PublicObjectPool>();
+            m_PublicObjectPool.RegisterTemplate("BulletExplode",data.Prefabs["BulletExplode"]);
         }
 
         #endregion
@@ -107,6 +111,11 @@ namespace GameMain
         public Player GetPlayer()
         {
             return m_Player;
+        }
+
+        public PublicObjectPool GetObjectPool()
+        {
+            return m_PublicObjectPool;
         }
     }
 }

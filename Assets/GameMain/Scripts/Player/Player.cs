@@ -12,7 +12,14 @@ namespace GameMain
 {
     public class Player : MonoBehaviour, IAttackable
     {
+        private enum EWeapon
+        {
+            ShotGun,
+            Bow
+        }
+
         private SpriteRenderer m_SpriteRenderer;
+        private Animator m_Animator;
         private Rigidbody2D m_Rigidbody;
         private Vector3 m_MoveDirection;
         private List<WeaponBase> m_Weapons;
@@ -24,6 +31,7 @@ namespace GameMain
         private CountdownTimer m_ChangeSceneTimer;
         private Coroutine m_IRecoil;
         private Coroutine m_IMoveTowards;
+        private EWeapon m_CurrentWeaponState=EWeapon.ShotGun;
         public Lock m_InvincibleLock;
         private int m_CurrentWeaponIndex;
         private int m_ObstacleMask;
@@ -46,7 +54,8 @@ namespace GameMain
             m_Weapons = new List<WeaponBase>();
             foreach (var weapon in data.WeaponsDatas)
             {
-                var obj = Instantiate(weapon.WeaponPrefab, transform, true);
+                var obj = Instantiate(weapon.WeaponPrefab, transform.Find("Weapons"), true);
+                obj.transform.localPosition = new Vector3(0, -0.261999995f, 0);
                 var weaponBase = obj.GetComponent<WeaponBase>();
                 weaponBase.Init(weapon);
                 m_Weapons.Add(weaponBase);
@@ -59,7 +68,8 @@ namespace GameMain
             }
 
             m_Rigidbody = GetComponent<Rigidbody2D>();
-            m_SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            m_SpriteRenderer = transform.Find("PlayerImage").GetComponent<SpriteRenderer>();
+            m_Animator = transform.Find("PlayerImage").GetComponent<Animator>();
             var hpObj = GameObject.Find("Hp");
             if (hpObj)
             {
@@ -78,7 +88,7 @@ namespace GameMain
             };
             m_InvincibleLock.OnUnlock += () =>
             {
-                transform.Find("PlayerImage").GetComponent<SpriteRenderer>().color = Color.red;
+                transform.Find("PlayerImage").GetComponent<SpriteRenderer>().color = Color.white;
             };
             m_InvincibleTimer.OnComplete += () => { m_InvincibleLock--; };
             m_ChangeSceneTimer.ForceComplete();
@@ -91,10 +101,13 @@ namespace GameMain
         {
             GetMoveInput();
             GetFireInput(Time.deltaTime);
+            Flip();
         }
 
         public void ChangeWeapon()
         {
+            m_CurrentWeaponState = m_CurrentWeaponState == EWeapon.ShotGun ? EWeapon.Bow : EWeapon.ShotGun;
+            PlayAnim(EPlayerAnim.Idle);
             m_ChangeSceneTimer.Restart();
             int cache = m_CurrentWeaponIndex;
             m_CurrentWeaponIndex = m_CurrentWeaponIndex - 1 >= 0 ? m_CurrentWeaponIndex - 1 : m_Weapons.Count - 1;
@@ -117,11 +130,17 @@ namespace GameMain
             m_MoveDirection = new Vector2(xDirection, yDirection);
             m_MoveDirection = m_MoveDirection.normalized;
             m_Rigidbody.velocity = m_MoveDirection * m_MoveSpeed;
-            int faceDirection = m_SpriteRenderer.flipX ? -1 : 1;
-            if ((xDirection < -0.1f && faceDirection == 1) || (xDirection > 0.1f && faceDirection == -1))
+        }
+
+        private void Flip()
+        {
+            float angle = m_CurrentWeapon.transform.eulerAngles.z;
+            if ((angle <= 90 && angle >= 0) || (angle >= 270 && angle <= 360))
             {
-                m_SpriteRenderer.flipX = !m_SpriteRenderer.flipX;
+                m_SpriteRenderer.flipX = false;
             }
+            else
+                m_SpriteRenderer.flipX = true;
         }
 
         private void GetFireInput(float deltaTime)
@@ -153,8 +172,6 @@ namespace GameMain
 
         public void Teleport(Vector2 position)
         {
-            // transf(position);
-            // transform.position = position;
             if (m_IMoveTowards is not null)
             {
                 StopCoroutine(m_IMoveTowards);
@@ -183,6 +200,7 @@ namespace GameMain
         public void CauseRecoil(RecoilData data, CinemachineImpulseSource source = null)
         {
             if (m_IRecoil != null) StopCoroutine(m_IRecoil);
+            PlayAnim(EPlayerAnim.Recoil);
             StartCoroutine(Recoil(data, source));
         }
 
@@ -203,6 +221,32 @@ namespace GameMain
                 SafeTranslate(-data.FireDirection / 6 * data.RecoilValue);
                 SafeTranslate(Vector3.up / 60 * 0.5f);
                 yield return new WaitForFixedUpdate();
+            }
+            PlayAnim(EPlayerAnim.RecoilToIdle);
+        }
+
+        private enum EPlayerAnim
+        {
+            Idle,
+            Recoil,
+            RecoilToIdle
+        }
+
+        private void PlayAnim(EPlayerAnim anim)
+        {
+            if (anim == EPlayerAnim.Idle)
+            {
+                string animName = m_CurrentWeaponState == EWeapon.ShotGun ? "ShotGunIdle" : "BowIdle";
+                m_Animator.Play(animName);
+            }
+            else if (anim == EPlayerAnim.RecoilToIdle)
+            {
+                string animName = m_CurrentWeaponState == EWeapon.ShotGun ? "ShotGunRecoilToIdle" : "BowRecoilToIdle";
+                m_Animator.Play(animName);
+            }
+            else if (anim == EPlayerAnim.Recoil)
+            {
+                m_Animator.Play("ShotGunRecoil");
             }
         }
 

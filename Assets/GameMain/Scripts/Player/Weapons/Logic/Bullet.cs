@@ -14,10 +14,12 @@ namespace GameMain
         protected float m_AliveTimer;
         protected Vector3 m_OriginalScale;
         private bool recycled = false;
+        protected PublicObjectPool m_PublicObjectPool;
 
         public virtual void OnInit(object userData)
         {
             m_OriginalScale = transform.localScale;
+            m_PublicObjectPool = GameBase.Instance.GetObjectPool();
         }
 
         public virtual void OnShow(object userData)
@@ -68,6 +70,8 @@ namespace GameMain
         public virtual void RecycleSelf()
         {
             if (recycled) return;
+            var explode=m_PublicObjectPool.Spawn("BulletExplode");
+            explode.transform.position = transform.position;
             recycled = true;
             m_AliveTimer = 0;
             gameObject.SetActive(false);

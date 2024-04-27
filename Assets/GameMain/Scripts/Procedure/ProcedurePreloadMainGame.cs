@@ -21,6 +21,7 @@ namespace GameMain
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
+            LoadPrefab(AssetUtility.GetPrefabAsset("PublicObjectPool"),"PublicObjectPool");
             LoadPlayer();
             LoadGameScene(0);
             LoadPathGraphScanner();
@@ -41,6 +42,8 @@ namespace GameMain
             foreach (var data in m_LoadedData.PlayerData.WeaponsDatas)
             {
                 data.WeaponPrefab = m_LoadedData.Prefabs[data.name];
+                data.BulletPrefab = m_LoadedData.Prefabs[data.name + "_Bullet"];
+                data.BulletExplodePrefab = m_LoadedData.Prefabs["BulletExplode"];
             }
 
             var tmp = new VarObject();
@@ -73,7 +76,7 @@ namespace GameMain
             LoadPrefab(AssetUtility.GetPrefabAsset("PathGraphScanner"), "PathGraphScanner");
         }
 
-        private void LoadPlayer()
+        private void LoadPlayer()   
         {
             //读取人物数据
             IDataTable<DRPlayer> dtPlayer = GameEntry.DataTable.GetDataTable<DRPlayer>();
@@ -86,6 +89,7 @@ namespace GameMain
                 DRWeapon drWeapon = dtWeapon.GetDataRow(DRWeapon.WeaponName2Id[name]);
                 weaponDatas.Add(WeaponFactory.GetWeaponData(drWeapon));
                 LoadPrefab(AssetUtility.GetPrefabAsset(name), name);
+                LoadPrefab(AssetUtility.GetPrefabAsset(name+"_Bullet"), name+"_Bullet");
             }
 
             //打包数据生成人物
@@ -93,6 +97,7 @@ namespace GameMain
                 drPlayer.MaxHp, drPlayer.Damage, drPlayer.MoveSpeed, drPlayer.ChangeSceneInterval, weaponDatas);
             m_LoadedData.PlayerData = playerData;
             LoadPrefab(AssetUtility.GetPrefabAsset("Player"), "Player");
+            LoadPrefab(AssetUtility.GetPrefabAsset("BulletExplode"),"BulletExplode");
         }
 
         private void LoadGameScene(int level)

@@ -19,6 +19,7 @@ namespace GameMain
         protected float m_MinRecoilValue;
         protected float m_MaxRecoilValue;
         protected float m_Jump;
+        private Animator m_Animator;
         private CinemachineImpulseSource m_Source;
         protected ObjectPool<MyObjectBase, Bullet> m_BulletPool;
 
@@ -44,14 +45,9 @@ namespace GameMain
             m_MaxRecoilValue = data.MaxRecoilValue;
             m_Jump = data.Jump;
             
-            GameEntry.Resource.LoadAsset(AssetUtility.GetPrefabAsset("Bullet"), typeof(GameObject), 100,
-                new LoadAssetCallbacks(
-                    (assetName, asset, duration, userData) => { m_BulletTemplate = (GameObject)asset; },
-                    (assetName, asset, duration, userData) => { Log.Error("加载Bullet预制体失败!"); }
-                )
-            );
-
+            m_BulletTemplate = data.BulletPrefab;
             m_Muzzle = transform.Find("Muzzle");
+            m_Animator = GetComponent<Animator>();
             m_BulletPool = new ObjectPool<MyObjectBase, Bullet>(240, "ShotgunBulletPool", this);
             var hudTrans = transform.Find("HUDCanvas");
             if(hudTrans)
@@ -65,17 +61,13 @@ namespace GameMain
         }
         
 
-        protected override void Update()
-        {
-            base.Update();
-        }
-
         public override void Fire(Player player, float chargeTime)
         {
             m_ChargeHUD.Hide();
             //重置开火间隔
             if (!m_FireCountdownTimer.Completed) return;
             m_FireCountdownTimer.Restart();
+            m_Animator.Play("ShotGunFire");
             //弹道随机偏移
             float randomFireAngle = Random.Range(-m_BulletRandomAngle / 2, m_BulletRandomAngle / 2);
             Vector2 fireDirection = Quaternion.AngleAxis(randomFireAngle, Vector3.forward) * m_FireDirection;

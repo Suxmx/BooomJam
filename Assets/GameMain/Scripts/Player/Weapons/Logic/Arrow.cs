@@ -6,6 +6,7 @@ namespace GameMain
     public class Arrow : Bullet
     {
         protected Player m_Player;
+
         public override void OnShow(object userData)
         {
             base.OnShow(userData);
@@ -33,6 +34,8 @@ namespace GameMain
 
         public override void RecycleSelf()
         {
+            var explode=m_PublicObjectPool.Spawn("BulletExplode");
+            explode.transform.position = transform.position;
             m_Player.Teleport(transform.position);
             base.RecycleSelf();
         }
