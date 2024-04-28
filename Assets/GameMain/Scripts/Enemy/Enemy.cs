@@ -38,7 +38,7 @@ namespace GameMain
         {
             SetAIPathTarget(GameBase.Instance.GetPlayer().transform);
             DisableAIPath();
-            PlayAnim("TestSpawn");
+            PlayAnim("Spawn");
             spawnSuccess = false;
             recycled = false;
         }
@@ -68,6 +68,7 @@ namespace GameMain
         {
             // m_AIPath = GetComponent<AIPath>();
             m_AIPath.enabled = true;
+            m_Animator.SetBool("Run",true);
         }
 
         /// <summary>
@@ -76,6 +77,7 @@ namespace GameMain
         public void DisableAIPath()
         {
             m_AIPath.enabled = false;
+            m_Animator.SetBool("Run",false);
         }
 
         public void SetAIPathTarget(Transform target)
@@ -86,6 +88,7 @@ namespace GameMain
         public void OnDead()
         {
             if (!spawnSuccess) return;
+            m_Animator.SetBool("Dead",false);
             RecycleSelf();
             // Destroy(gameObject);
         }
@@ -93,6 +96,7 @@ namespace GameMain
         public void OnAttacked(AttackData data)
         {
             OnDead();
+            m_Animator.SetBool("Dead",true);
         }
 
         public void PlayAnim(string animName)
