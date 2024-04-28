@@ -17,6 +17,7 @@ namespace GameMain
         protected CharacterStatusInfo m_StatusInfo;
         protected Animator m_Animator;
         protected Rigidbody2D m_Rigidbody;
+        protected SpriteRenderer m_SpriteRenderer;
         protected bool spawnSuccess = false;
         protected bool recycled=false;
 
@@ -24,7 +25,16 @@ namespace GameMain
         public float m_IdleDist = 1;
         public float m_TrackDist = 3;
 
-        public void OnInit(object userData)
+        private void Update()
+        {
+            if (m_AIPath.velocity.x>0)
+            {
+                m_SpriteRenderer.flipX = false;
+            }
+            else if(m_AIPath.velocity.x<0) m_SpriteRenderer.flipX = true;
+        }
+
+        public void OnInit(object userData) 
         {
             //TODO:用EnemyData读取数据
             m_StatusInfo = new CharacterStatusInfo(10, 2);
@@ -32,13 +42,15 @@ namespace GameMain
             m_Animator = GetComponent<Animator>();
             m_AIDestinationSetter = GetComponent<AIDestinationSetter>();
             m_AIPath.maxSpeed = m_StatusInfo.MoveSpeed;
+            m_SpriteRenderer = GetComponent<SpriteRenderer>();
+            m_Rigidbody = GetComponent<Rigidbody2D>();
         }
 
-        public void OnShow(object userData)
+        public virtual void OnShow(object userData)
         {
             SetAIPathTarget(GameBase.Instance.GetPlayer().transform);
             DisableAIPath();
-            PlayAnim("TestSpawn");
+            PlayAnim("Spawn");
             spawnSuccess = false;
             recycled = false;
         }
@@ -64,7 +76,7 @@ namespace GameMain
         /// <summary>
         /// 关闭寻路
         /// </summary>
-        public void EnableAIPath()
+        protected void EnableAIPath()
         {
             // m_AIPath = GetComponent<AIPath>();
             m_AIPath.enabled = true;
@@ -73,20 +85,21 @@ namespace GameMain
         /// <summary>
         /// 开启寻路
         /// </summary>
-        public void DisableAIPath()
+        protected void DisableAIPath()
         {
             m_AIPath.enabled = false;
         }
 
-        public void SetAIPathTarget(Transform target)
+        protected void SetAIPathTarget(Transform target)
         {
             m_AIDestinationSetter.target = target;
         }
 
-        public void OnDead()
+        public virtual void OnDead()
         {
             if (!spawnSuccess) return;
-            RecycleSelf();
+            DisableAIPath();
+            m_Animator.Play("Die");
             // Destroy(gameObject);
         }
 
