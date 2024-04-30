@@ -17,6 +17,7 @@ namespace GameMain
         protected CharacterStatusInfo m_StatusInfo;
         protected Animator m_Animator;
         protected Rigidbody2D m_Rigidbody;
+        protected CapsuleCollider2D m_CapsuleCollider2D;
         protected SpriteRenderer m_SpriteRenderer;
         protected bool spawnSuccess = false;
         protected bool recycled=false;
@@ -24,7 +25,7 @@ namespace GameMain
         protected Player player => GameBase.Instance.GetPlayer();
         public float m_IdleDist = 1;
         public float m_TrackDist = 3;
-
+        
         private void Update()
         {
             if (m_AIPath.velocity.x>0)
@@ -44,6 +45,7 @@ namespace GameMain
             m_AIPath.maxSpeed = m_StatusInfo.MoveSpeed;
             m_SpriteRenderer = GetComponent<SpriteRenderer>();
             m_Rigidbody = GetComponent<Rigidbody2D>();
+            m_CapsuleCollider2D = GetComponent<CapsuleCollider2D>();
         }
 
         public virtual void OnShow(object userData)
@@ -53,6 +55,7 @@ namespace GameMain
             PlayAnim("Spawn");
             spawnSuccess = false;
             recycled = false;
+            m_CapsuleCollider2D.enabled = true;
         }
 
         public Action<object> RecycleAction { get; set; }
@@ -100,6 +103,8 @@ namespace GameMain
             if (!spawnSuccess) return;
             DisableAIPath();
             m_Animator.Play("Die");
+            m_CapsuleCollider2D.enabled = false;
+            m_Rigidbody.velocity = Vector2.zero;
             // Destroy(gameObject);
         }
 
