@@ -118,7 +118,7 @@ namespace GameMain
             m_Animator.Play(animName);
         }
 
-        public void GetBeaten(Vector2 force)
+        public virtual void GetBeaten(Vector2 force)
         {
             DisableAIPath();
             StartCoroutine(Recoil(force));
@@ -150,5 +150,6 @@ namespace GameMain
 
             EnableAIPath();
         }
+        
     }
 }
