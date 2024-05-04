@@ -21,9 +21,11 @@ namespace GameMain
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
+            m_LoadedAssetFlag = new();
+            m_LoadedData = new();
             LoadPrefab(AssetUtility.GetPrefabAsset("PublicObjectPool"),"PublicObjectPool");
             LoadPlayer();
-            LoadGameScene(0);
+            LoadGameScene(procedureOwner.GetData<VarInt32>("Level"));
             LoadPathGraphScanner();
         }
 
@@ -50,6 +52,12 @@ namespace GameMain
             tmp.Value = m_LoadedData;
             procedureOwner.SetData<VarObject>("GameData", tmp);
             ChangeState<ProcedureChangeScene>(procedureOwner);
+        }
+
+        protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
+        {
+            base.OnLeave(procedureOwner, isShutdown);
+            procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Main"));
         }
 
         private void LoadPrefab(string path, string nameInDict)

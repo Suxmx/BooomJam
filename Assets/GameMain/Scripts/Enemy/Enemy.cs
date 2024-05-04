@@ -108,7 +108,7 @@ namespace GameMain
             // Destroy(gameObject);
         }
 
-        public void OnAttacked(AttackData data)
+        public virtual void OnAttacked(AttackData data)
         {
             OnDead();
         }

@@ -70,6 +70,7 @@ namespace GameMain
             {
                 ChangeState<ProcedureMainGame>(procedureOwner);
             }
+            else ChangeState<ProcedureLevelSelect>(procedureOwner);
         }
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
         {

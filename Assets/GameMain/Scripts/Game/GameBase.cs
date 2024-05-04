@@ -6,6 +6,7 @@ using GameFramework.Resource;
 using MyTimer;
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityGameFramework.Runtime;
 
 namespace GameMain
@@ -26,6 +27,7 @@ namespace GameMain
     public class GameBase
     {
         public static GameBase Instance;
+        public UnityAction<int> OnChangeGameScene;
 
         public GameBase(GameMode gameMode)
         {
@@ -104,6 +106,7 @@ namespace GameMain
                 //更新PathFinder Gizmos
                 AstarPath.active.hierarchicalGraph.RecalculateIfNecessary();
                 m_CurrentGameScene.OnChangeSceneToThis();
+                OnChangeGameScene?.Invoke(m_CurrentGameSceneIndex);
             }
         }
 
