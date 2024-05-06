@@ -11,6 +11,7 @@ namespace GameMain
         public bool isBlue;
         private int m_CurrentSceneIndex;
         private CountdownTimer m_timer;
+        private PublicObjectPool m_Pool;
         
         public void Init()
         {
@@ -21,11 +22,12 @@ namespace GameMain
             m_CurrentSceneIndex = GameBase.Instance.GetGameSceneIndex();
             OnGameScene(m_CurrentSceneIndex);
             GameBase.Instance.OnChangeGameScene += OnGameScene;
+            m_Pool = GameBase.Instance.GetObjectPool();
         }
         
         public void OnTimerComplete()
         {
-            // RecycleSelf();
+            m_Pool.UnSpawn(gameObject);
             m_timer.Paused = true;
         }
 

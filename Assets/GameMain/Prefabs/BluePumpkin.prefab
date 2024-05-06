@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 5477574463123519990}
   - component: {fileID: 2226104775768968254}
   - component: {fileID: 7412504383120451024}
-  - component: {fileID: 5369485306396528419}
   m_Layer: 7
   m_Name: BluePumpkin
   m_TagString: Enemy
@@ -250,16 +249,3 @@ MonoBehaviour:
   m_TrackDist: 3
   isRed: 0
   isBlue: 1
---- !u!114 &5369485306396528419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4523030983691541842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e169fd68b6c58b243b51bde90e19a3bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FireTemplate: {fileID: 5051791632648072622, guid: e878efcf97f1d1247a04f8f83417bc84, type: 3}
