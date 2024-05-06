@@ -80,8 +80,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.54
-  height: 0.99
+  radius: 0.37
+  height: 0.39
   canMove: 1
   maxSpeed: 4
   gravity: {x: 0, y: 0, z: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   autoRepath:
     mode: 2
     interval: 0.5
-    sensitivity: 10
+    sensitivity: 4.23
     maximumInterval: 2
     visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
@@ -244,6 +244,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.8, y: 1.45}
+  m_Offset: {x: 0.010312557, y: 0.062133312}
+  m_Size: {x: 0.5421856, y: 1.1102006}
   m_Direction: 0

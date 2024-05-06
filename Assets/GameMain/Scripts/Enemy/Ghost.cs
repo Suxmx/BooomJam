@@ -17,7 +17,7 @@ namespace GameMain
         public override void OnSpawnSuccess()
         {
             base.OnSpawnSuccess();
-            if (ifHide) m_Collider.enabled = false;
+            if (ifHide) Hide();
 
         }
 
@@ -50,7 +50,7 @@ namespace GameMain
 
         private void Show()
         {
-            m_Collider.enabled = true;
+            gameObject.layer = LayerMask.NameToLayer("Enemy");
             m_SpriteRenderer.color = Color.white;
             invincible = false;
             ifHide = false;
@@ -58,10 +58,11 @@ namespace GameMain
 
         private void Hide()
         {
-            m_Collider.enabled = false;
+            gameObject.layer = LayerMask.NameToLayer("Ghost");
             m_SpriteRenderer.color = new Color(1, 1, 1, 0.4f);
             invincible = true;
             ifHide = true;
         }
+        
     }
 }

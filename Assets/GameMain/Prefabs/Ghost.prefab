@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.54
+  radius: 0.36
   height: 0.99
   canMove: 1
   maxSpeed: 4
@@ -230,8 +230,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0946458, y: 0.06853652}
-  m_Size: {x: 0.74936116, y: 1.1409988}
+  m_Offset: {x: 0.061078846, y: 0.08196336}
+  m_Size: {x: 0.58823955, y: 1.0067307}
   m_Direction: 0
 --- !u!114 &-2853925278751195314
 MonoBehaviour:

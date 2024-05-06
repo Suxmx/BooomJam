@@ -271,7 +271,7 @@ namespace GameMain
             m_InvincibleLock++;
             m_InvincibleTimer.Restart();
             Collider2D[] targetEnemies = Physics2D.OverlapCircleAll(transform.position,
-                2f, LayerMask.GetMask("Enemy"));
+                2f, LayerMask.GetMask("Enemy","Ghost"));
             foreach (var e in targetEnemies)
             {
                 e.GetComponent<Enemy>().GetBeaten((e.transform.position - transform.position).normalized);

@@ -8,14 +8,9 @@ using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour
 {
-    [SerializeField] private Button StartButton;
     private int m_SelectedIndex = -1;
     private List<Button> m_LevelButtons = new();
-
-    private void Awake()
-    {
-        StartButton.onClick.AddListener(OnClickStart);
-    }
+    
 
     private void Start()
     {
@@ -32,18 +27,9 @@ public class LevelSelect : MonoBehaviour
     private void SelectLevel(int index, Button btn)
     {
         m_SelectedIndex = index;
-        foreach (var b in m_LevelButtons)
-        {
-            b.GetComponent<Outline>().enabled = false;
-        }
-
-        btn.GetComponent<Outline>().enabled = true;
-    }
-
-    private void OnClickStart()
-    {
-        if (m_SelectedIndex == -1) return;
         var procedure = GameEntry.Procedure.CurrentProcedure;
         (procedure as ProcedureLevelSelect).SelectLevel(m_SelectedIndex);
+
     }
+    
 }
