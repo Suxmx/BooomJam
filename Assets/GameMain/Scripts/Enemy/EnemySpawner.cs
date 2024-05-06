@@ -9,17 +9,17 @@ using Random = UnityEngine.Random;
 
 namespace GameMain
 {
-    public class EnemySpawner : MonoBehaviour, IHasObjectPool
+    public class EnemySpawner : MonoBehaviour
     {
         [SerializeField, LabelText("生成间隔")] private float m_SpawnInterval = 1f;
-        [SerializeField] private GameObject m_EnemyTemplate;
+        // [SerializeField] private GameObject m_EnemyTemplate;
 
         [SerializeField] private GameObject m_BoneTemplate;
-        [SerializeField] private GameObject m_PumpkinTemplate;
+        [SerializeField] private GameObject m_BluePumpkinTemplate;
+        [SerializeField] private GameObject m_RedPumpkinTemplate;
         [SerializeField] private GameObject m_GhostTemplate;
-
-        private ObjectPool<MyObjectBase, Enemy> m_EnemyPool;
         private RepeatTimer m_SpawnTimer;
+        private ObjectPool<MyObjectBase, Enemy> m_EnemyPool;
 
         private Bounds m_SpawnBounds;
         private Dictionary<string, Queue<GameObject>> m_Pools = new();
@@ -30,16 +30,16 @@ namespace GameMain
         {
             m_SpawnTimer.Paused = true;
         }
-
+        
         private void Awake()
         {
-            m_EnemyPool = new ObjectPool<MyObjectBase, Enemy>(240, "EnemyPool", this);
             m_SpawnBounds = GameObject.Find("EnemySpawnBound").GetComponent<BoxCollider2D>().bounds;
             m_SpawnTimer = new RepeatTimer();
             m_SpawnTimer.Initialize(m_SpawnInterval);
             m_SpawnTimer.OnComplete += SpawnTestEnemy;
             m_TemplateDict.Add("Bone", m_BoneTemplate);
-            m_TemplateDict.Add("Pumpkin", m_PumpkinTemplate);
+            m_TemplateDict.Add("BluePumpkin", m_BluePumpkinTemplate);
+            m_TemplateDict.Add("RedPumpkin", m_RedPumpkinTemplate);
             m_TemplateDict.Add("Ghost", m_GhostTemplate);
             foreach (var key in m_TemplateDict.Keys)
             {
@@ -55,7 +55,7 @@ namespace GameMain
             // var e=m_EnemyPool.Spawn();
             // e.transform.position = RandomPosition();
             //
-            int rand = Random.Range(1, 4);
+            int rand = Random.Range(1, 5);
             Enemy e;
             switch (rand)
             {
@@ -64,10 +64,16 @@ namespace GameMain
                     e.transform.position = RandomPosition();
                     break;
                 case 2:
-                    e = Spawn("Pumpkin");
+                    e = Spawn("BluePumpkin");
                     e.transform.position = RandomPosition();
+                    ((Pumpkin)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
                     break;
                 case 3:
+                    e = Spawn("RedPumpkin");
+                    e.transform.position = RandomPosition();
+                    ((Pumpkin)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
+                    break;
+                case 4:
                     e = Spawn("Ghost");
                     e.transform.position = RandomPosition();
                     ((Ghost)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
@@ -105,11 +111,7 @@ namespace GameMain
             enemy.gameObject.SetActive(false);
             m_Pools[enemy.GetName()].Enqueue(enemy.gameObject);
         }
-
-        public GameObject CreateObject()
-        {
-            return Instantiate(m_EnemyTemplate);
-        }
+        
 
         private Vector2 RandomPosition()
         {

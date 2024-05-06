@@ -82,6 +82,8 @@ namespace GameMain
             //生成对象池
             m_PublicObjectPool = Object.Instantiate(data.Prefabs["PublicObjectPool"]).GetComponent<PublicObjectPool>();
             m_PublicObjectPool.RegisterTemplate("BulletExplode", data.Prefabs["BulletExplode"]);
+            m_PublicObjectPool.RegisterTemplate("BluePumpkinFire", data.Prefabs["BluePumpkinFire"]);
+            m_PublicObjectPool.RegisterTemplate("RedPumpkinFire", data.Prefabs["RedPumpkinFire"]);
         }
 
         #endregion

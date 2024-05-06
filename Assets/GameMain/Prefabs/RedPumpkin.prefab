@@ -12,12 +12,11 @@ GameObject:
   - component: {fileID: 8228620636411619979}
   - component: {fileID: 8228620636411619980}
   - component: {fileID: 8228620636411619981}
-  - component: {fileID: 1120277562346150477}
   - component: {fileID: 2244318919581102637}
   - component: {fileID: 1201322254518558599}
   - component: {fileID: 67737183137304107}
   - component: {fileID: 5913314373996444643}
-  - component: {fileID: 1766688293570931547}
+  - component: {fileID: 6992163967458358867}
   m_Layer: 7
   m_Name: RedPumpkin
   m_TagString: Enemy
@@ -124,20 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &1120277562346150477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8228620636411619983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bde068108c74f3897f63e9384662766, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IdleDist: 1
-  m_TrackDist: 3
 --- !u!50 &2244318919581102637
 Rigidbody2D:
   serializedVersion: 4
@@ -248,7 +233,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.33}
   m_Size: {x: 1.36, y: 1.12}
   m_Direction: 1
---- !u!114 &1766688293570931547
+--- !u!114 &6992163967458358867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,8 +242,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8228620636411619983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e169fd68b6c58b243b51bde90e19a3bf, type: 3}
+  m_Script: {fileID: 11500000, guid: e7e9358a50c37374594b0eb77f882c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FireTemplate: {fileID: 9167509574157689850, guid: 8c8f97164061cc84f9c28145c3839b53, type: 3}
-  Pumpkin: {fileID: 8228620636411619983}
+  m_IdleDist: 1
+  m_TrackDist: 3
+  isRed: 1
+  isBlue: 0

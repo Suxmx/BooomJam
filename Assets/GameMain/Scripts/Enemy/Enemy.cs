@@ -21,24 +21,24 @@ namespace GameMain
         protected Collider2D m_Collider;
         protected SpriteRenderer m_SpriteRenderer;
         protected bool spawnSuccess = false;
-        protected bool recycled=false;
+        protected bool recycled = false;
         protected EnemySpawner m_Spawner;
         protected string m_Name;
 
         protected Player player => GameBase.Instance.GetPlayer();
         public float m_IdleDist = 1;
         public float m_TrackDist = 3;
-        
+
         private void Update()
         {
-            if (m_AIPath.velocity.x>0)
+            if (m_AIPath.velocity.x > 0)
             {
                 m_SpriteRenderer.flipX = false;
             }
-            else if(m_AIPath.velocity.x<0) m_SpriteRenderer.flipX = true;
+            else if (m_AIPath.velocity.x < 0) m_SpriteRenderer.flipX = true;
         }
 
-        public void OnInit(object userData) 
+        public void OnInit(object userData)
         {
             //TODO:用EnemyData读取数据
             m_Collider = GetComponent<Collider2D>();
@@ -83,9 +83,9 @@ namespace GameMain
         {
             return m_Name;
         }
-        
 
-        public void OnSpawnSuccess()
+
+        public virtual void OnSpawnSuccess()
         {
             spawnSuccess = true;
             EnableAIPath();
@@ -119,7 +119,7 @@ namespace GameMain
             if (!spawnSuccess) return;
             DisableAIPath();
             m_Animator.Play("Die");
-            m_CapsuleCollider2D.enabled = false;
+            m_Collider.enabled = false;
             m_Rigidbody.velocity = Vector2.zero;
             // Destroy(gameObject);
         }
@@ -154,18 +154,47 @@ namespace GameMain
             transform.right = Vector2.right;
             for (int i = 1; i <= 2; i++)
             {
-                transform.Translate(direction / 2 * 0.8f);
+                SafeTranslate(direction / 2 * 0.8f);
                 yield return new WaitForFixedUpdate();
             }
 
             for (int i = 1; i <= 6; i++)
             {
-                transform.Translate(direction / 6 * 0.8f);
+                SafeTranslate(direction / 6 * 0.8f);
                 yield return new WaitForFixedUpdate();
             }
 
             EnableAIPath();
         }
-        
+
+        protected void SafeTranslate(Vector2 direction)
+        {
+            var m_ObstacleMask = LayerMask.GetMask("Ground");
+            var hit = Physics2D.Raycast(transform.position, direction, direction.magnitude + GetColliderSize(),
+                m_ObstacleMask);
+            if (hit.collider is null)
+                transform.Translate(direction);
+            else
+            {
+                transform.Translate(direction.normalized * GetColliderSize() / 10);
+            }
+        }
+
+        protected float GetColliderSize()
+        {
+            if (m_Collider is CapsuleCollider2D)
+            {
+                return (m_Collider as CapsuleCollider2D).size.x;
+            }
+            else if (m_Collider is CircleCollider2D)
+            {
+                return (m_Collider as CircleCollider2D).radius;
+            }
+            else
+            {
+                Log.Error($"Enemy使用了未注册碰撞体类型{(m_Collider.GetType())}");
+                return 0;
+            }
+        }
     }
 }

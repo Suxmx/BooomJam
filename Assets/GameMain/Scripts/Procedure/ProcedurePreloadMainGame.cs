@@ -27,6 +27,8 @@ namespace GameMain
             LoadPlayer();
             LoadGameScene(procedureOwner.GetData<VarInt32>("Level"));
             LoadPathGraphScanner();
+            LoadPrefab(AssetUtility.GetPrefabAsset("BluePumpkinFire"),"BluePumpkinFire");
+            LoadPrefab(AssetUtility.GetPrefabAsset("RedPumpkinFire"),"RedPumpkinFire");
             var pools=GameEntry.ObjectPool.GetAllObjectPools();
             foreach (var pool in pools)
             {

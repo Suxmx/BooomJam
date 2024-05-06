@@ -546,9 +546,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SpawnInterval: 2
-  m_EnemyTemplate: {fileID: 8228620636411619983, guid: 3cfbb04fc874e9e4fa59a69ef3a5b6bc, type: 3}
   m_BoneTemplate: {fileID: 521919995565279168, guid: 03675f19acbc8524b9f435521d9735b0, type: 3}
-  m_PumpkinTemplate: {fileID: 4523030983691541842, guid: bafb9159bdf2f074bbab3b8dcb804e85, type: 3}
+  m_BluePumpkinTemplate: {fileID: 4523030983691541842, guid: bafb9159bdf2f074bbab3b8dcb804e85, type: 3}
+  m_RedPumpkinTemplate: {fileID: 8228620636411619983, guid: 3cfbb04fc874e9e4fa59a69ef3a5b6bc, type: 3}
   m_GhostTemplate: {fileID: 521919995565279168, guid: 67ed33ae05d05ab4fa0b0b87ecac6199, type: 3}
 --- !u!4 &373220213
 Transform:

@@ -22,7 +22,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 21300000, guid: 9c0f3fcc44aecae4ab5840f579d4fdfe, type: 3}
     - time: 0.05
-      value: {fileID: 21300000, guid: 064a8f7d7eb100d49afd299bf5eabed0, type: 3}
+      value: {fileID: 21300000, guid: d067b42a430811d48bd0f58718c0636b, type: 3}
     - time: 0.11666667
       value: {fileID: 21300000, guid: 711a7a92fb31e684da19674e483a7a49, type: 3}
     - time: 0.18333334
@@ -65,7 +65,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 9c0f3fcc44aecae4ab5840f579d4fdfe, type: 3}
-    - {fileID: 21300000, guid: 064a8f7d7eb100d49afd299bf5eabed0, type: 3}
+    - {fileID: 21300000, guid: d067b42a430811d48bd0f58718c0636b, type: 3}
     - {fileID: 21300000, guid: 711a7a92fb31e684da19674e483a7a49, type: 3}
     - {fileID: 21300000, guid: 91587fc6327bf09468d64b8b68b8265d, type: 3}
     - {fileID: 21300000, guid: f93ca73fad6d1fb4791a07eff086fd02, type: 3}
@@ -103,14 +103,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.6666667
-    functionName: RecycleSelf
+    functionName: SpawnFire
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
-    functionName: SpawnFire
+    functionName: RecycleSelf
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
