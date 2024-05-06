@@ -12,7 +12,12 @@ namespace GameMain
         private int m_CurrentSceneIndex;
         private CountdownTimer m_timer;
         private PublicObjectPool m_Pool;
-        
+
+        private void OnDestroy()
+        {
+            m_timer.Paused = true;
+        }
+
         public void Init()
         {
             float Lasttime = 10f;

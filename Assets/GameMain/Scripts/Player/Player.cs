@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using GameFramework.Event;
+using GameMain.Scripts.UI;
 using MyTimer;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,7 +30,7 @@ namespace GameMain
         private WeaponBase m_CurrentWeapon;
         private PlayerStatusInfo m_PlayerStatusInfo;
         private CapsuleCollider2D m_Collider;
-        private Image m_HpImage;
+        private HpUI m_HpUI;
         private CountdownTimer m_InvincibleTimer;
         private CountdownTimer m_ChangeSceneTimer;
         private Coroutine m_IRecoil;
@@ -91,6 +92,8 @@ namespace GameMain
             m_ChangeSceneTimer.ForceComplete();
             m_Collider = GetComponent<CapsuleCollider2D>();
             m_ObstacleMask = LayerMask.GetMask("Ground");
+            m_HpUI = GameObject.Find("Hp").GetComponent<HpUI>();
+            m_HpUI.SetHp(m_PlayerStatusInfo.Hp);
         }
 
 
@@ -263,6 +266,7 @@ namespace GameMain
             if (Invincible) return;
             m_PlayerStatusInfo.Hp -= data.Damage;
             Log.Info($"Player Hp:{m_PlayerStatusInfo.Hp}");
+            m_HpUI.SetHp(m_PlayerStatusInfo.Hp);
             if (m_PlayerStatusInfo.IsDead)
             {
                 OnDead();
