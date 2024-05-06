@@ -3,6 +3,7 @@ using Cinemachine;
 using GameFramework.DataTable;
 using GameFramework.Event;
 using GameFramework.Resource;
+using GameMain.Scripts.UI;
 using MyTimer;
 using Pathfinding;
 using UnityEngine;
@@ -41,7 +42,7 @@ namespace GameMain
         }
 
         public GameMode GameMode { get; }
-        public int Level { get; }
+        public int Level { get; set; }
 
         protected bool m_Inited;
         protected Player m_Player;
@@ -57,6 +58,7 @@ namespace GameMain
 
         public virtual void Init(GameBaseData data)
         {
+            GameObject.Find($"Tip{Level + 1}").GetComponent<TipsUI>().Show();
             //生成初始化Player
             var player = Object.Instantiate(data.Prefabs["Player"]).GetComponent<Player>();
             player.Init(data.PlayerData);
@@ -84,6 +86,7 @@ namespace GameMain
             m_PublicObjectPool.RegisterTemplate("BulletExplode", data.Prefabs["BulletExplode"]);
             m_PublicObjectPool.RegisterTemplate("BluePumpkinFire", data.Prefabs["BluePumpkinFire"]);
             m_PublicObjectPool.RegisterTemplate("RedPumpkinFire", data.Prefabs["RedPumpkinFire"]);
+            
         }
 
         #endregion
