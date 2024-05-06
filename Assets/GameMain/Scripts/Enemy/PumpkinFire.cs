@@ -6,7 +6,7 @@ using MyTimer;
 namespace GameMain
 {
     public class PumpkinFire : MonoBehaviour
-    {   
+    {
         public bool isRed;
         public bool isBlue;
         private int m_CurrentSceneIndex;
@@ -29,7 +29,7 @@ namespace GameMain
             GameBase.Instance.OnChangeGameScene += OnGameScene;
             m_Pool = GameBase.Instance.GetObjectPool();
         }
-        
+
         public void OnTimerComplete()
         {
             m_Pool.UnSpawn(gameObject);
@@ -50,6 +50,7 @@ namespace GameMain
                     gameObject.SetActive(false);
                 }
             }
+
             if (isBlue)
             {
                 if (index == 0)
@@ -62,7 +63,17 @@ namespace GameMain
                     gameObject.SetActive(true);
                 }
             }
-            
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                other.gameObject.GetComponent<IAttackable>()
+                    .OnAttacked(new AttackData(1, transform.position - other.transform.position));
+                m_timer.Paused = true;
+                m_Pool.UnSpawn(gameObject);
+            }
         }
     }
 }
