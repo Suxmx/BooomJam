@@ -21,35 +21,35 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 9c0f3fcc44aecae4ab5840f579d4fdfe, type: 3}
-    - time: 0.125
-      value: {fileID: 21300000, guid: d067b42a430811d48bd0f58718c0636b, type: 3}
-    - time: 0.25
-      value: {fileID: 21300000, guid: 711a7a92fb31e684da19674e483a7a49, type: 3}
-    - time: 0.375
-      value: {fileID: 21300000, guid: 91587fc6327bf09468d64b8b68b8265d, type: 3}
-    - time: 0.5
-      value: {fileID: 21300000, guid: f93ca73fad6d1fb4791a07eff086fd02, type: 3}
-    - time: 0.625
-      value: {fileID: 21300000, guid: eff98d5888a7399479b0ca8d4b183656, type: 3}
-    - time: 0.75
+    - time: 0.05
       value: {fileID: 21300000, guid: 064a8f7d7eb100d49afd299bf5eabed0, type: 3}
-    - time: 0.875
+    - time: 0.11666667
+      value: {fileID: 21300000, guid: 711a7a92fb31e684da19674e483a7a49, type: 3}
+    - time: 0.18333334
+      value: {fileID: 21300000, guid: 91587fc6327bf09468d64b8b68b8265d, type: 3}
+    - time: 0.23333333
+      value: {fileID: 21300000, guid: f93ca73fad6d1fb4791a07eff086fd02, type: 3}
+    - time: 0.28333333
+      value: {fileID: 21300000, guid: eff98d5888a7399479b0ca8d4b183656, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 064a8f7d7eb100d49afd299bf5eabed0, type: 3}
+    - time: 0.4
       value: {fileID: 21300000, guid: c579dfcf5bcd9e14c97b92d528b1803c, type: 3}
-    - time: 1
+    - time: 0.45
       value: {fileID: 21300000, guid: e5641800d9191eb47af050f9521c6be1, type: 3}
-    - time: 1.125
+    - time: 0.51666665
       value: {fileID: 21300000, guid: 8eb376a217efb3f4b8b99dabd377ea0f, type: 3}
-    - time: 1.25
+    - time: 0.5833333
       value: {fileID: 21300000, guid: 7504246104fa6ab4682b5a6155ea8598, type: 3}
-    - time: 1.375
+    - time: 0.6166667
       value: {fileID: 21300000, guid: c2108996583565b47b9b172774f84728, type: 3}
-    - time: 1.5
+    - time: 0.6666667
       value: {fileID: 21300000, guid: bd17f80ed306d8840b4462fa8c19703e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 8
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -65,7 +65,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 9c0f3fcc44aecae4ab5840f579d4fdfe, type: 3}
-    - {fileID: 21300000, guid: d067b42a430811d48bd0f58718c0636b, type: 3}
+    - {fileID: 21300000, guid: 064a8f7d7eb100d49afd299bf5eabed0, type: 3}
     - {fileID: 21300000, guid: 711a7a92fb31e684da19674e483a7a49, type: 3}
     - {fileID: 21300000, guid: 91587fc6327bf09468d64b8b68b8265d, type: 3}
     - {fileID: 21300000, guid: f93ca73fad6d1fb4791a07eff086fd02, type: 3}
@@ -82,7 +82,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.625
+    m_StopTime: 0.68333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -102,15 +102,15 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
-    functionName: SpawnFire
+  - time: 0.6666667
+    functionName: RecycleSelf
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.5
-    functionName: RecycleSelf
+  - time: 0.6666667
+    functionName: SpawnFire
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

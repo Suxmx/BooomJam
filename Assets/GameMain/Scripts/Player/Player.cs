@@ -70,12 +70,6 @@ namespace GameMain
             m_Rigidbody = GetComponent<Rigidbody2D>();
             m_SpriteRenderer = transform.Find("PlayerImage").GetComponent<SpriteRenderer>();
             m_Animator = transform.Find("PlayerImage").GetComponent<Animator>();
-            var hpObj = GameObject.Find("Hp");
-            if (hpObj)
-            {
-                m_HpImage = hpObj.transform.Find("HpInside").GetComponent<Image>();
-                m_HpImage.fillAmount = 0;
-            }
 
             m_InvincibleTimer = new CountdownTimer();
             m_ChangeSceneTimer = new CountdownTimer();
