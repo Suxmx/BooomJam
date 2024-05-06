@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 930247247
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3e7b28f9051871367151ee09a4a9365d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 3e7b28f9051871367151ee09a4a9365d
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/UI/darkstar1.png
+Dependencies: []

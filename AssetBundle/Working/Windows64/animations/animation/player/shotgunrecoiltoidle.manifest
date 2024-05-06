@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 80448739
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7fececc34d6cf92d1f66f6efa67faad9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 7fececc34d6cf92d1f66f6efa67faad9
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Player/ShotGunRecoilToIdle.anim
+Dependencies: []

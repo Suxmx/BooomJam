@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2482769688
+CRC: 3773118342
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: da203565d108b12cf65ef8e9156d61c4
+    Hash: faced3bd69f6cc4c53484eb890038785
   TypeTreeHash:
     serializedVersion: 2
-    Hash: be383019b814fbf26986c596214d12a2
+    Hash: 5fdc7a821919d1d209ac0799a0ada1bc
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: da203565d108b12cf65ef8e9156d61c4
+    Hash: faced3bd69f6cc4c53484eb890038785
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -25,8 +25,6 @@ ClassTypes:
 - Class: 50
   Script: {instanceID: 0}
 - Class: 70
-  Script: {instanceID: 0}
-- Class: 74
   Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
@@ -56,19 +54,4 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/GameMain/Prefabs/Enemy.prefab
 Dependencies:
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong1
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong10
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong11
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong12
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong13
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong14
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong15
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong16
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong2
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong3
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong4
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong5
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong6
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong7
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong8
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong9
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animator/enemytest

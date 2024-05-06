@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 3146881537
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1e802b35a750d200aa797da0ec24e291
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 1e802b35a750d200aa797da0ec24e291
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Enemy/Skeleton/Die.anim
+Dependencies: []

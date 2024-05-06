@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2366802209
+CRC: 2315372216
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d77cd07764b0395f77dcf4b60659c6f0
+    Hash: 5480462ac63254fa57c77da4dec58f0b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: bb231daf30ccc959632492cfc9f7beb4
+    Hash: dd9633e23c5eaf4a2a23b97c4a90e96c
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: d77cd07764b0395f77dcf4b60659c6f0
+    Hash: 5480462ac63254fa57c77da4dec58f0b
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -24,8 +24,6 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 58
   Script: {instanceID: 0}
-- Class: 74
-  Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
 - Class: 95
@@ -37,4 +35,5 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/GameMain/Prefabs/BlueTree.prefab
-Dependencies: []
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animator/bluetree

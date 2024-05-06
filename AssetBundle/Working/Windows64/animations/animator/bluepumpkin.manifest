@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 3982281521
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0354c5d11fce77d054a026916f9d3f8c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 0354c5d11fce77d054a026916f9d3f8c
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animator/BluePumpkin.controller
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animation/enemy/pumpkin/blue/die
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animation/enemy/pumpkin/blue/move
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animation/enemy/pumpkin/blue/spawn

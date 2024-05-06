@@ -19,7 +19,6 @@ namespace GameMain.Scripts.UI
 
         public void SetStar(int num)
         {
-            Debug.Log(num);
             for (int i = 1; i <= num; i++)
             {
                 m_StarSrs[i - 1].sprite = StarSprite;

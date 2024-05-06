@@ -22,7 +22,7 @@ namespace GameMain
         public ObjectPool(int capacity, string poolName, IHasObjectPool owner)
         {
             m_Capacity = capacity;
-            m_PoolName = poolName;
+            m_PoolName = "SelfCreated_"+poolName;
             m_Owner = owner;
             if (!GameEntry.ObjectPool.HasObjectPool<T1>(m_PoolName))
                 m_Pool = GameEntry.ObjectPool.CreateSingleSpawnObjectPool<T1>(m_PoolName, m_Capacity);

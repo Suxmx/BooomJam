@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3438737523
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 842b9a1f74538d86935ab4f99de4cc7f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 842b9a1f74538d86935ab4f99de4cc7f
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/UI/heart.png
+Dependencies: []

@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 2653887982
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0a79367d629d22a6609215155289355e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 0a79367d629d22a6609215155289355e
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Enemy/Ghost/Move.anim
+Dependencies: []

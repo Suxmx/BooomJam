@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 293868521
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 457dc5ef57ec5db307d96a36878ce9db
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 457dc5ef57ec5db307d96a36878ce9db
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animator/EnemyTest.controller
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animation/enemy/skeleton/die
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animation/enemy/skeleton/run
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animation/enemy/skeleton/spawn
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animation/enemy/skeleton/testhurt

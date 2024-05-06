@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1216330607
+CRC: 2191079645
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7caec814e1b45fc78bcc33ba1c280dea
+    Hash: 755e5f9ee9903f76b01be4ebd8427546
   TypeTreeHash:
     serializedVersion: 2
-    Hash: bb231daf30ccc959632492cfc9f7beb4
+    Hash: 02597830ba105fa1edb22b7c4d1aa514
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 7caec814e1b45fc78bcc33ba1c280dea
+    Hash: 755e5f9ee9903f76b01be4ebd8427546
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -22,9 +22,7 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 58
-  Script: {instanceID: 0}
-- Class: 74
+- Class: 70
   Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
@@ -37,4 +35,5 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/GameMain/Prefabs/RedTree.prefab
-Dependencies: []
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animator/redtree

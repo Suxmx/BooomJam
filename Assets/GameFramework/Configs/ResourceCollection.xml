@@ -2,6 +2,57 @@
 <UnityGameFramework>
   <ResourceCollection>
     <Resources>
+      <Resource Name="Animations/Animation/Enemy/Ghost/Die" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Ghost/Move" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Ghost/Spawn" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Die" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Fire/Idle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Fire/Spawn" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Move" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Spawn" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Die" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Fire/Die" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Fire/Idle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Fire/Spawn" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Move" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Spawn" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Skeleton/Die" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Skeleton/Idle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Skeleton/Run" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Skeleton/Spawn" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Skeleton/TestHurt" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Enemy/Skeleton/TestSpawn" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Fire/Idle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Fire/RedIdle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/BowIdle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/BowRecoilToIdle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/Die" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/Explode" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/ShotGun/ShotGunFire" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/ShotGun/ShotGunNormal" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/ShotGunIdle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/ShotGunRecoil" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/ShotGunRecoilToIdle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/Teleport" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Player/TeleportAnim" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Tree/BlueIdle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animation/Tree/Idle" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/BluePumpkin" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/BluePumpkinFire" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/BlueTree" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/BulletExplode" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/EnemyTest" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/Ghost" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/Player" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/PlayerDie" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/PlayerTeleport" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/PurpleFire" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/RedFire" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/RedPumpkin" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/RedPumpkinFire" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/RedTree" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/ShotGun" LoadType="0" Packed="False" />
+      <Resource Name="Animations/Animator/Teleport" LoadType="0" Packed="False" />
       <Resource Name="Configs/DefaultConfig" LoadType="0" Packed="False" />
       <Resource Name="DataTables/Entity" LoadType="0" Packed="False" />
       <Resource Name="DataTables/Level" LoadType="0" Packed="False" />
@@ -10,6 +61,8 @@
       <Resource Name="DataTables/Test" LoadType="0" Packed="False" />
       <Resource Name="DataTables/UIForm" LoadType="0" Packed="False" />
       <Resource Name="DataTables/Weapon" LoadType="0" Packed="False" />
+      <Resource Name="Fonts/VonwaonBitmap-12px" LoadType="0" Packed="False" />
+      <Resource Name="Fonts/VonwaonBitmap-16px" LoadType="0" Packed="False" />
       <Resource Name="Images/BowHUD" LoadType="0" Packed="False" />
       <Resource Name="Images/Bullet" LoadType="0" Packed="False" />
       <Resource Name="Images/Enemy/Skeleton/Run/yidong1" LoadType="0" Packed="False" />
@@ -34,6 +87,14 @@
       <Resource Name="Images/MagicCircle/magic1" LoadType="0" Packed="False" />
       <Resource Name="Images/ShotGun" LoadType="0" Packed="False" />
       <Resource Name="Images/ShotGunHUD" LoadType="0" Packed="False" />
+      <Resource Name="Images/UI/2" LoadType="0" Packed="False" />
+      <Resource Name="Images/UI/background" LoadType="0" Packed="False" />
+      <Resource Name="Images/UI/cross" LoadType="0" Packed="False" />
+      <Resource Name="Images/UI/darkstar1" LoadType="0" Packed="False" />
+      <Resource Name="Images/UI/heart" LoadType="0" Packed="False" />
+      <Resource Name="Images/UI/heart-empty" LoadType="0" Packed="False" />
+      <Resource Name="Images/UI/iconBack1" LoadType="0" Packed="False" />
+      <Resource Name="Images/UI/star" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/BlueCircle" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/BluePumpkin" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/BluePumpkinFire" LoadType="0" Packed="False" />
@@ -51,6 +112,7 @@
       <Resource Name="Prefabs/Ghost" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/PathGraphScanner" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/Player" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/PlayerDie" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/PublicObjectPool" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/PurpleFire" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/RedCircle" LoadType="0" Packed="False" />
@@ -60,73 +122,141 @@
       <Resource Name="Prefabs/RedTree" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/ShotGun" LoadType="0" Packed="False" />
       <Resource Name="Prefabs/ShotGun_Bullet" LoadType="0" Packed="False" />
-      <Resource Name="Scenes/Launch" LoadType="0" Packed="False" />
-      <Resource Name="Scenes/Main" LoadType="0" Packed="False" />
-      <Resource Name="Scenes/Menu" LoadType="0" Packed="False" />
-      <Resource Name="Scenes/Test" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/TeleportAnim" LoadType="0" Packed="False" />
+      <Resource Name="Scenes/Launch" LoadType="0" Packed="True" />
+      <Resource Name="Scenes/Main" LoadType="0" Packed="True" />
+      <Resource Name="Scenes/Menu" LoadType="0" Packed="True" />
+      <Resource Name="Scenes/Menu1" LoadType="0" Packed="False" />
+      <Resource Name="Scenes/Test" LoadType="0" Packed="True" />
+      <Resource Name="Videos/VideoTexture" LoadType="0" Packed="False" />
     </Resources>
     <Assets>
       <Asset Guid="03675f19acbc8524b9f435521d9735b0" ResourceName="Prefabs/Enemy" />
       <Asset Guid="04d9b3546dda567479d62ad6026e24ca" ResourceName="Prefabs/GameScenes/Level1_Scene1" />
       <Asset Guid="086b9e8d314e5b94584db5063c9365f7" ResourceName="Scenes/Menu" />
+      <Asset Guid="0940deea72858d548afd99b2e78f9396" ResourceName="Animations/Animator/Teleport" />
+      <Asset Guid="09a7f7522dc16a346886fdce1bf6b7f8" ResourceName="Animations/Animation/Enemy/Skeleton/Die" />
+      <Asset Guid="0a1c1fab37a5edd4ca531a1439ef2118" ResourceName="Animations/Animator/BlueTree" />
+      <Asset Guid="113f41febd6fe4146ae9d93eb0015941" ResourceName="Animations/Animator/BluePumpkin" />
       <Asset Guid="11f3fc0b50877644fac8f94afdb16637" ResourceName="Images/ShotGunHUD" />
+      <Asset Guid="11f71ce8e43d6bb47bf7b3c95db3ead6" ResourceName="Images/UI/iconBack1" />
+      <Asset Guid="14fa35758aad0984eb8b0a7d5ed331ee" ResourceName="Animations/Animation/Player/ShotGun/ShotGunNormal" />
       <Asset Guid="16c5f12d47d60c54cbb702b19a558093" ResourceName="Scenes/Main" />
+      <Asset Guid="173f540078068324a901416ad797a084" ResourceName="Animations/Animator/RedFire" />
+      <Asset Guid="205adba687509494995b45c8c11b8400" ResourceName="Prefabs/PlayerDie" />
       <Asset Guid="248c4fb06582a1044b5bdd03302efa84" ResourceName="Images/Bullet" />
       <Asset Guid="2578777abf771b848a6ba65485480e08" ResourceName="Images/MagicCircle/Circle" />
+      <Asset Guid="2c746b9687eb2644890763aa6909fb8d" ResourceName="Animations/Animator/ShotGun" />
       <Asset Guid="2cbf00628c9ed9e4bbdbefbbbd19b663" ResourceName="Prefabs/ShotGun" />
       <Asset Guid="2f84275dba548924e8785dd0d591a5a7" ResourceName="Images/Enemy/Skeleton/Run/yidong8" />
+      <Asset Guid="31a952b081e484347bf297b5f77c103e" ResourceName="Fonts/VonwaonBitmap-12px" />
       <Asset Guid="32eccce7e201cee4ab42f91cff5dd49b" ResourceName="Configs/DefaultConfig" />
+      <Asset Guid="3365fffadb979f14f92be8484b54f1a9" ResourceName="Prefabs/TeleportAnim" />
+      <Asset Guid="34dc2fb8046a0054bae1049bc62bf400" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Spawn" />
+      <Asset Guid="3523db752d7c13b48af60b4ebd29c807" ResourceName="Animations/Animator/RedTree" />
       <Asset Guid="38a1ce9772ff8d24ea7edb20d2da8380" ResourceName="Images/Enemy/Skeleton/Run/yidong13" />
       <Asset Guid="39a9d25f5664d3c4fb4b4030ef7a793f" ResourceName="Prefabs/ShotGun_Bullet" />
+      <Asset Guid="3a420e080b6819a4cb44a61e42fbe5f6" ResourceName="Animations/Animation/Tree/BlueIdle" />
       <Asset Guid="3aea744ad1b3e344ea56a17ac3a3845a" ResourceName="Prefabs/PublicObjectPool" />
+      <Asset Guid="3c161619f8a87144b847994a9da1f23e" ResourceName="Animations/Animation/Enemy/Pumpkin/Blue/Die" />
       <Asset Guid="3cfbb04fc874e9e4fa59a69ef3a5b6bc" ResourceName="Prefabs/RedPumpkin" />
       <Asset Guid="3fab90d77aa3ce547bd07babbf9fd71f" ResourceName="Prefabs/PathGraphScanner" />
+      <Asset Guid="461c00564706f1d468d9403d7a77ad29" ResourceName="Animations/Animator/PlayerTeleport" />
+      <Asset Guid="51206c5d084b26b4586239b822cedded" ResourceName="Images/UI/heart" />
+      <Asset Guid="53e2f766a7a1f37408d93c6e9b55d17c" ResourceName="Images/UI/cross" />
+      <Asset Guid="5551471d22b4ec34f9305ca027798e75" ResourceName="Animations/Animation/Enemy/Skeleton/TestHurt" />
       <Asset Guid="5a310466cbea7a74eae484f70c0f85e7" ResourceName="Images/Enemy/Skeleton/Run/yidong11" />
+      <Asset Guid="5b269d39bd6b12549bd354478e269bfe" ResourceName="Scenes/Menu1" />
       <Asset Guid="624682d1e79dfab45a1e6cffdda83b3d" ResourceName="Images/HpUI" />
+      <Asset Guid="64b600466afe9ce4fae86cb11c9253a9" ResourceName="Animations/Animation/Player/Die" />
       <Asset Guid="66a7eee2ef767ea47a16068f9535dca8" ResourceName="Prefabs/GameScenes/Level0_Scene2" />
       <Asset Guid="66c75347ed1ac324f888f5ecd9d3f531" ResourceName="DataTables/Scene" />
+      <Asset Guid="67b70236e2ce33f4d9205ecfae8938e2" ResourceName="Animations/Animation/Enemy/Ghost/Move" />
       <Asset Guid="67e1f955e96d93a4c9bd25bf880e7673" ResourceName="DataTables/UIForm" />
       <Asset Guid="67ed33ae05d05ab4fa0b0b87ecac6199" ResourceName="Prefabs/Ghost" />
+      <Asset Guid="6869f330122c04d4aae59328a70737a4" ResourceName="Animations/Animation/Player/BowIdle" />
       <Asset Guid="6c0ebb89d6bdcd646a277887de92a98a" ResourceName="DataTables/Entity" />
+      <Asset Guid="6e85230f5b51583459ce1b51404de958" ResourceName="Animations/Animation/Enemy/Skeleton/Idle" />
       <Asset Guid="6eec880a2b6b7c34d8ff815ac55c53c7" ResourceName="Prefabs/BulletExplode" />
       <Asset Guid="733f594e319d0ca479634bb556fc2d3b" ResourceName="Prefabs/GameScenes/Level1_Scene2" />
+      <Asset Guid="737eeb361c6009a46a222a8aabfc7cea" ResourceName="Animations/Animation/Player/BowRecoilToIdle" />
+      <Asset Guid="7442609e59bff324b828c0b000331254" ResourceName="Animations/Animator/Ghost" />
       <Asset Guid="758ea2fc40ef27c41910580db069a557" ResourceName="Images/Enemy/Skeleton/Run/yidong12" />
       <Asset Guid="79400c779f203fd468006ddf82dd9bcc" ResourceName="Prefabs/GameScenes/Level0_Scene1" />
       <Asset Guid="7a28717095763354685b1ddfd463c1ba" ResourceName="Prefabs/BlueCircle" />
+      <Asset Guid="7b727806216d05944a016c87344825b9" ResourceName="Images/UI/background" />
+      <Asset Guid="7f52aa9f3059f1941b147065ffb13f79" ResourceName="Animations/Animation/Player/ShotGun/ShotGunFire" />
+      <Asset Guid="80a96c858b66c4248b7ba74f8318be5f" ResourceName="Videos/VideoTexture" />
       <Asset Guid="819a68773a0e5854ca930382dce47ded" ResourceName="Prefabs/RedFire" />
       <Asset Guid="8338c75f8c1068c4aa80c375374363c2" ResourceName="Images/Enemy/Skeleton/Run/yidong4" />
+      <Asset Guid="8540fa239e412bd42828271b3d6bc515" ResourceName="Animations/Animation/Player/TeleportAnim" />
       <Asset Guid="868f8ab3b83db4a48a91c358f98a8518" ResourceName="Images/Enemy/Skeleton/Run/yidong16" />
       <Asset Guid="8891f79ca0c89b04da39e1c622dc60d8" ResourceName="Scenes/Test" />
+      <Asset Guid="8c880091b1a679c4dac54906f71f6f9e" ResourceName="Images/UI/star" />
       <Asset Guid="8c8f97164061cc84f9c28145c3839b53" ResourceName="Prefabs/RedPumpkinFire" />
       <Asset Guid="8cb5d28b1017bf04eb460fcb3f819d38" ResourceName="Images/Enemy/Skeleton/Run/yidong5" />
+      <Asset Guid="8d3e3f5a7efe0af429b603e9a032e372" ResourceName="Animations/Animator/PlayerDie" />
+      <Asset Guid="9073f849cdb7475439c8fd2e3c6c2795" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Fire/Spawn" />
+      <Asset Guid="93977874cccbbfa469bc04e303e4b4b3" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Move" />
+      <Asset Guid="93be854115bd0e247a7666909e4fb218" ResourceName="Animations/Animation/Fire/Idle" />
       <Asset Guid="9752b6efbd1f3524d8b015d30b23ce99" ResourceName="Images/MagicCircle/FillShader" />
       <Asset Guid="9b144b61d4aaac74ca60c40508155094" ResourceName="Prefabs/Bow_Bullet" />
       <Asset Guid="9c4104c99dd49ad46b1e3f24661f042d" ResourceName="Images/Enemy/Skeleton/Run/yidong6" />
       <Asset Guid="9eee6e138c99724419d27a194d81d26a" ResourceName="DataTables/Player" />
       <Asset Guid="9ff69d9914ba790468a6cb0d224bb89d" ResourceName="Images/Enemy/Skeleton/Run/yidong9" />
+      <Asset Guid="a128232d21bc10f44b6421134b51efa1" ResourceName="Animations/Animation/Enemy/Ghost/Spawn" />
       <Asset Guid="a2ec18d7eab6a954fb54163e07e17e3b" ResourceName="Prefabs/GameScenes/Level2_Scene2" />
+      <Asset Guid="a3aee242a08e8234e892a2f0c38f0244" ResourceName="Animations/Animation/Tree/Idle" />
+      <Asset Guid="a60b927c5ef1ee04d80364387e95883f" ResourceName="Animations/Animation/Enemy/Pumpkin/Blue/Spawn" />
+      <Asset Guid="a6a20d14410dd6542949571df8010144" ResourceName="Images/UI/heart-empty" />
       <Asset Guid="a7237355af44b184a81e842d5684ceec" ResourceName="Prefabs/Player" />
+      <Asset Guid="ac3f01f41fc5ad14296369e6f3e45107" ResourceName="Images/UI/darkstar1" />
       <Asset Guid="ad12f67df9d4f5648bda12f7b0f4cc8a" ResourceName="Prefabs/RedCircle" />
       <Asset Guid="add050c35ee428a40980371f4e999250" ResourceName="Images/Enemy/Skeleton/Run/yidong3" />
+      <Asset Guid="b05bc2ab94cb6c84585569fee27fd9c1" ResourceName="Animations/Animator/BulletExplode" />
       <Asset Guid="b13a822eddca8334cb5708d41f3f261c" ResourceName="DataTables/Level" />
       <Asset Guid="b3dd3c230cd239e49b5f1c0367095bb1" ResourceName="Images/Enemy/Skeleton/Run/yidong14" />
       <Asset Guid="b8d06e07e30a973428fa97580034485b" ResourceName="DataTables/Test" />
       <Asset Guid="b8ff3267204440d4da5f1a6f79e9baf1" ResourceName="Prefabs/PurpleFire" />
+      <Asset Guid="ba2ff7728ba362a478bec1e105ce6e55" ResourceName="Animations/Animator/EnemyTest" />
       <Asset Guid="ba5b1788bea374a4cbdf75f981055201" ResourceName="DataTables/Weapon" />
       <Asset Guid="bafb9159bdf2f074bbab3b8dcb804e85" ResourceName="Prefabs/BluePumpkin" />
+      <Asset Guid="bbf19019af1e7414daf7ca1b2d2a0723" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Fire/Die" />
+      <Asset Guid="bc69bb789b29ef849a92b016fd0e1d66" ResourceName="Animations/Animator/Player" />
+      <Asset Guid="be00ee5b0391c7f409112fbd4e7ef85e" ResourceName="Animations/Animation/Enemy/Skeleton/TestSpawn" />
+      <Asset Guid="c0ff57f61ce8a504598dfb1c111a4e2c" ResourceName="Animations/Animation/Player/ShotGunRecoil" />
       <Asset Guid="c3acb57701a4d7043958585d619d6786" ResourceName="Prefabs/GameScenes/Level2_Scene1" />
       <Asset Guid="c518f0d069522ba4aa842c672048dafa" ResourceName="Images/MagicCircle/magic1" />
+      <Asset Guid="c6afff566df7a3a49b542d7b6df71f9b" ResourceName="Animations/Animation/Enemy/Pumpkin/Blue/Fire/Spawn" />
+      <Asset Guid="ca0e9b53ab7df304b91699d0e4e691a6" ResourceName="Animations/Animation/Fire/RedIdle" />
       <Asset Guid="cb11ffbf02937e141b9e2a155a01f195" ResourceName="Images/BowHUD" />
+      <Asset Guid="ce5b43948cbe0d442b2efd92c337706d" ResourceName="Animations/Animator/PurpleFire" />
       <Asset Guid="ce5c4e1f6fd53e145b52cf78555ac57f" ResourceName="Images/ShotGun" />
+      <Asset Guid="d0f0241e44d809a4ab6c74a5ad75c765" ResourceName="Animations/Animator/RedPumpkin" />
+      <Asset Guid="d102b8eb8b316294bb3975c5fc793f30" ResourceName="Animations/Animator/BluePumpkinFire" />
       <Asset Guid="d12ce70fdcef7e546bd4deb2fc7a0ddc" ResourceName="Prefabs/RedTree" />
+      <Asset Guid="d14f3a7f341431b41abd9cbad7fa4c7c" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Die" />
+      <Asset Guid="d49b9679169c25f40b94bfbbcec97003" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Fire/Idle" />
+      <Asset Guid="d82b29ef3ea12da489b5ddfd8143f744" ResourceName="Animations/Animation/Player/Teleport" />
+      <Asset Guid="d9aefc356736920449e401fc1d2ad76a" ResourceName="Animations/Animator/RedPumpkinFire" />
       <Asset Guid="d9b4139ec64f6cb4e8a74a0d9948adc4" ResourceName="Images/Enemy/Skeleton/Run/yidong2" />
       <Asset Guid="da107ae9236cc3142b53df7a86b196f5" ResourceName="Scenes/Launch" />
+      <Asset Guid="db810ec31ff7b7f4f99e488e61a10c0e" ResourceName="Animations/Animation/Enemy/Pumpkin/Blue/Fire/Idle" />
+      <Asset Guid="dda01b03ba14f344b9314af3efc63b53" ResourceName="Animations/Animation/Player/Explode" />
       <Asset Guid="de45b46aca2e13f4fac2d65bd57e4bc2" ResourceName="Images/Enemy/Skeleton/Run/yidong1" />
+      <Asset Guid="dee3ce7e06086d34d809929dd60deb27" ResourceName="Fonts/VonwaonBitmap-16px" />
+      <Asset Guid="e163129f45d586843af5b17189137e43" ResourceName="Animations/Animation/Enemy/Ghost/Die" />
       <Asset Guid="e1ba6c646ba03d54a925bb1624b61922" ResourceName="Images/Enemy/Skeleton/Run/yidong15" />
       <Asset Guid="e2175d6671a140e4f9be0bbd704a9350" ResourceName="Images/Enemy/Skeleton/Run/yidong7" />
       <Asset Guid="e878efcf97f1d1247a04f8f83417bc84" ResourceName="Prefabs/BluePumpkinFire" />
+      <Asset Guid="e8e2d283aade47546bed714f2583e374" ResourceName="Animations/Animation/Player/ShotGunIdle" />
       <Asset Guid="e921923b515f00a4bae19e9485c86135" ResourceName="Prefabs/BlueTree" />
       <Asset Guid="f1a29ba99c075204ab07cd97c0f426ae" ResourceName="Images/Enemy/Skeleton/Run/yidong10" />
+      <Asset Guid="f4cb15df55b407e45972308fb900c7c1" ResourceName="Animations/Animation/Enemy/Pumpkin/Blue/Move" />
+      <Asset Guid="f592687bd9073b24cbced7da38a41024" ResourceName="Images/UI/2" />
+      <Asset Guid="f5eb3d0f22d04824d87e3d259636954a" ResourceName="Animations/Animation/Enemy/Skeleton/Spawn" />
+      <Asset Guid="f6c19f6eb6b1eeb4090f669b53617d98" ResourceName="Animations/Animation/Enemy/Skeleton/Run" />
+      <Asset Guid="f797c458dd9d52d4b9fb85934a327586" ResourceName="Animations/Animation/Player/ShotGunRecoilToIdle" />
       <Asset Guid="f96fddf388c33d940b6a502259795eec" ResourceName="Prefabs/Bow" />
     </Assets>
   </ResourceCollection>

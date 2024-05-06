@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 2288698455
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fc8db265a8a98edc30fa0c3fbbc8c0a8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: fc8db265a8a98edc30fa0c3fbbc8c0a8
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/UI/background.png
+Dependencies: []

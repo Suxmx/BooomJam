@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 351252068
+CRC: 4192391447
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 490ac5a8de87e55acb29208054a723eb
+    Hash: 1079bdc29e49065df187e71faa3955e2
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 5679ff4a107a3812af516f2f921281f1
+    Hash: 85f66c08e468996a377d9cb8a6b054e7
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 490ac5a8de87e55acb29208054a723eb
+    Hash: 1079bdc29e49065df187e71faa3955e2
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -25,8 +25,6 @@ ClassTypes:
 - Class: 50
   Script: {instanceID: 0}
 - Class: 70
-  Script: {instanceID: 0}
-- Class: 74
   Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
@@ -45,4 +43,6 @@ SerializeReferenceClassIdentifiers:
   ClassName: Lock
 Assets:
 - Assets/GameMain/Prefabs/Player.prefab
-Dependencies: []
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animator/player
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/prefabs/playerdie

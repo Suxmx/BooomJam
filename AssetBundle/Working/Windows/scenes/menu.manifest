@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3978558833
+CRC: 1169829410
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a980ae99e7fde16b449f1677989c9e31
+    Hash: 08f9cf53017ad9028e27ae4524f351fa
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 4c9e3d5db302cebd6414aa9a3ac7282d
+    Hash: 7955ca552b3bd24b8a1dc98b9df26939
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: a980ae99e7fde16b449f1677989c9e31
+    Hash: 08f9cf53017ad9028e27ae4524f351fa
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -18,7 +18,11 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 20
   Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 48
   Script: {instanceID: 0}
 - Class: 81
   Script: {instanceID: 0}
@@ -39,6 +43,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 8c6ee039a0cf4dca8299c140d69c54cc, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
@@ -51,8 +57,14 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 61776ee3dd1844c090383aaef8929a3d, type: 3}
 - Class: 115
+  Script: {instanceID: 0}
+- Class: 128
   Script: {instanceID: 0}
 - Class: 157
   Script: {instanceID: 0}
@@ -73,4 +85,10 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/GameMain/Scenes/Menu.unity
-Dependencies: []
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/fonts/vonwaonbitmap-16px
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/2
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/darkstar1
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/iconback1
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/star
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/videos/videotexture

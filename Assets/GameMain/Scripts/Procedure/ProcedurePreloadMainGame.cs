@@ -23,16 +23,17 @@ namespace GameMain
             base.OnEnter(procedureOwner);
             m_LoadedAssetFlag = new();
             m_LoadedData = new();
-            LoadPrefab(AssetUtility.GetPrefabAsset("PublicObjectPool"),"PublicObjectPool");
+            LoadPrefab(AssetUtility.GetPrefabAsset("PublicObjectPool"), "PublicObjectPool");
             LoadPlayer();
             LoadGameScene(procedureOwner.GetData<VarInt32>("Level"));
             LoadPathGraphScanner();
-            LoadPrefab(AssetUtility.GetPrefabAsset("BluePumpkinFire"),"BluePumpkinFire");
-            LoadPrefab(AssetUtility.GetPrefabAsset("RedPumpkinFire"),"RedPumpkinFire");
-            var pools=GameEntry.ObjectPool.GetAllObjectPools();
+            LoadPrefab(AssetUtility.GetPrefabAsset("BluePumpkinFire"), "BluePumpkinFire");
+            LoadPrefab(AssetUtility.GetPrefabAsset("RedPumpkinFire"), "RedPumpkinFire");
+            var pools = GameEntry.ObjectPool.GetAllObjectPools();
             foreach (var pool in pools)
             {
-                GameEntry.ObjectPool.DestroyObjectPool(pool);
+                if (pool.FullName.Contains("SelfCreated_"))
+                    GameEntry.ObjectPool.DestroyObjectPool(pool);
             }
         }
 
@@ -58,13 +59,13 @@ namespace GameMain
             var tmp = new VarObject();
             tmp.Value = m_LoadedData;
             procedureOwner.SetData<VarObject>("GameData", tmp);
+            procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Main"));
             ChangeState<ProcedureChangeScene>(procedureOwner);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
         {
             base.OnLeave(procedureOwner, isShutdown);
-            procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Main"));
         }
 
         private void LoadPrefab(string path, string nameInDict)
@@ -91,7 +92,7 @@ namespace GameMain
             LoadPrefab(AssetUtility.GetPrefabAsset("PathGraphScanner"), "PathGraphScanner");
         }
 
-        private void LoadPlayer()   
+        private void LoadPlayer()
         {
             //读取人物数据
             IDataTable<DRPlayer> dtPlayer = GameEntry.DataTable.GetDataTable<DRPlayer>();
@@ -104,7 +105,7 @@ namespace GameMain
                 DRWeapon drWeapon = dtWeapon.GetDataRow(DRWeapon.WeaponName2Id[name]);
                 weaponDatas.Add(WeaponFactory.GetWeaponData(drWeapon));
                 LoadPrefab(AssetUtility.GetPrefabAsset(name), name);
-                LoadPrefab(AssetUtility.GetPrefabAsset(name+"_Bullet"), name+"_Bullet");
+                LoadPrefab(AssetUtility.GetPrefabAsset(name + "_Bullet"), name + "_Bullet");
             }
 
             //打包数据生成人物
@@ -112,7 +113,7 @@ namespace GameMain
                 drPlayer.MaxHp, drPlayer.Damage, drPlayer.MoveSpeed, drPlayer.ChangeSceneInterval, weaponDatas);
             m_LoadedData.PlayerData = playerData;
             LoadPrefab(AssetUtility.GetPrefabAsset("Player"), "Player");
-            LoadPrefab(AssetUtility.GetPrefabAsset("BulletExplode"),"BulletExplode");
+            LoadPrefab(AssetUtility.GetPrefabAsset("BulletExplode"), "BulletExplode");
         }
 
         private void LoadGameScene(int level)

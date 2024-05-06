@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 730798771
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8b7ad3f78a5e50cf5d2dba7554094356
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 8b7ad3f78a5e50cf5d2dba7554094356
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Fire/Idle.anim
+Dependencies: []

@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 511214351
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ffc4b41478d1468f307699a7efcacc5f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: ffc4b41478d1468f307699a7efcacc5f
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Fire/RedIdle.anim
+Dependencies: []

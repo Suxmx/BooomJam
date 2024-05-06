@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2942552017
+CRC: 3941615697
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a00b57d2d0353df1ac4ce9d3af2335b0
+    Hash: 2f80430971e0b61a65e01c47f073c325
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f6312db94cb3637a1000a49577f84142
+    Hash: 9aa0dd8e0e726e769a2fc9b2c2fbc73b
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: a00b57d2d0353df1ac4ce9d3af2335b0
+    Hash: 2f80430971e0b61a65e01c47f073c325
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -26,33 +26,20 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 70
   Script: {instanceID: 0}
-- Class: 74
-  Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
 - Class: 95
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 5ea0ab458d5195944a9186a7fd2c08f4, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 212
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers:
-- AssemblyName: AstarPathfindingProject
-  ClassName: Pathfinding.AutoRepathPolicy
-- AssemblyName: AstarPathfindingProject
-  ClassName: Pathfinding.GraphMask
-- AssemblyName: AstarPathfindingProject
-  ClassName: Pathfinding.StartEndModifier
+SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/GameMain/Prefabs/RedPumpkinFire.prefab
-Dependencies: []
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animator/redpumpkinfire

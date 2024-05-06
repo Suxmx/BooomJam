@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 2329421722
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: af3d1701e6e602035c7b46079f94890d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: be10fbd89bdb8dfde4467e09c6fdd5e0
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: af3d1701e6e602035c7b46079f94890d
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Enemy/Skeleton/Run.anim
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong1
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong10
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong11
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong12
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong13
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong14
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong15
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong16
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong2
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong3
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong4
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong5
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong6
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong7
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong8
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/enemy/skeleton/run/yidong9

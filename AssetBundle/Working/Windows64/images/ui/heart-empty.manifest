@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3660918215
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 988cb8d3bde93146ff3e13bfeb8be502
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 988cb8d3bde93146ff3e13bfeb8be502
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/UI/heart-empty.png
+Dependencies: []

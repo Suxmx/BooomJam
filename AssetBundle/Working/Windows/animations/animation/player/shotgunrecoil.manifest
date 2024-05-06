@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 2003680907
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a6b3306c721c892514035ec50f17ec2b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: a6b3306c721c892514035ec50f17ec2b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Player/ShotGunRecoil.anim
+Dependencies: []

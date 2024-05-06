@@ -1,0 +1,1411 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<UnityGameFramework>
+  <BuildReport>
+    <Summary>
+      <ProductName>J-Jam</ProductName>
+      <CompanyName>DefaultCompany</CompanyName>
+      <GameIdentifier>com.DefaultCompany.J-Jam</GameIdentifier>
+      <GameFrameworkVersion>2021.05.31</GameFrameworkVersion>
+      <UnityVersion>2021.3.37f1</UnityVersion>
+      <ApplicableGameVersion>1.0</ApplicableGameVersion>
+      <InternalResourceVersion>8</InternalResourceVersion>
+      <Platforms>Windows, Windows64</Platforms>
+      <AssetBundleCompression>LZ4</AssetBundleCompression>
+      <CompressionHelperTypeName>UnityGameFramework.Runtime.DefaultCompressionHelper</CompressionHelperTypeName>
+      <AdditionalCompressionSelected>False</AdditionalCompressionSelected>
+      <ForceRebuildAssetBundleSelected>False</ForceRebuildAssetBundleSelected>
+      <BuildEventHandlerTypeName>
+      </BuildEventHandlerTypeName>
+      <OutputDirectory>D:/UnityProject/J-Jam/AssetBundle</OutputDirectory>
+      <BuildAssetBundleOptions>DeterministicAssetBundle, ChunkBasedCompression</BuildAssetBundleOptions>
+    </Summary>
+    <Resources Count="126">
+      <Resource Name="Animations/Animation/Enemy/Ghost/Die" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="e163129f45d586843af5b17189137e43" Name="Assets/GameMain/Animations/Animation/Enemy/Ghost/Die.anim" Length="3972" HashCode="-346769088" />
+        </Assets>
+        <Codes>
+          <Windows Length="49301" HashCode="1391198577" CompressedLength="49301" CompressedHashCode="1391198577" />
+          <Windows64 Length="49301" HashCode="-163740013" CompressedLength="49301" CompressedHashCode="-163740013" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Ghost/Move" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="67b70236e2ce33f4d9205ecfae8938e2" Name="Assets/GameMain/Animations/Animation/Enemy/Ghost/Move.anim" Length="3453" HashCode="-1081407072" />
+        </Assets>
+        <Codes>
+          <Windows Length="51958" HashCode="-2017361361" CompressedLength="51958" CompressedHashCode="-2017361361" />
+          <Windows64 Length="51958" HashCode="-1010395921" CompressedLength="51958" CompressedHashCode="-1010395921" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Ghost/Spawn" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="a128232d21bc10f44b6421134b51efa1" Name="Assets/GameMain/Animations/Animation/Enemy/Ghost/Spawn.anim" Length="3258" HashCode="2082763390" />
+        </Assets>
+        <Codes>
+          <Windows Length="36281" HashCode="-1237763042" CompressedLength="36281" CompressedHashCode="-1237763042" />
+          <Windows64 Length="36281" HashCode="-1712564873" CompressedLength="36281" CompressedHashCode="-1712564873" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Die" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="3c161619f8a87144b847994a9da1f23e" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Die.anim" Length="3971" HashCode="-755780094" />
+        </Assets>
+        <Codes>
+          <Windows Length="49518" HashCode="-1198429353" CompressedLength="49518" CompressedHashCode="-1198429353" />
+          <Windows64 Length="49518" HashCode="1795311137" CompressedLength="49518" CompressedHashCode="1795311137" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Fire/Idle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="db810ec31ff7b7f4f99e488e61a10c0e" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Fire/Idle.anim" Length="2648" HashCode="-130991753" />
+        </Assets>
+        <Codes>
+          <Windows Length="18764" HashCode="205744964" CompressedLength="18764" CompressedHashCode="205744964" />
+          <Windows64 Length="18764" HashCode="1499158373" CompressedLength="18764" CompressedHashCode="1499158373" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Fire/Spawn" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="c6afff566df7a3a49b542d7b6df71f9b" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Fire/Spawn.anim" Length="2805" HashCode="1608129297" />
+        </Assets>
+        <Codes>
+          <Windows Length="18785" HashCode="-1291322495" CompressedLength="18785" CompressedHashCode="-1291322495" />
+          <Windows64 Length="18785" HashCode="-131141614" CompressedLength="18785" CompressedHashCode="-131141614" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Move" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="f4cb15df55b407e45972308fb900c7c1" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Move.anim" Length="2632" HashCode="-1523747437" />
+        </Assets>
+        <Codes>
+          <Windows Length="31169" HashCode="1155646674" CompressedLength="31169" CompressedHashCode="1155646674" />
+          <Windows64 Length="31169" HashCode="-609539043" CompressedLength="31169" CompressedHashCode="-609539043" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Blue/Spawn" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="a60b927c5ef1ee04d80364387e95883f" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Spawn.anim" Length="3272" HashCode="-1499203389" />
+        </Assets>
+        <Codes>
+          <Windows Length="31609" HashCode="1870530513" CompressedLength="31609" CompressedHashCode="1870530513" />
+          <Windows64 Length="31609" HashCode="-1326948610" CompressedLength="31609" CompressedHashCode="-1326948610" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Die" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="d14f3a7f341431b41abd9cbad7fa4c7c" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Die.anim" Length="3962" HashCode="-820986248" />
+        </Assets>
+        <Codes>
+          <Windows Length="51245" HashCode="-781375063" CompressedLength="51245" CompressedHashCode="-781375063" />
+          <Windows64 Length="51245" HashCode="639650064" CompressedLength="51245" CompressedHashCode="639650064" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Fire/Die" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="bbf19019af1e7414daf7ca1b2d2a0723" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Fire/Die.anim" Length="2647" HashCode="-1605231251" />
+        </Assets>
+        <Codes>
+          <Windows Length="18956" HashCode="1698193725" CompressedLength="18956" CompressedHashCode="1698193725" />
+          <Windows64 Length="18956" HashCode="-1789057775" CompressedLength="18956" CompressedHashCode="-1789057775" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Fire/Idle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="d49b9679169c25f40b94bfbbcec97003" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Fire/Idle.anim" Length="2648" HashCode="-1314640590" />
+        </Assets>
+        <Codes>
+          <Windows Length="18953" HashCode="773428215" CompressedLength="18953" CompressedHashCode="773428215" />
+          <Windows64 Length="18953" HashCode="-1154396564" CompressedLength="18953" CompressedHashCode="-1154396564" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Fire/Spawn" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="9073f849cdb7475439c8fd2e3c6c2795" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Fire/Spawn.anim" Length="2805" HashCode="1279029524" />
+        </Assets>
+        <Codes>
+          <Windows Length="18969" HashCode="-787108675" CompressedLength="18969" CompressedHashCode="-787108675" />
+          <Windows64 Length="18969" HashCode="-92576545" CompressedLength="18969" CompressedHashCode="-92576545" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Move" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="93977874cccbbfa469bc04e303e4b4b3" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Move.anim" Length="2632" HashCode="-1199267191" />
+        </Assets>
+        <Codes>
+          <Windows Length="31179" HashCode="2099924238" CompressedLength="31179" CompressedHashCode="2099924238" />
+          <Windows64 Length="31179" HashCode="-726801631" CompressedLength="31179" CompressedHashCode="-726801631" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Pumpkin/Red/Spawn" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="34dc2fb8046a0054bae1049bc62bf400" Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Spawn.anim" Length="3272" HashCode="1544537587" />
+        </Assets>
+        <Codes>
+          <Windows Length="31770" HashCode="-1075804016" CompressedLength="31770" CompressedHashCode="-1075804016" />
+          <Windows64 Length="31770" HashCode="811057477" CompressedLength="31770" CompressedHashCode="811057477" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Skeleton/Die" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="09a7f7522dc16a346886fdce1bf6b7f8" Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/Die.anim" Length="19136" HashCode="544501711" />
+        </Assets>
+        <Codes>
+          <Windows Length="27117" HashCode="-1236363402" CompressedLength="27117" CompressedHashCode="-1236363402" />
+          <Windows64 Length="27117" HashCode="204996428" CompressedLength="27117" CompressedHashCode="204996428" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Skeleton/Idle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="6e85230f5b51583459ce1b51404de958" Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/Idle.anim" Length="23513" HashCode="-523742938" />
+        </Assets>
+        <Codes>
+          <Windows Length="82334" HashCode="-173347400" CompressedLength="82334" CompressedHashCode="-173347400" />
+          <Windows64 Length="82334" HashCode="-1159818059" CompressedLength="82334" CompressedHashCode="-1159818059" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Skeleton/Run" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="f6c19f6eb6b1eeb4090f669b53617d98" Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/Run.anim" Length="35651" HashCode="2139635121">
+            <DependencyAssets Count="16">
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong1.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong10.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong11.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong12.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong13.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong14.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong15.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong16.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong2.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong3.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong4.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong5.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong6.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong7.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong8.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong9.png" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="7118" HashCode="1514043978" CompressedLength="7118" CompressedHashCode="1514043978" />
+          <Windows64 Length="7118" HashCode="110502438" CompressedLength="7118" CompressedHashCode="110502438" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Skeleton/Spawn" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="f5eb3d0f22d04824d87e3d259636954a" Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/Spawn.anim" Length="22694" HashCode="445364780" />
+        </Assets>
+        <Codes>
+          <Windows Length="29012" HashCode="1574155788" CompressedLength="29012" CompressedHashCode="1574155788" />
+          <Windows64 Length="29012" HashCode="-746745169" CompressedLength="29012" CompressedHashCode="-746745169" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Skeleton/TestHurt" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="5551471d22b4ec34f9305ca027798e75" Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/TestHurt.anim" Length="11341" HashCode="313380697" />
+        </Assets>
+        <Codes>
+          <Windows Length="6201" HashCode="1926708061" CompressedLength="6201" CompressedHashCode="1926708061" />
+          <Windows64 Length="6201" HashCode="-477843416" CompressedLength="6201" CompressedHashCode="-477843416" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Enemy/Skeleton/TestSpawn" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="be00ee5b0391c7f409112fbd4e7ef85e" Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/TestSpawn.anim" Length="4481" HashCode="926000229" />
+        </Assets>
+        <Codes>
+          <Windows Length="6039" HashCode="-229598292" CompressedLength="6039" CompressedHashCode="-229598292" />
+          <Windows64 Length="6039" HashCode="287330655" CompressedLength="6039" CompressedHashCode="287330655" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Fire/Idle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="93be854115bd0e247a7666909e4fb218" Name="Assets/GameMain/Animations/Animation/Fire/Idle.anim" Length="2836" HashCode="1796680267" />
+        </Assets>
+        <Codes>
+          <Windows Length="13192" HashCode="397337951" CompressedLength="13192" CompressedHashCode="397337951" />
+          <Windows64 Length="13194" HashCode="1168278326" CompressedLength="13194" CompressedHashCode="1168278326" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Fire/RedIdle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="ca0e9b53ab7df304b91699d0e4e691a6" Name="Assets/GameMain/Animations/Animation/Fire/RedIdle.anim" Length="2667" HashCode="583112901" />
+        </Assets>
+        <Codes>
+          <Windows Length="21980" HashCode="1520271144" CompressedLength="21980" CompressedHashCode="1520271144" />
+          <Windows64 Length="21980" HashCode="1755266270" CompressedLength="21980" CompressedHashCode="1755266270" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/BowIdle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="6869f330122c04d4aae59328a70737a4" Name="Assets/GameMain/Animations/Animation/Player/BowIdle.anim" Length="2579" HashCode="131189687" />
+        </Assets>
+        <Codes>
+          <Windows Length="17094" HashCode="1727825426" CompressedLength="17094" CompressedHashCode="1727825426" />
+          <Windows64 Length="17094" HashCode="-595457559" CompressedLength="17094" CompressedHashCode="-595457559" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/BowRecoilToIdle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="737eeb361c6009a46a222a8aabfc7cea" Name="Assets/GameMain/Animations/Animation/Player/BowRecoilToIdle.anim" Length="2411" HashCode="981745265" />
+        </Assets>
+        <Codes>
+          <Windows Length="17504" HashCode="1204590779" CompressedLength="17504" CompressedHashCode="1204590779" />
+          <Windows64 Length="17504" HashCode="141710701" CompressedLength="17504" CompressedHashCode="141710701" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/Die" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="64b600466afe9ce4fae86cb11c9253a9" Name="Assets/GameMain/Animations/Animation/Player/Die.anim" Length="2736" HashCode="416598548" />
+        </Assets>
+        <Codes>
+          <Windows Length="17677" HashCode="-351356647" CompressedLength="17677" CompressedHashCode="-351356647" />
+          <Windows64 Length="17677" HashCode="1873079114" CompressedLength="17677" CompressedHashCode="1873079114" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/Explode" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="dda01b03ba14f344b9314af3efc63b53" Name="Assets/GameMain/Animations/Animation/Player/Explode.anim" Length="2736" HashCode="-1148918160" />
+        </Assets>
+        <Codes>
+          <Windows Length="15500" HashCode="1441322322" CompressedLength="15500" CompressedHashCode="1441322322" />
+          <Windows64 Length="15500" HashCode="-1729816348" CompressedLength="15500" CompressedHashCode="-1729816348" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/ShotGun/ShotGunFire" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="7f52aa9f3059f1941b147065ffb13f79" Name="Assets/GameMain/Animations/Animation/Player/ShotGun/ShotGunFire.anim" Length="1900" HashCode="1273958396" />
+        </Assets>
+        <Codes>
+          <Windows Length="9753" HashCode="-1201128905" CompressedLength="9753" CompressedHashCode="-1201128905" />
+          <Windows64 Length="9753" HashCode="-872957774" CompressedLength="9753" CompressedHashCode="-872957774" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/ShotGun/ShotGunNormal" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="14fa35758aad0984eb8b0a7d5ed331ee" Name="Assets/GameMain/Animations/Animation/Player/ShotGun/ShotGunNormal.anim" Length="1892" HashCode="1861291889" />
+        </Assets>
+        <Codes>
+          <Windows Length="9295" HashCode="2141035857" CompressedLength="9295" CompressedHashCode="2141035857" />
+          <Windows64 Length="9295" HashCode="-2006772364" CompressedLength="9295" CompressedHashCode="-2006772364" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/ShotGunIdle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="e8e2d283aade47546bed714f2583e374" Name="Assets/GameMain/Animations/Animation/Player/ShotGunIdle.anim" Length="2583" HashCode="-825727770" />
+        </Assets>
+        <Codes>
+          <Windows Length="17241" HashCode="188448115" CompressedLength="17241" CompressedHashCode="188448115" />
+          <Windows64 Length="17241" HashCode="-1077007196" CompressedLength="17241" CompressedHashCode="-1077007196" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/ShotGunRecoil" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="c0ff57f61ce8a504598dfb1c111a4e2c" Name="Assets/GameMain/Animations/Animation/Player/ShotGunRecoil.anim" Length="2046" HashCode="-1175745949" />
+        </Assets>
+        <Codes>
+          <Windows Length="12660" HashCode="807960511" CompressedLength="12660" CompressedHashCode="807960511" />
+          <Windows64 Length="12660" HashCode="-1151771429" CompressedLength="12660" CompressedHashCode="-1151771429" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/ShotGunRecoilToIdle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="f797c458dd9d52d4b9fb85934a327586" Name="Assets/GameMain/Animations/Animation/Player/ShotGunRecoilToIdle.anim" Length="2415" HashCode="-1395044641" />
+        </Assets>
+        <Codes>
+          <Windows Length="17734" HashCode="2138437052" CompressedLength="17734" CompressedHashCode="2138437052" />
+          <Windows64 Length="17734" HashCode="1742189005" CompressedLength="17734" CompressedHashCode="1742189005" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/Teleport" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="d82b29ef3ea12da489b5ddfd8143f744" Name="Assets/GameMain/Animations/Animation/Player/Teleport.anim" Length="2576" HashCode="-648887835" />
+        </Assets>
+        <Codes>
+          <Windows Length="13567" HashCode="-1398148682" CompressedLength="13567" CompressedHashCode="-1398148682" />
+          <Windows64 Length="13567" HashCode="-1423787465" CompressedLength="13567" CompressedHashCode="-1423787465" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Player/TeleportAnim" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="8540fa239e412bd42828271b3d6bc515" Name="Assets/GameMain/Animations/Animation/Player/TeleportAnim.anim" Length="2802" HashCode="1891983618" />
+        </Assets>
+        <Codes>
+          <Windows Length="13549" HashCode="1482898827" CompressedLength="13549" CompressedHashCode="1482898827" />
+          <Windows64 Length="13549" HashCode="1766666191" CompressedLength="13549" CompressedHashCode="1766666191" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Tree/BlueIdle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="3a420e080b6819a4cb44a61e42fbe5f6" Name="Assets/GameMain/Animations/Animation/Tree/BlueIdle.anim" Length="3020" HashCode="-1709895248" />
+        </Assets>
+        <Codes>
+          <Windows Length="294816" HashCode="-1285325621" CompressedLength="294816" CompressedHashCode="-1285325621" />
+          <Windows64 Length="294816" HashCode="-1824898343" CompressedLength="294816" CompressedHashCode="-1824898343" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animation/Tree/Idle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="a3aee242a08e8234e892a2f0c38f0244" Name="Assets/GameMain/Animations/Animation/Tree/Idle.anim" Length="2664" HashCode="-1804645670" />
+        </Assets>
+        <Codes>
+          <Windows Length="220153" HashCode="-1001981815" CompressedLength="220153" CompressedHashCode="-1001981815" />
+          <Windows64 Length="220153" HashCode="1224411795" CompressedLength="220153" CompressedHashCode="1224411795" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/BluePumpkin" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="113f41febd6fe4146ae9d93eb0015941" Name="Assets/GameMain/Animations/Animator/BluePumpkin.controller" Length="4344" HashCode="1052318560">
+            <DependencyAssets Count="3">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Die.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Move.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Spawn.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4963" HashCode="1075630109" CompressedLength="4963" CompressedHashCode="1075630109" />
+          <Windows64 Length="4963" HashCode="-630238445" CompressedLength="4963" CompressedHashCode="-630238445" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/BluePumpkinFire" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="d102b8eb8b316294bb3975c5fc793f30" Name="Assets/GameMain/Animations/Animator/BluePumpkinFire.controller" Length="3520" HashCode="832974958">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Fire/Idle.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Blue/Fire/Spawn.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4863" HashCode="329331795" CompressedLength="4863" CompressedHashCode="329331795" />
+          <Windows64 Length="4863" HashCode="551539179" CompressedLength="4863" CompressedHashCode="551539179" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/BlueTree" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="0a1c1fab37a5edd4ca531a1439ef2118" Name="Assets/GameMain/Animations/Animator/BlueTree.controller" Length="2095" HashCode="-293682149">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Tree/BlueIdle.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4679" HashCode="-1356369607" CompressedLength="4679" CompressedHashCode="-1356369607" />
+          <Windows64 Length="4679" HashCode="-961758108" CompressedLength="4679" CompressedHashCode="-961758108" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/BulletExplode" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="b05bc2ab94cb6c84585569fee27fd9c1" Name="Assets/GameMain/Animations/Animator/BulletExplode.controller" Length="2785" HashCode="1365656918">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/Explode.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4717" HashCode="-1515695483" CompressedLength="4717" CompressedHashCode="-1515695483" />
+          <Windows64 Length="4717" HashCode="-1575567416" CompressedLength="4717" CompressedHashCode="-1575567416" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/EnemyTest" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="ba2ff7728ba362a478bec1e105ce6e55" Name="Assets/GameMain/Animations/Animator/EnemyTest.controller" Length="5240" HashCode="-2010330531">
+            <DependencyAssets Count="4">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/Die.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/Run.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/Spawn.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Skeleton/TestHurt.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="5076" HashCode="979647496" CompressedLength="5076" CompressedHashCode="979647496" />
+          <Windows64 Length="5076" HashCode="1315230666" CompressedLength="5076" CompressedHashCode="1315230666" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/Ghost" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="7442609e59bff324b828c0b000331254" Name="Assets/GameMain/Animations/Animator/Ghost.controller" Length="4339" HashCode="1056054443">
+            <DependencyAssets Count="3">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Ghost/Die.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Ghost/Move.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Ghost/Spawn.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4940" HashCode="57148604" CompressedLength="4940" CompressedHashCode="57148604" />
+          <Windows64 Length="4940" HashCode="332066181" CompressedLength="4940" CompressedHashCode="332066181" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/Player" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="bc69bb789b29ef849a92b016fd0e1d66" Name="Assets/GameMain/Animations/Animator/Player.controller" Length="7189" HashCode="-1988966712">
+            <DependencyAssets Count="6">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/BowIdle.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/BowRecoilToIdle.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/Die.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/ShotGunIdle.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/ShotGunRecoil.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/ShotGunRecoilToIdle.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="5325" HashCode="-1644859834" CompressedLength="5325" CompressedHashCode="-1644859834" />
+          <Windows64 Length="5325" HashCode="-224418241" CompressedLength="5325" CompressedHashCode="-224418241" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/PlayerDie" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="8d3e3f5a7efe0af429b603e9a032e372" Name="Assets/GameMain/Animations/Animator/PlayerDie.controller" Length="2024" HashCode="1429967200">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/Die.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4663" HashCode="1889555348" CompressedLength="4663" CompressedHashCode="1889555348" />
+          <Windows64 Length="4663" HashCode="952844563" CompressedLength="4663" CompressedHashCode="952844563" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/PlayerTeleport" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="461c00564706f1d468d9403d7a77ad29" Name="Assets/GameMain/Animations/Animator/PlayerTeleport.controller" Length="2032" HashCode="460914725">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/Teleport.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4674" HashCode="401810302" CompressedLength="4674" CompressedHashCode="401810302" />
+          <Windows64 Length="4674" HashCode="583429912" CompressedLength="4674" CompressedHashCode="583429912" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/PurpleFire" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="ce5b43948cbe0d442b2efd92c337706d" Name="Assets/GameMain/Animations/Animator/PurpleFire.controller" Length="2101" HashCode="1133615506">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Fire/RedIdle.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4679" HashCode="633079799" CompressedLength="4679" CompressedHashCode="633079799" />
+          <Windows64 Length="4679" HashCode="1278724778" CompressedLength="4679" CompressedHashCode="1278724778" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/RedFire" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="173f540078068324a901416ad797a084" Name="Assets/GameMain/Animations/Animator/RedFire.controller" Length="2088" HashCode="413658342">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Fire/Idle.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4657" HashCode="-52454752" CompressedLength="4657" CompressedHashCode="-52454752" />
+          <Windows64 Length="4657" HashCode="-766333613" CompressedLength="4657" CompressedHashCode="-766333613" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/RedPumpkin" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="d0f0241e44d809a4ab6c74a5ad75c765" Name="Assets/GameMain/Animations/Animator/RedPumpkin.controller" Length="4347" HashCode="1680081019">
+            <DependencyAssets Count="3">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Die.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Move.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Spawn.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4953" HashCode="1111513208" CompressedLength="4953" CompressedHashCode="1111513208" />
+          <Windows64 Length="4953" HashCode="-1724971865" CompressedLength="4953" CompressedHashCode="-1724971865" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/RedPumpkinFire" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="d9aefc356736920449e401fc1d2ad76a" Name="Assets/GameMain/Animations/Animator/RedPumpkinFire.controller" Length="3529" HashCode="1951699391">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Fire/Idle.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Fire/Spawn.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4855" HashCode="-1392439453" CompressedLength="4855" CompressedHashCode="-1392439453" />
+          <Windows64 Length="4855" HashCode="2127107847" CompressedLength="4855" CompressedHashCode="2127107847" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/RedTree" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="3523db752d7c13b48af60b4ebd29c807" Name="Assets/GameMain/Animations/Animator/RedTree.controller" Length="2090" HashCode="-1364616637">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Tree/Idle.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4672" HashCode="406486487" CompressedLength="4672" CompressedHashCode="406486487" />
+          <Windows64 Length="4672" HashCode="1311421977" CompressedLength="4672" CompressedHashCode="1311421977" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/ShotGun" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="2c746b9687eb2644890763aa6909fb8d" Name="Assets/GameMain/Animations/Animator/ShotGun.controller" Length="3414" HashCode="805053809">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/ShotGun/ShotGunFire.anim" />
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/ShotGun/ShotGunNormal.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4852" HashCode="1501679118" CompressedLength="4852" CompressedHashCode="1501679118" />
+          <Windows64 Length="4852" HashCode="-1945273202" CompressedLength="4852" CompressedHashCode="-1945273202" />
+        </Codes>
+      </Resource>
+      <Resource Name="Animations/Animator/Teleport" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="0940deea72858d548afd99b2e78f9396" Name="Assets/GameMain/Animations/Animator/Teleport.controller" Length="2030" HashCode="-638759303">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animation/Player/TeleportAnim.anim" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4677" HashCode="1322683658" CompressedLength="4677" CompressedHashCode="1322683658" />
+          <Windows64 Length="4677" HashCode="1232661269" CompressedLength="4677" CompressedHashCode="1232661269" />
+        </Codes>
+      </Resource>
+      <Resource Name="Configs/DefaultConfig" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="32eccce7e201cee4ab42f91cff5dd49b" Name="Assets/GameMain/Configs/DefaultConfig.csv" Length="31" HashCode="-808839860" />
+        </Assets>
+        <Codes>
+          <Windows Length="1215" HashCode="-1674147493" CompressedLength="1215" CompressedHashCode="-1674147493" />
+          <Windows64 Length="1215" HashCode="1059168794" CompressedLength="1215" CompressedHashCode="1059168794" />
+        </Codes>
+      </Resource>
+      <Resource Name="DataTables/Entity" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="6c0ebb89d6bdcd646a277887de92a98a" Name="Assets/GameMain/DataTables/Entity.csv" Length="77" HashCode="-1557516066" />
+        </Assets>
+        <Codes>
+          <Windows Length="1260" HashCode="1016867898" CompressedLength="1260" CompressedHashCode="1016867898" />
+          <Windows64 Length="1260" HashCode="-1582921318" CompressedLength="1260" CompressedHashCode="-1582921318" />
+        </Codes>
+      </Resource>
+      <Resource Name="DataTables/Level" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="b13a822eddca8334cb5708d41f3f261c" Name="Assets/GameMain/DataTables/Level.csv" Length="121" HashCode="800941501" />
+        </Assets>
+        <Codes>
+          <Windows Length="1258" HashCode="-1032231104" CompressedLength="1258" CompressedHashCode="-1032231104" />
+          <Windows64 Length="1258" HashCode="-1465724665" CompressedLength="1258" CompressedHashCode="-1465724665" />
+        </Codes>
+      </Resource>
+      <Resource Name="DataTables/Player" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="9eee6e138c99724419d27a194d81d26a" Name="Assets/GameMain/DataTables/Player.csv" Length="101" HashCode="-689957483" />
+        </Assets>
+        <Codes>
+          <Windows Length="1291" HashCode="1226365868" CompressedLength="1291" CompressedHashCode="1226365868" />
+          <Windows64 Length="1291" HashCode="-1098181246" CompressedLength="1291" CompressedHashCode="-1098181246" />
+        </Codes>
+      </Resource>
+      <Resource Name="DataTables/Scene" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="66c75347ed1ac324f888f5ecd9d3f531" Name="Assets/GameMain/DataTables/Scene.csv" Length="59" HashCode="758236333" />
+        </Assets>
+        <Codes>
+          <Windows Length="1240" HashCode="-1962848865" CompressedLength="1240" CompressedHashCode="-1962848865" />
+          <Windows64 Length="1240" HashCode="1755532586" CompressedLength="1240" CompressedHashCode="1755532586" />
+        </Codes>
+      </Resource>
+      <Resource Name="DataTables/Test" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="b8d06e07e30a973428fa97580034485b" Name="Assets/GameMain/DataTables/Test.csv" Length="337" HashCode="425977953" />
+        </Assets>
+        <Codes>
+          <Windows Length="1461" HashCode="758329759" CompressedLength="1461" CompressedHashCode="758329759" />
+          <Windows64 Length="1461" HashCode="-1437706797" CompressedLength="1461" CompressedHashCode="-1437706797" />
+        </Codes>
+      </Resource>
+      <Resource Name="DataTables/UIForm" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="67e1f955e96d93a4c9bd25bf880e7673" Name="Assets/GameMain/DataTables/UIForm.csv" Length="87" HashCode="1101846520" />
+        </Assets>
+        <Codes>
+          <Windows Length="1280" HashCode="-1726919825" CompressedLength="1280" CompressedHashCode="-1726919825" />
+          <Windows64 Length="1280" HashCode="-1275025258" CompressedLength="1280" CompressedHashCode="-1275025258" />
+        </Codes>
+      </Resource>
+      <Resource Name="DataTables/Weapon" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="ba5b1788bea374a4cbdf75f981055201" Name="Assets/GameMain/DataTables/Weapon.csv" Length="490" HashCode="1854676926" />
+        </Assets>
+        <Codes>
+          <Windows Length="1538" HashCode="-1685216482" CompressedLength="1538" CompressedHashCode="-1685216482" />
+          <Windows64 Length="1538" HashCode="699188887" CompressedLength="1538" CompressedHashCode="699188887" />
+        </Codes>
+      </Resource>
+      <Resource Name="Fonts/VonwaonBitmap-12px" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="31a952b081e484347bf297b5f77c103e" Name="Assets/GameMain/Fonts/VonwaonBitmap-12px.ttf" Length="1568208" HashCode="321725841" />
+        </Assets>
+        <Codes>
+          <Windows Length="587229" HashCode="-1951381370" CompressedLength="587229" CompressedHashCode="-1951381370" />
+          <Windows64 Length="587230" HashCode="404795946" CompressedLength="587230" CompressedHashCode="404795946" />
+        </Codes>
+      </Resource>
+      <Resource Name="Fonts/VonwaonBitmap-16px" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="dee3ce7e06086d34d809929dd60deb27" Name="Assets/GameMain/Fonts/VonwaonBitmap-16px.ttf" Length="1914788" HashCode="-552127695" />
+        </Assets>
+        <Codes>
+          <Windows Length="695170" HashCode="270500800" CompressedLength="695170" CompressedHashCode="270500800" />
+          <Windows64 Length="695172" HashCode="1274914240" CompressedLength="695172" CompressedHashCode="1274914240" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/BowHUD" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="cb11ffbf02937e141b9e2a155a01f195" Name="Assets/GameMain/Images/BowHUD.png" Length="2097" HashCode="-1816669085" />
+        </Assets>
+        <Codes>
+          <Windows Length="4222" HashCode="-1792280091" CompressedLength="4222" CompressedHashCode="-1792280091" />
+          <Windows64 Length="4222" HashCode="-1069212482" CompressedLength="4222" CompressedHashCode="-1069212482" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Bullet" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="248c4fb06582a1044b5bdd03302efa84" Name="Assets/GameMain/Images/Bullet.png" Length="2097" HashCode="-1816669085" />
+        </Assets>
+        <Codes>
+          <Windows Length="4219" HashCode="511732772" CompressedLength="4219" CompressedHashCode="511732772" />
+          <Windows64 Length="4219" HashCode="1545365897" CompressedLength="4219" CompressedHashCode="1545365897" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong1" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="de45b46aca2e13f4fac2d65bd57e4bc2" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong1.png" Length="2144" HashCode="-1355794008" />
+        </Assets>
+        <Codes>
+          <Windows Length="6727" HashCode="1543850090" CompressedLength="6727" CompressedHashCode="1543850090" />
+          <Windows64 Length="6727" HashCode="1253557919" CompressedLength="6727" CompressedHashCode="1253557919" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong10" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="f1a29ba99c075204ab07cd97c0f426ae" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong10.png" Length="2180" HashCode="1559354769" />
+        </Assets>
+        <Codes>
+          <Windows Length="6483" HashCode="890411419" CompressedLength="6483" CompressedHashCode="890411419" />
+          <Windows64 Length="6483" HashCode="-877276823" CompressedLength="6483" CompressedHashCode="-877276823" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong11" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="5a310466cbea7a74eae484f70c0f85e7" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong11.png" Length="2221" HashCode="-494091805" />
+        </Assets>
+        <Codes>
+          <Windows Length="6845" HashCode="-1742187117" CompressedLength="6845" CompressedHashCode="-1742187117" />
+          <Windows64 Length="6845" HashCode="243205396" CompressedLength="6845" CompressedHashCode="243205396" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong12" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="758ea2fc40ef27c41910580db069a557" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong12.png" Length="2130" HashCode="249753821" />
+        </Assets>
+        <Codes>
+          <Windows Length="6981" HashCode="1178023956" CompressedLength="6981" CompressedHashCode="1178023956" />
+          <Windows64 Length="6981" HashCode="-1528659345" CompressedLength="6981" CompressedHashCode="-1528659345" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong13" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="38a1ce9772ff8d24ea7edb20d2da8380" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong13.png" Length="2164" HashCode="-920346993" />
+        </Assets>
+        <Codes>
+          <Windows Length="6790" HashCode="-680111566" CompressedLength="6790" CompressedHashCode="-680111566" />
+          <Windows64 Length="6790" HashCode="-1485939402" CompressedLength="6790" CompressedHashCode="-1485939402" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong14" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="b3dd3c230cd239e49b5f1c0367095bb1" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong14.png" Length="2108" HashCode="1899933223" />
+        </Assets>
+        <Codes>
+          <Windows Length="6792" HashCode="-962208980" CompressedLength="6792" CompressedHashCode="-962208980" />
+          <Windows64 Length="6792" HashCode="846623649" CompressedLength="6792" CompressedHashCode="846623649" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong15" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="e1ba6c646ba03d54a925bb1624b61922" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong15.png" Length="2152" HashCode="-584185852" />
+        </Assets>
+        <Codes>
+          <Windows Length="6625" HashCode="1285266393" CompressedLength="6625" CompressedHashCode="1285266393" />
+          <Windows64 Length="6625" HashCode="-550482143" CompressedLength="6625" CompressedHashCode="-550482143" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong16" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="868f8ab3b83db4a48a91c358f98a8518" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong16.png" Length="2197" HashCode="-77978826" />
+        </Assets>
+        <Codes>
+          <Windows Length="6699" HashCode="-225154314" CompressedLength="6699" CompressedHashCode="-225154314" />
+          <Windows64 Length="6699" HashCode="-654517266" CompressedLength="6699" CompressedHashCode="-654517266" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong2" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="d9b4139ec64f6cb4e8a74a0d9948adc4" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong2.png" Length="2200" HashCode="1575138308" />
+        </Assets>
+        <Codes>
+          <Windows Length="6564" HashCode="198974460" CompressedLength="6564" CompressedHashCode="198974460" />
+          <Windows64 Length="6564" HashCode="-473396466" CompressedLength="6564" CompressedHashCode="-473396466" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong3" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="add050c35ee428a40980371f4e999250" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong3.png" Length="2241" HashCode="1642688837" />
+        </Assets>
+        <Codes>
+          <Windows Length="6883" HashCode="-774452535" CompressedLength="6883" CompressedHashCode="-774452535" />
+          <Windows64 Length="6883" HashCode="1149781286" CompressedLength="6883" CompressedHashCode="1149781286" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong4" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="8338c75f8c1068c4aa80c375374363c2" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong4.png" Length="2145" HashCode="681096787" />
+        </Assets>
+        <Codes>
+          <Windows Length="6892" HashCode="1133313748" CompressedLength="6892" CompressedHashCode="1133313748" />
+          <Windows64 Length="6892" HashCode="307835522" CompressedLength="6892" CompressedHashCode="307835522" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong5" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="8cb5d28b1017bf04eb460fcb3f819d38" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong5.png" Length="2185" HashCode="621037927" />
+        </Assets>
+        <Codes>
+          <Windows Length="6806" HashCode="1152191163" CompressedLength="6806" CompressedHashCode="1152191163" />
+          <Windows64 Length="6806" HashCode="722197375" CompressedLength="6806" CompressedHashCode="722197375" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong6" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="9c4104c99dd49ad46b1e3f24661f042d" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong6.png" Length="2134" HashCode="-151845442" />
+        </Assets>
+        <Codes>
+          <Windows Length="6867" HashCode="-1049572695" CompressedLength="6867" CompressedHashCode="-1049572695" />
+          <Windows64 Length="6867" HashCode="1957998546" CompressedLength="6867" CompressedHashCode="1957998546" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong7" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="e2175d6671a140e4f9be0bbd704a9350" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong7.png" Length="2160" HashCode="1575357555" />
+        </Assets>
+        <Codes>
+          <Windows Length="6671" HashCode="-1938094828" CompressedLength="6671" CompressedHashCode="-1938094828" />
+          <Windows64 Length="6671" HashCode="-1311408653" CompressedLength="6671" CompressedHashCode="-1311408653" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong8" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="2f84275dba548924e8785dd0d591a5a7" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong8.png" Length="2203" HashCode="522609808" />
+        </Assets>
+        <Codes>
+          <Windows Length="6878" HashCode="160064948" CompressedLength="6878" CompressedHashCode="160064948" />
+          <Windows64 Length="6878" HashCode="-1736772176" CompressedLength="6878" CompressedHashCode="-1736772176" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong9" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="9ff69d9914ba790468a6cb0d224bb89d" Name="Assets/GameMain/Images/Enemy/Skeleton/Run/yidong9.png" Length="2130" HashCode="1227546804" />
+        </Assets>
+        <Codes>
+          <Windows Length="6804" HashCode="-1356032899" CompressedLength="6804" CompressedHashCode="-1356032899" />
+          <Windows64 Length="6804" HashCode="1707476898" CompressedLength="6804" CompressedHashCode="1707476898" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/HpUI" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="624682d1e79dfab45a1e6cffdda83b3d" Name="Assets/GameMain/Images/HpUI.png" Length="2097" HashCode="-1816669085" />
+        </Assets>
+        <Codes>
+          <Windows Length="4215" HashCode="-487807154" CompressedLength="4215" CompressedHashCode="-487807154" />
+          <Windows64 Length="4215" HashCode="1495570195" CompressedLength="4215" CompressedHashCode="1495570195" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/MagicCircle/Circle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="2578777abf771b848a6ba65485480e08" Name="Assets/GameMain/Images/MagicCircle/Circle.mat" Length="1332" HashCode="-971894881">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Images/MagicCircle/FillShader.shader" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="2386" HashCode="-187761656" CompressedLength="2386" CompressedHashCode="-187761656" />
+          <Windows64 Length="2386" HashCode="-1482540406" CompressedLength="2386" CompressedHashCode="-1482540406" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/MagicCircle/FillShader" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="9752b6efbd1f3524d8b015d30b23ce99" Name="Assets/GameMain/Images/MagicCircle/FillShader.shader" Length="1763" HashCode="-1320590120" />
+        </Assets>
+        <Codes>
+          <Windows Length="21849" HashCode="733547402" CompressedLength="21849" CompressedHashCode="733547402" />
+          <Windows64 Length="21849" HashCode="1654688621" CompressedLength="21849" CompressedHashCode="1654688621" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/MagicCircle/magic1" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="c518f0d069522ba4aa842c672048dafa" Name="Assets/GameMain/Images/MagicCircle/magic1.png" Length="4181" HashCode="716393791" />
+        </Assets>
+        <Codes>
+          <Windows Length="9539" HashCode="1344555745" CompressedLength="9539" CompressedHashCode="1344555745" />
+          <Windows64 Length="9539" HashCode="174116698" CompressedLength="9539" CompressedHashCode="174116698" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/ShotGun" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="ce5c4e1f6fd53e145b52cf78555ac57f" Name="Assets/GameMain/Images/ShotGun.png" Length="2097" HashCode="-1816669085" />
+        </Assets>
+        <Codes>
+          <Windows Length="4224" HashCode="1063155490" CompressedLength="4224" CompressedHashCode="1063155490" />
+          <Windows64 Length="4224" HashCode="-1234063324" CompressedLength="4224" CompressedHashCode="-1234063324" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/ShotGunHUD" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="11f3fc0b50877644fac8f94afdb16637" Name="Assets/GameMain/Images/ShotGunHUD.png" Length="6085" HashCode="-1886068185" />
+        </Assets>
+        <Codes>
+          <Windows Length="6140" HashCode="-2074731431" CompressedLength="6140" CompressedHashCode="-2074731431" />
+          <Windows64 Length="6140" HashCode="1424987903" CompressedLength="6140" CompressedHashCode="1424987903" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/UI/2" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="f592687bd9073b24cbced7da38a41024" Name="Assets/GameMain/Images/UI/2.png" Length="490049" HashCode="228418490" />
+        </Assets>
+        <Codes>
+          <Windows Length="190849" HashCode="-227235032" CompressedLength="190849" CompressedHashCode="-227235032" />
+          <Windows64 Length="190849" HashCode="1475481193" CompressedLength="190849" CompressedHashCode="1475481193" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/UI/background" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="7b727806216d05944a016c87344825b9" Name="Assets/GameMain/Images/UI/background.png" Length="1558" HashCode="560526562" />
+        </Assets>
+        <Codes>
+          <Windows Length="5064" HashCode="-2032187074" CompressedLength="5064" CompressedHashCode="-2032187074" />
+          <Windows64 Length="5064" HashCode="-1481087399" CompressedLength="5064" CompressedHashCode="-1481087399" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/UI/cross" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="53e2f766a7a1f37408d93c6e9b55d17c" Name="Assets/GameMain/Images/UI/cross.png" Length="3576" HashCode="122953455" />
+        </Assets>
+        <Codes>
+          <Windows Length="9062" HashCode="1319460240" CompressedLength="9062" CompressedHashCode="1319460240" />
+          <Windows64 Length="9062" HashCode="970946669" CompressedLength="9062" CompressedHashCode="970946669" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/UI/darkstar1" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="ac3f01f41fc5ad14296369e6f3e45107" Name="Assets/GameMain/Images/UI/darkstar1.png" Length="566" HashCode="844126453" />
+        </Assets>
+        <Codes>
+          <Windows Length="4772" HashCode="-1223979702" CompressedLength="4772" CompressedHashCode="-1223979702" />
+          <Windows64 Length="4772" HashCode="1033104595" CompressedLength="4772" CompressedHashCode="1033104595" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/UI/heart" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="51206c5d084b26b4586239b822cedded" Name="Assets/GameMain/Images/UI/heart.png" Length="631" HashCode="-820209970" />
+        </Assets>
+        <Codes>
+          <Windows Length="4839" HashCode="849817432" CompressedLength="4839" CompressedHashCode="849817432" />
+          <Windows64 Length="4839" HashCode="733083156" CompressedLength="4839" CompressedHashCode="733083156" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/UI/heart-empty" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="a6a20d14410dd6542949571df8010144" Name="Assets/GameMain/Images/UI/heart-empty.png" Length="965" HashCode="1508931353" />
+        </Assets>
+        <Codes>
+          <Windows Length="5294" HashCode="-615119795" CompressedLength="5294" CompressedHashCode="-615119795" />
+          <Windows64 Length="5294" HashCode="1730936909" CompressedLength="5294" CompressedHashCode="1730936909" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/UI/iconBack1" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="11f71ce8e43d6bb47bf7b3c95db3ead6" Name="Assets/GameMain/Images/UI/iconBack1.png" Length="3909" HashCode="247224215" />
+        </Assets>
+        <Codes>
+          <Windows Length="9772" HashCode="1463673614" CompressedLength="9772" CompressedHashCode="1463673614" />
+          <Windows64 Length="9772" HashCode="1356782778" CompressedLength="9772" CompressedHashCode="1356782778" />
+        </Codes>
+      </Resource>
+      <Resource Name="Images/UI/star" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="8c880091b1a679c4dac54906f71f6f9e" Name="Assets/GameMain/Images/UI/star.png" Length="538" HashCode="2090853620" />
+        </Assets>
+        <Codes>
+          <Windows Length="4776" HashCode="1782348810" CompressedLength="4776" CompressedHashCode="1782348810" />
+          <Windows64 Length="4776" HashCode="1469323551" CompressedLength="4776" CompressedHashCode="1469323551" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/BlueCircle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="7a28717095763354685b1ddfd463c1ba" Name="Assets/GameMain/Prefabs/BlueCircle.prefab" Length="3586" HashCode="-1082691179">
+            <DependencyAssets Count="3">
+              <DependencyAsset Name="Assets/GameMain/Images/MagicCircle/Circle.mat" />
+              <DependencyAsset Name="Assets/GameMain/Images/ShotGunHUD.png" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/Player.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="4081" HashCode="-317469042" CompressedLength="4081" CompressedHashCode="-317469042" />
+          <Windows64 Length="4083" HashCode="-2115515407" CompressedLength="4083" CompressedHashCode="-2115515407" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/BluePumpkin" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="bafb9159bdf2f074bbab3b8dcb804e85" Name="Assets/GameMain/Prefabs/BluePumpkin.prefab" Length="7080" HashCode="-24863016">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/BluePumpkin.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="34021" HashCode="-318793924" CompressedLength="34021" CompressedHashCode="-318793924" />
+          <Windows64 Length="34023" HashCode="1549943388" CompressedLength="34023" CompressedHashCode="1549943388" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/BluePumpkinFire" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="e878efcf97f1d1247a04f8f83417bc84" Name="Assets/GameMain/Prefabs/BluePumpkinFire.prefab" Length="4513" HashCode="-1765573611">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/BluePumpkinFire.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="31025" HashCode="-880449779" CompressedLength="31025" CompressedHashCode="-880449779" />
+          <Windows64 Length="31027" HashCode="-1678218114" CompressedLength="31027" CompressedHashCode="-1678218114" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/BlueTree" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="e921923b515f00a4bae19e9485c86135" Name="Assets/GameMain/Prefabs/BlueTree.prefab" Length="3508" HashCode="-53899297">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/BlueTree.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="44670" HashCode="489355620" CompressedLength="44670" CompressedHashCode="489355620" />
+          <Windows64 Length="44670" HashCode="-1878641979" CompressedLength="44670" CompressedHashCode="-1878641979" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/Bow" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="f96fddf388c33d940b6a502259795eec" Name="Assets/GameMain/Prefabs/Bow.prefab" Length="10009" HashCode="1345950467">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Images/BowHUD.png" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="30826" HashCode="-1618089927" CompressedLength="30826" CompressedHashCode="-1618089927" />
+          <Windows64 Length="30828" HashCode="-314194004" CompressedLength="30828" CompressedHashCode="-314194004" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/Bow_Bullet" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="9b144b61d4aaac74ca60c40508155094" Name="Assets/GameMain/Prefabs/Bow_Bullet.prefab" Length="3074" HashCode="-1264520344" />
+        </Assets>
+        <Codes>
+          <Windows Length="27955" HashCode="1666814776" CompressedLength="27955" CompressedHashCode="1666814776" />
+          <Windows64 Length="27955" HashCode="-676390592" CompressedLength="27955" CompressedHashCode="-676390592" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/BulletExplode" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="6eec880a2b6b7c34d8ff815ac55c53c7" Name="Assets/GameMain/Prefabs/BulletExplode.prefab" Length="3456" HashCode="-63899312">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/BulletExplode.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="28555" HashCode="-1515369846" CompressedLength="28555" CompressedHashCode="-1515369846" />
+          <Windows64 Length="28557" HashCode="-1567760765" CompressedLength="28557" CompressedHashCode="-1567760765" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/Enemy" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="03675f19acbc8524b9f435521d9735b0" Name="Assets/GameMain/Prefabs/Enemy.prefab" Length="7033" HashCode="-769079770">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/EnemyTest.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="32734" HashCode="578149406" CompressedLength="32734" CompressedHashCode="578149406" />
+          <Windows64 Length="32736" HashCode="916189440" CompressedLength="32736" CompressedHashCode="916189440" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/GameScenes/Level0_Scene1" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="79400c779f203fd468006ddf82dd9bcc" Name="Assets/GameMain/Prefabs/GameScenes/Level0_Scene1.prefab" Length="40270" HashCode="-964191483">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Prefabs/RedTree.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="759639" HashCode="1813237818" CompressedLength="759639" CompressedHashCode="1813237818" />
+          <Windows64 Length="759641" HashCode="796047717" CompressedLength="759641" CompressedHashCode="796047717" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/GameScenes/Level0_Scene2" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="66a7eee2ef767ea47a16068f9535dca8" Name="Assets/GameMain/Prefabs/GameScenes/Level0_Scene2.prefab" Length="34028" HashCode="-675661555">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Prefabs/BlueTree.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="673707" HashCode="1860194624" CompressedLength="673707" CompressedHashCode="1860194624" />
+          <Windows64 Length="673709" HashCode="-51716639" CompressedLength="673709" CompressedHashCode="-51716639" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/GameScenes/Level1_Scene1" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="04d9b3546dda567479d62ad6026e24ca" Name="Assets/GameMain/Prefabs/GameScenes/Level1_Scene1.prefab" Length="51736" HashCode="-909880842">
+            <DependencyAssets Count="4">
+              <DependencyAsset Name="Assets/GameMain/Images/MagicCircle/Circle.mat" />
+              <DependencyAsset Name="Assets/GameMain/Images/ShotGunHUD.png" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/Player.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/RedTree.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="761393" HashCode="1046856340" CompressedLength="761393" CompressedHashCode="1046856340" />
+          <Windows64 Length="761395" HashCode="-1905729944" CompressedLength="761395" CompressedHashCode="-1905729944" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/GameScenes/Level1_Scene2" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="733f594e319d0ca479634bb556fc2d3b" Name="Assets/GameMain/Prefabs/GameScenes/Level1_Scene2.prefab" Length="54429" HashCode="-445779629">
+            <DependencyAssets Count="4">
+              <DependencyAsset Name="Assets/GameMain/Images/MagicCircle/Circle.mat" />
+              <DependencyAsset Name="Assets/GameMain/Images/ShotGunHUD.png" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/BlueTree.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/Player.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="675412" HashCode="-1079135411" CompressedLength="675412" CompressedHashCode="-1079135411" />
+          <Windows64 Length="675414" HashCode="929038191" CompressedLength="675414" CompressedHashCode="929038191" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/GameScenes/Level2_Scene1" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="c3acb57701a4d7043958585d619d6786" Name="Assets/GameMain/Prefabs/GameScenes/Level2_Scene1.prefab" Length="84491" HashCode="693098358">
+            <DependencyAssets Count="4">
+              <DependencyAsset Name="Assets/GameMain/Images/MagicCircle/Circle.mat" />
+              <DependencyAsset Name="Assets/GameMain/Images/ShotGunHUD.png" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/Player.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/RedTree.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="763873" HashCode="-453647820" CompressedLength="763873" CompressedHashCode="-453647820" />
+          <Windows64 Length="763875" HashCode="1263322319" CompressedLength="763875" CompressedHashCode="1263322319" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/GameScenes/Level2_Scene2" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="a2ec18d7eab6a954fb54163e07e17e3b" Name="Assets/GameMain/Prefabs/GameScenes/Level2_Scene2.prefab" Length="44791" HashCode="-1188795574">
+            <DependencyAssets Count="4">
+              <DependencyAsset Name="Assets/GameMain/Images/MagicCircle/Circle.mat" />
+              <DependencyAsset Name="Assets/GameMain/Images/ShotGunHUD.png" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/BlueTree.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/Player.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="674436" HashCode="-535925739" CompressedLength="674436" CompressedHashCode="-535925739" />
+          <Windows64 Length="674438" HashCode="1503523177" CompressedLength="674438" CompressedHashCode="1503523177" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/Ghost" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="67ed33ae05d05ab4fa0b0b87ecac6199" Name="Assets/GameMain/Prefabs/Ghost.prefab" Length="7033" HashCode="1392722652">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/Ghost.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="34215" HashCode="383874437" CompressedLength="34215" CompressedHashCode="383874437" />
+          <Windows64 Length="34217" HashCode="1018375355" CompressedLength="34217" CompressedHashCode="1018375355" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/PathGraphScanner" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="3fab90d77aa3ce547bd07babbf9fd71f" Name="Assets/GameMain/Prefabs/PathGraphScanner.prefab" Length="4921" HashCode="181061229" />
+        </Assets>
+        <Codes>
+          <Windows Length="5828" HashCode="-1069876604" CompressedLength="5828" CompressedHashCode="-1069876604" />
+          <Windows64 Length="5830" HashCode="1958458475" CompressedLength="5830" CompressedHashCode="1958458475" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/Player" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="a7237355af44b184a81e842d5684ceec" Name="Assets/GameMain/Prefabs/Player.prefab" Length="6410" HashCode="-1370290676">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/Player.controller" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/PlayerDie.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="31717" HashCode="-1665122726" CompressedLength="31717" CompressedHashCode="-1665122726" />
+          <Windows64 Length="31719" HashCode="-5419598" CompressedLength="31719" CompressedHashCode="-5419598" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/PlayerDie" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="205adba687509494995b45c8c11b8400" Name="Assets/GameMain/Prefabs/PlayerDie.prefab" Length="3458" HashCode="2021667733">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/PlayerDie.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="29771" HashCode="-1186953086" CompressedLength="29771" CompressedHashCode="-1186953086" />
+          <Windows64 Length="29773" HashCode="-589504738" CompressedLength="29773" CompressedHashCode="-589504738" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/PublicObjectPool" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="3aea744ad1b3e344ea56a17ac3a3845a" Name="Assets/GameMain/Prefabs/PublicObjectPool.prefab" Length="1329" HashCode="2033350073" />
+        </Assets>
+        <Codes>
+          <Windows Length="2309" HashCode="-2127055457" CompressedLength="2309" CompressedHashCode="-2127055457" />
+          <Windows64 Length="2311" HashCode="-1822027833" CompressedLength="2311" CompressedHashCode="-1822027833" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/PurpleFire" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="b8ff3267204440d4da5f1a6f79e9baf1" Name="Assets/GameMain/Prefabs/PurpleFire.prefab" Length="3630" HashCode="-1603198379">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/PurpleFire.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="29802" HashCode="-780518891" CompressedLength="29802" CompressedHashCode="-780518891" />
+          <Windows64 Length="29802" HashCode="112983923" CompressedLength="29802" CompressedHashCode="112983923" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/RedCircle" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="ad12f67df9d4f5648bda12f7b0f4cc8a" Name="Assets/GameMain/Prefabs/RedCircle.prefab" Length="3573" HashCode="1009462712">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/GameMain/Images/MagicCircle/Circle.mat" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/Player.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="15246" HashCode="498470856" CompressedLength="15246" CompressedHashCode="498470856" />
+          <Windows64 Length="15248" HashCode="446717686" CompressedLength="15248" CompressedHashCode="446717686" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/RedFire" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="819a68773a0e5854ca930382dce47ded" Name="Assets/GameMain/Prefabs/RedFire.prefab" Length="3613" HashCode="1373366146">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/RedFire.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="29218" HashCode="179528626" CompressedLength="29218" CompressedHashCode="179528626" />
+          <Windows64 Length="29218" HashCode="825451072" CompressedLength="29218" CompressedHashCode="825451072" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/RedPumpkin" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="3cfbb04fc874e9e4fa59a69ef3a5b6bc" Name="Assets/GameMain/Prefabs/RedPumpkin.prefab" Length="7074" HashCode="-1973469640">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/RedPumpkin.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="33646" HashCode="1282529572" CompressedLength="33646" CompressedHashCode="1282529572" />
+          <Windows64 Length="33648" HashCode="-1832391781" CompressedLength="33648" CompressedHashCode="-1832391781" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/RedPumpkinFire" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="8c8f97164061cc84f9c28145c3839b53" Name="Assets/GameMain/Prefabs/RedPumpkinFire.prefab" Length="4512" HashCode="-1600765400">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/RedPumpkinFire.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="31138" HashCode="322361710" CompressedLength="31138" CompressedHashCode="322361710" />
+          <Windows64 Length="31140" HashCode="-1356970272" CompressedLength="31140" CompressedHashCode="-1356970272" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/RedTree" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="d12ce70fdcef7e546bd4deb2fc7a0ddc" Name="Assets/GameMain/Prefabs/RedTree.prefab" Length="3527" HashCode="185070951">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/RedTree.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="64411" HashCode="-1677267428" CompressedLength="64411" CompressedHashCode="-1677267428" />
+          <Windows64 Length="64411" HashCode="557917050" CompressedLength="64411" CompressedHashCode="557917050" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/ShotGun" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="2cbf00628c9ed9e4bbdbefbbbd19b663" Name="Assets/GameMain/Prefabs/ShotGun.prefab" Length="12930" HashCode="1622802373">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/ShotGun.controller" />
+              <DependencyAsset Name="Assets/GameMain/Images/ShotGunHUD.png" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="33191" HashCode="-567958389" CompressedLength="33191" CompressedHashCode="-567958389" />
+          <Windows64 Length="33193" HashCode="-1884474873" CompressedLength="33193" CompressedHashCode="-1884474873" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/ShotGun_Bullet" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="39a9d25f5664d3c4fb4b4030ef7a793f" Name="Assets/GameMain/Prefabs/ShotGun_Bullet.prefab" Length="3103" HashCode="481295818" />
+        </Assets>
+        <Codes>
+          <Windows Length="27603" HashCode="1405077809" CompressedLength="27603" CompressedHashCode="1405077809" />
+          <Windows64 Length="27603" HashCode="528589503" CompressedLength="27603" CompressedHashCode="528589503" />
+        </Codes>
+      </Resource>
+      <Resource Name="Prefabs/TeleportAnim" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="3365fffadb979f14f92be8484b54f1a9" Name="Assets/GameMain/Prefabs/TeleportAnim.prefab" Length="3410" HashCode="2134782376">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/GameMain/Animations/Animator/Teleport.controller" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="25554" HashCode="-851734986" CompressedLength="25554" CompressedHashCode="-851734986" />
+          <Windows64 Length="25556" HashCode="1462410192" CompressedLength="25556" CompressedHashCode="1462410192" />
+        </Codes>
+      </Resource>
+      <Resource Name="Scenes/Launch" Extension="dat" LoadType="0" Packed="True">
+        <Assets Count="1">
+          <Asset Guid="da107ae9236cc3142b53df7a86b196f5" Name="Assets/GameMain/Scenes/Launch.unity" Length="10969" HashCode="2085878933" />
+        </Assets>
+        <Codes>
+          <Windows Length="35567" HashCode="1080955540" CompressedLength="35567" CompressedHashCode="1080955540" />
+          <Windows64 Length="35569" HashCode="1568825664" CompressedLength="35569" CompressedHashCode="1568825664" />
+        </Codes>
+      </Resource>
+      <Resource Name="Scenes/Main" Extension="dat" LoadType="0" Packed="True">
+        <Assets Count="1">
+          <Asset Guid="16c5f12d47d60c54cbb702b19a558093" Name="Assets/GameMain/Scenes/Main.unity" Length="59807" HashCode="-192034408">
+            <DependencyAssets Count="8">
+              <DependencyAsset Name="Assets/GameMain/Fonts/VonwaonBitmap-16px.ttf" />
+              <DependencyAsset Name="Assets/GameMain/Images/UI/background.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/UI/heart.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/UI/heart-empty.png" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/BluePumpkin.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/Enemy.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/Ghost.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/RedPumpkin.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="474626" HashCode="-839794555" CompressedLength="474626" CompressedHashCode="-839794555" />
+          <Windows64 Length="474629" HashCode="1836625411" CompressedLength="474629" CompressedHashCode="1836625411" />
+        </Codes>
+      </Resource>
+      <Resource Name="Scenes/Menu" Extension="dat" LoadType="0" Packed="True">
+        <Assets Count="1">
+          <Asset Guid="086b9e8d314e5b94584db5063c9365f7" Name="Assets/GameMain/Scenes/Menu.unity" Length="80850" HashCode="-921663253">
+            <DependencyAssets Count="6">
+              <DependencyAsset Name="Assets/GameMain/Fonts/VonwaonBitmap-16px.ttf" />
+              <DependencyAsset Name="Assets/GameMain/Images/UI/2.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/UI/darkstar1.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/UI/iconBack1.png" />
+              <DependencyAsset Name="Assets/GameMain/Images/UI/star.png" />
+              <DependencyAsset Name="Assets/GameMain/Videos/VideoTexture.renderTexture" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="12425773" HashCode="-1318680136" CompressedLength="12425773" CompressedHashCode="-1318680136" />
+          <Windows64 Length="12425776" HashCode="845612431" CompressedLength="12425776" CompressedHashCode="845612431" />
+        </Codes>
+      </Resource>
+      <Resource Name="Scenes/Test" Extension="dat" LoadType="0" Packed="True">
+        <Assets Count="1">
+          <Asset Guid="8891f79ca0c89b04da39e1c622dc60d8" Name="Assets/GameMain/Scenes/Test.unity" Length="58874" HashCode="257655679">
+            <DependencyAssets Count="12">
+              <DependencyAsset Name="Assets/GameMain/Images/MagicCircle/magic1.png" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/BlueCircle.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/BluePumpkin.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/BluePumpkinFire.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/BlueTree.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/Enemy.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/PurpleFire.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/RedCircle.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/RedFire.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/RedPumpkin.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/RedPumpkinFire.prefab" />
+              <DependencyAsset Name="Assets/GameMain/Prefabs/RedTree.prefab" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows Length="874868" HashCode="-349182788" CompressedLength="874868" CompressedHashCode="-349182788" />
+          <Windows64 Length="874870" HashCode="1290016409" CompressedLength="874870" CompressedHashCode="1290016409" />
+        </Codes>
+      </Resource>
+      <Resource Name="Videos/VideoTexture" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="80a96c858b66c4248b7ba74f8318be5f" Name="Assets/GameMain/Videos/VideoTexture.renderTexture" Length="881" HashCode="-1046567535" />
+        </Assets>
+        <Codes>
+          <Windows Length="1749" HashCode="-404989769" CompressedLength="1749" CompressedHashCode="-404989769" />
+          <Windows64 Length="1749" HashCode="-1714819798" CompressedLength="1749" CompressedHashCode="-1714819798" />
+        </Codes>
+      </Resource>
+    </Resources>
+  </BuildReport>
+</UnityGameFramework>

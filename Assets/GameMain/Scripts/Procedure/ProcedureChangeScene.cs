@@ -53,7 +53,8 @@ namespace GameMain
                 return;
             }
 
-            m_ChangeToMenu = String.Compare(drScene.AssetName, "Menu", StringComparison.Ordinal) == 0;
+            m_ChangeToMenu = String.Compare(drScene.AssetName, "Menu", StringComparison.Ordinal) == 0||
+                             String.Compare(drScene.AssetName, "Menu1", StringComparison.Ordinal) == 0;
             GameEntry.Scene.LoadScene(AssetUtility.GetSceneAsset(drScene.AssetName), Constant.AssetPriority.SceneAsset, this);
             m_BackgroundMusicId = drScene.BackgroundMusicId;
         }

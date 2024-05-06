@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 321151782
+CRC: 1143928279
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c9bf9236d203c34e7973144b593d5f37
+    Hash: 1735546d5adfeef6bbf3b1e42bd1e7de
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0cae00c63b8dd81c843ee9e0b6c1fc70
+    Hash: 302f368c7c56863fb1f3daf4afa670f6
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: c9bf9236d203c34e7973144b593d5f37
+    Hash: 1735546d5adfeef6bbf3b1e42bd1e7de
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -28,8 +28,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 61
   Script: {instanceID: 0}
-- Class: 114
-  Script: {fileID: 11500000, guid: 0246de55e87430e4f932c1e8603ccd40, type: 3}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: afe6663bd70c4a55aa725e123f95d9d4, type: 3}
 - Class: 115
@@ -42,6 +44,4 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/GameMain/Prefabs/GameScenes/Level0_Scene2.prefab
 Dependencies:
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/magiccircle/circle
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/shotgunhud
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/prefabs/player
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animator/bluetree

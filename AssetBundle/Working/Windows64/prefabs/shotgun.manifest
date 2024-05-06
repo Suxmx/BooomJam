@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3891063339
+CRC: 949712379
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a0a231a572ddd75ca670d11c0a41c162
+    Hash: 02c16c3537a5415df79165e1dc7d1270
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ba25c3d6f84b438889c16f9f0ed378b7
+    Hash: c8ae7898b15fc53590dbc474cda996eb
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: a0a231a572ddd75ca670d11c0a41c162
+    Hash: 02c16c3537a5415df79165e1dc7d1270
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,8 +21,6 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 - Class: 48
-  Script: {instanceID: 0}
-- Class: 74
   Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
@@ -70,4 +68,5 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/GameMain/Prefabs/ShotGun.prefab
 Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animator/shotgun
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/shotgunhud

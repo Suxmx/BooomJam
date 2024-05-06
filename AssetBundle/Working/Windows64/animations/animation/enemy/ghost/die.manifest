@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 830487739
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6170c11703f50557489d0743200aaccb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 6170c11703f50557489d0743200aaccb
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Enemy/Ghost/Die.anim
+Dependencies: []

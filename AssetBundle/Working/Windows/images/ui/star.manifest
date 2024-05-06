@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3619183118
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5790d5a16fd931ff5a0d0c1943b2d8d0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 5790d5a16fd931ff5a0d0c1943b2d8d0
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/UI/star.png
+Dependencies: []

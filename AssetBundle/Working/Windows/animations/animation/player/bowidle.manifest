@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1159482101
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1940f36d5e78687bb4e465cffc47e66c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 1940f36d5e78687bb4e465cffc47e66c
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Player/BowIdle.anim
+Dependencies: []

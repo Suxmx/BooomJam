@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 2313489354
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cdbf89ce0c05e2050a81da7830c3bea9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: af57576da81d5d3ce45807ac11234de6
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: cdbf89ce0c05e2050a81da7830c3bea9
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Enemy/Skeleton/TestSpawn.anim
+Dependencies: []

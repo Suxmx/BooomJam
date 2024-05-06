@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 2973052541
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f75d767b8c00b0841f7111de6343c59a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: f75d767b8c00b0841f7111de6343c59a
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Die.anim
+Dependencies: []

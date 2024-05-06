@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1644772578
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3c54f2cb1371ad7155baab062e59ea8f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 3c54f2cb1371ad7155baab062e59ea8f
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Player/Die.anim
+Dependencies: []

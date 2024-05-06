@@ -1,0 +1,41 @@
+ManifestFileVersion: 0
+CRC: 3918450323
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eab182bc9143042e87693587a6bf2e10
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1f175d08c2e25be6496cffc6020a4884
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: eab182bc9143042e87693587a6bf2e10
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6c57ab7f1005432eb8815aaeb059c77a, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Prefabs/PlayerDie.prefab
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animator/playerdie

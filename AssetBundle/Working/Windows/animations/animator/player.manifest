@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 458049401
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8b216708145370b461445c75238b86bb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 8b216708145370b461445c75238b86bb
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animator/Player.controller
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animation/player/bowidle
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animation/player/bowrecoiltoidle
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animation/player/die
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animation/player/shotgunidle
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animation/player/shotgunrecoil
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animation/player/shotgunrecoiltoidle

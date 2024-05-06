@@ -1,132 +1,57 @@
 ManifestFileVersion: 0
-CRC: 1158389443
+CRC: 426999476
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: configs/defaultconfig
+      Name: animations/animation/enemy/ghost/die
       Dependencies: {}
     Info_1:
-      Name: datatables/entity
+      Name: animations/animation/enemy/ghost/move
       Dependencies: {}
     Info_2:
-      Name: datatables/level
+      Name: animations/animation/enemy/ghost/spawn
       Dependencies: {}
     Info_3:
-      Name: datatables/player
+      Name: animations/animation/enemy/pumpkin/blue/die
       Dependencies: {}
     Info_4:
-      Name: datatables/scene
+      Name: animations/animation/enemy/pumpkin/blue/fire/idle
       Dependencies: {}
     Info_5:
-      Name: datatables/test
+      Name: animations/animation/enemy/pumpkin/blue/fire/spawn
       Dependencies: {}
     Info_6:
-      Name: datatables/uiform
+      Name: animations/animation/enemy/pumpkin/blue/move
       Dependencies: {}
     Info_7:
-      Name: datatables/weapon
+      Name: animations/animation/enemy/pumpkin/blue/spawn
       Dependencies: {}
     Info_8:
-      Name: images/bowhud
+      Name: animations/animation/enemy/pumpkin/red/die
       Dependencies: {}
     Info_9:
-      Name: images/bullet
+      Name: animations/animation/enemy/pumpkin/red/fire/die
       Dependencies: {}
     Info_10:
-      Name: images/enemy/skeleton/run/yidong1
+      Name: animations/animation/enemy/pumpkin/red/fire/idle
       Dependencies: {}
     Info_11:
-      Name: images/enemy/skeleton/run/yidong10
+      Name: animations/animation/enemy/pumpkin/red/fire/spawn
       Dependencies: {}
     Info_12:
-      Name: images/enemy/skeleton/run/yidong11
+      Name: animations/animation/enemy/pumpkin/red/move
       Dependencies: {}
     Info_13:
-      Name: images/enemy/skeleton/run/yidong12
+      Name: animations/animation/enemy/pumpkin/red/spawn
       Dependencies: {}
     Info_14:
-      Name: images/enemy/skeleton/run/yidong13
+      Name: animations/animation/enemy/skeleton/die
       Dependencies: {}
     Info_15:
-      Name: images/enemy/skeleton/run/yidong14
+      Name: animations/animation/enemy/skeleton/idle
       Dependencies: {}
     Info_16:
-      Name: images/enemy/skeleton/run/yidong15
-      Dependencies: {}
-    Info_17:
-      Name: images/enemy/skeleton/run/yidong16
-      Dependencies: {}
-    Info_18:
-      Name: images/enemy/skeleton/run/yidong2
-      Dependencies: {}
-    Info_19:
-      Name: images/enemy/skeleton/run/yidong3
-      Dependencies: {}
-    Info_20:
-      Name: images/enemy/skeleton/run/yidong4
-      Dependencies: {}
-    Info_21:
-      Name: images/enemy/skeleton/run/yidong5
-      Dependencies: {}
-    Info_22:
-      Name: images/enemy/skeleton/run/yidong6
-      Dependencies: {}
-    Info_23:
-      Name: images/enemy/skeleton/run/yidong7
-      Dependencies: {}
-    Info_24:
-      Name: images/enemy/skeleton/run/yidong8
-      Dependencies: {}
-    Info_25:
-      Name: images/enemy/skeleton/run/yidong9
-      Dependencies: {}
-    Info_26:
-      Name: images/hpui
-      Dependencies: {}
-    Info_27:
-      Name: images/magiccircle/circle
-      Dependencies:
-        Dependency_0: images/magiccircle/fillshader
-    Info_28:
-      Name: images/magiccircle/fillshader
-      Dependencies: {}
-    Info_29:
-      Name: images/magiccircle/magic1
-      Dependencies: {}
-    Info_30:
-      Name: images/shotgun
-      Dependencies: {}
-    Info_31:
-      Name: images/shotgunhud
-      Dependencies: {}
-    Info_32:
-      Name: prefabs/bluecircle
-      Dependencies:
-        Dependency_0: images/magiccircle/circle
-        Dependency_1: images/shotgunhud
-        Dependency_2: prefabs/player
-    Info_33:
-      Name: prefabs/bluepumpkin
-      Dependencies:
-        Dependency_0: prefabs/bluepumpkinfire
-    Info_34:
-      Name: prefabs/bluepumpkinfire
-      Dependencies: {}
-    Info_35:
-      Name: prefabs/bluetree
-      Dependencies: {}
-    Info_36:
-      Name: prefabs/bow
-      Dependencies:
-        Dependency_0: images/bowhud
-    Info_37:
-      Name: prefabs/bow_bullet
-      Dependencies: {}
-    Info_38:
-      Name: prefabs/bulletexplode
-      Dependencies: {}
-    Info_39:
-      Name: prefabs/enemy
+      Name: animations/animation/enemy/skeleton/run
       Dependencies:
         Dependency_0: images/enemy/skeleton/run/yidong1
         Dependency_1: images/enemy/skeleton/run/yidong10
@@ -144,96 +69,420 @@ AssetBundleManifest:
         Dependency_13: images/enemy/skeleton/run/yidong7
         Dependency_14: images/enemy/skeleton/run/yidong8
         Dependency_15: images/enemy/skeleton/run/yidong9
+    Info_17:
+      Name: animations/animation/enemy/skeleton/spawn
+      Dependencies: {}
+    Info_18:
+      Name: animations/animation/enemy/skeleton/testhurt
+      Dependencies: {}
+    Info_19:
+      Name: animations/animation/enemy/skeleton/testspawn
+      Dependencies: {}
+    Info_20:
+      Name: animations/animation/fire/idle
+      Dependencies: {}
+    Info_21:
+      Name: animations/animation/fire/redidle
+      Dependencies: {}
+    Info_22:
+      Name: animations/animation/player/bowidle
+      Dependencies: {}
+    Info_23:
+      Name: animations/animation/player/bowrecoiltoidle
+      Dependencies: {}
+    Info_24:
+      Name: animations/animation/player/die
+      Dependencies: {}
+    Info_25:
+      Name: animations/animation/player/explode
+      Dependencies: {}
+    Info_26:
+      Name: animations/animation/player/shotgun/shotgunfire
+      Dependencies: {}
+    Info_27:
+      Name: animations/animation/player/shotgun/shotgunnormal
+      Dependencies: {}
+    Info_28:
+      Name: animations/animation/player/shotgunidle
+      Dependencies: {}
+    Info_29:
+      Name: animations/animation/player/shotgunrecoil
+      Dependencies: {}
+    Info_30:
+      Name: animations/animation/player/shotgunrecoiltoidle
+      Dependencies: {}
+    Info_31:
+      Name: animations/animation/player/teleport
+      Dependencies: {}
+    Info_32:
+      Name: animations/animation/player/teleportanim
+      Dependencies: {}
+    Info_33:
+      Name: animations/animation/tree/blueidle
+      Dependencies: {}
+    Info_34:
+      Name: animations/animation/tree/idle
+      Dependencies: {}
+    Info_35:
+      Name: animations/animator/bluepumpkin
+      Dependencies:
+        Dependency_0: animations/animation/enemy/pumpkin/blue/die
+        Dependency_1: animations/animation/enemy/pumpkin/blue/move
+        Dependency_2: animations/animation/enemy/pumpkin/blue/spawn
+    Info_36:
+      Name: animations/animator/bluepumpkinfire
+      Dependencies:
+        Dependency_0: animations/animation/enemy/pumpkin/blue/fire/idle
+        Dependency_1: animations/animation/enemy/pumpkin/blue/fire/spawn
+    Info_37:
+      Name: animations/animator/bluetree
+      Dependencies:
+        Dependency_0: animations/animation/tree/blueidle
+    Info_38:
+      Name: animations/animator/bulletexplode
+      Dependencies:
+        Dependency_0: animations/animation/player/explode
+    Info_39:
+      Name: animations/animator/enemytest
+      Dependencies:
+        Dependency_0: animations/animation/enemy/skeleton/die
+        Dependency_1: animations/animation/enemy/skeleton/run
+        Dependency_2: animations/animation/enemy/skeleton/spawn
+        Dependency_3: animations/animation/enemy/skeleton/testhurt
     Info_40:
+      Name: animations/animator/ghost
+      Dependencies:
+        Dependency_0: animations/animation/enemy/ghost/die
+        Dependency_1: animations/animation/enemy/ghost/move
+        Dependency_2: animations/animation/enemy/ghost/spawn
+    Info_41:
+      Name: animations/animator/player
+      Dependencies:
+        Dependency_0: animations/animation/player/bowidle
+        Dependency_1: animations/animation/player/bowrecoiltoidle
+        Dependency_2: animations/animation/player/die
+        Dependency_3: animations/animation/player/shotgunidle
+        Dependency_4: animations/animation/player/shotgunrecoil
+        Dependency_5: animations/animation/player/shotgunrecoiltoidle
+    Info_42:
+      Name: animations/animator/playerdie
+      Dependencies:
+        Dependency_0: animations/animation/player/die
+    Info_43:
+      Name: animations/animator/playerteleport
+      Dependencies:
+        Dependency_0: animations/animation/player/teleport
+    Info_44:
+      Name: animations/animator/purplefire
+      Dependencies:
+        Dependency_0: animations/animation/fire/redidle
+    Info_45:
+      Name: animations/animator/redfire
+      Dependencies:
+        Dependency_0: animations/animation/fire/idle
+    Info_46:
+      Name: animations/animator/redpumpkin
+      Dependencies:
+        Dependency_0: animations/animation/enemy/pumpkin/red/die
+        Dependency_1: animations/animation/enemy/pumpkin/red/move
+        Dependency_2: animations/animation/enemy/pumpkin/red/spawn
+    Info_47:
+      Name: animations/animator/redpumpkinfire
+      Dependencies:
+        Dependency_0: animations/animation/enemy/pumpkin/red/fire/idle
+        Dependency_1: animations/animation/enemy/pumpkin/red/fire/spawn
+    Info_48:
+      Name: animations/animator/redtree
+      Dependencies:
+        Dependency_0: animations/animation/tree/idle
+    Info_49:
+      Name: animations/animator/shotgun
+      Dependencies:
+        Dependency_0: animations/animation/player/shotgun/shotgunfire
+        Dependency_1: animations/animation/player/shotgun/shotgunnormal
+    Info_50:
+      Name: animations/animator/teleport
+      Dependencies:
+        Dependency_0: animations/animation/player/teleportanim
+    Info_51:
+      Name: configs/defaultconfig
+      Dependencies: {}
+    Info_52:
+      Name: datatables/entity
+      Dependencies: {}
+    Info_53:
+      Name: datatables/level
+      Dependencies: {}
+    Info_54:
+      Name: datatables/player
+      Dependencies: {}
+    Info_55:
+      Name: datatables/scene
+      Dependencies: {}
+    Info_56:
+      Name: datatables/test
+      Dependencies: {}
+    Info_57:
+      Name: datatables/uiform
+      Dependencies: {}
+    Info_58:
+      Name: datatables/weapon
+      Dependencies: {}
+    Info_59:
+      Name: fonts/vonwaonbitmap-12px
+      Dependencies: {}
+    Info_60:
+      Name: fonts/vonwaonbitmap-16px
+      Dependencies: {}
+    Info_61:
+      Name: images/bowhud
+      Dependencies: {}
+    Info_62:
+      Name: images/bullet
+      Dependencies: {}
+    Info_63:
+      Name: images/enemy/skeleton/run/yidong1
+      Dependencies: {}
+    Info_64:
+      Name: images/enemy/skeleton/run/yidong10
+      Dependencies: {}
+    Info_65:
+      Name: images/enemy/skeleton/run/yidong11
+      Dependencies: {}
+    Info_66:
+      Name: images/enemy/skeleton/run/yidong12
+      Dependencies: {}
+    Info_67:
+      Name: images/enemy/skeleton/run/yidong13
+      Dependencies: {}
+    Info_68:
+      Name: images/enemy/skeleton/run/yidong14
+      Dependencies: {}
+    Info_69:
+      Name: images/enemy/skeleton/run/yidong15
+      Dependencies: {}
+    Info_70:
+      Name: images/enemy/skeleton/run/yidong16
+      Dependencies: {}
+    Info_71:
+      Name: images/enemy/skeleton/run/yidong2
+      Dependencies: {}
+    Info_72:
+      Name: images/enemy/skeleton/run/yidong3
+      Dependencies: {}
+    Info_73:
+      Name: images/enemy/skeleton/run/yidong4
+      Dependencies: {}
+    Info_74:
+      Name: images/enemy/skeleton/run/yidong5
+      Dependencies: {}
+    Info_75:
+      Name: images/enemy/skeleton/run/yidong6
+      Dependencies: {}
+    Info_76:
+      Name: images/enemy/skeleton/run/yidong7
+      Dependencies: {}
+    Info_77:
+      Name: images/enemy/skeleton/run/yidong8
+      Dependencies: {}
+    Info_78:
+      Name: images/enemy/skeleton/run/yidong9
+      Dependencies: {}
+    Info_79:
+      Name: images/hpui
+      Dependencies: {}
+    Info_80:
+      Name: images/magiccircle/circle
+      Dependencies:
+        Dependency_0: images/magiccircle/fillshader
+    Info_81:
+      Name: images/magiccircle/fillshader
+      Dependencies: {}
+    Info_82:
+      Name: images/magiccircle/magic1
+      Dependencies: {}
+    Info_83:
+      Name: images/shotgun
+      Dependencies: {}
+    Info_84:
+      Name: images/shotgunhud
+      Dependencies: {}
+    Info_85:
+      Name: images/ui/2
+      Dependencies: {}
+    Info_86:
+      Name: images/ui/background
+      Dependencies: {}
+    Info_87:
+      Name: images/ui/cross
+      Dependencies: {}
+    Info_88:
+      Name: images/ui/darkstar1
+      Dependencies: {}
+    Info_89:
+      Name: images/ui/heart
+      Dependencies: {}
+    Info_90:
+      Name: images/ui/heart-empty
+      Dependencies: {}
+    Info_91:
+      Name: images/ui/iconback1
+      Dependencies: {}
+    Info_92:
+      Name: images/ui/star
+      Dependencies: {}
+    Info_93:
+      Name: prefabs/bluecircle
+      Dependencies:
+        Dependency_0: images/magiccircle/circle
+        Dependency_1: images/shotgunhud
+        Dependency_2: prefabs/player
+    Info_94:
+      Name: prefabs/bluepumpkin
+      Dependencies:
+        Dependency_0: animations/animator/bluepumpkin
+    Info_95:
+      Name: prefabs/bluepumpkinfire
+      Dependencies:
+        Dependency_0: animations/animator/bluepumpkinfire
+    Info_96:
+      Name: prefabs/bluetree
+      Dependencies:
+        Dependency_0: animations/animator/bluetree
+    Info_97:
+      Name: prefabs/bow
+      Dependencies:
+        Dependency_0: images/bowhud
+    Info_98:
+      Name: prefabs/bow_bullet
+      Dependencies: {}
+    Info_99:
+      Name: prefabs/bulletexplode
+      Dependencies:
+        Dependency_0: animations/animator/bulletexplode
+    Info_100:
+      Name: prefabs/enemy
+      Dependencies:
+        Dependency_0: animations/animator/enemytest
+    Info_101:
       Name: prefabs/gamescenes/level0_scene1
       Dependencies:
-        Dependency_0: images/magiccircle/circle
-        Dependency_1: images/shotgunhud
-        Dependency_2: prefabs/player
-    Info_41:
+        Dependency_0: animations/animator/redtree
+    Info_102:
       Name: prefabs/gamescenes/level0_scene2
       Dependencies:
-        Dependency_0: images/magiccircle/circle
-        Dependency_1: images/shotgunhud
-        Dependency_2: prefabs/player
-    Info_42:
+        Dependency_0: animations/animator/bluetree
+    Info_103:
       Name: prefabs/gamescenes/level1_scene1
       Dependencies:
-        Dependency_0: images/magiccircle/circle
-        Dependency_1: images/shotgunhud
-        Dependency_2: prefabs/player
-    Info_43:
+        Dependency_0: animations/animator/redtree
+        Dependency_1: images/magiccircle/circle
+        Dependency_2: images/shotgunhud
+        Dependency_3: prefabs/player
+    Info_104:
       Name: prefabs/gamescenes/level1_scene2
       Dependencies:
-        Dependency_0: images/magiccircle/circle
-        Dependency_1: images/shotgunhud
-        Dependency_2: prefabs/player
-    Info_44:
+        Dependency_0: animations/animator/bluetree
+        Dependency_1: images/magiccircle/circle
+        Dependency_2: images/shotgunhud
+        Dependency_3: prefabs/player
+    Info_105:
       Name: prefabs/gamescenes/level2_scene1
       Dependencies:
-        Dependency_0: images/magiccircle/circle
-        Dependency_1: images/shotgunhud
-        Dependency_2: prefabs/player
-    Info_45:
+        Dependency_0: animations/animator/redtree
+        Dependency_1: images/magiccircle/circle
+        Dependency_2: images/shotgunhud
+        Dependency_3: prefabs/player
+    Info_106:
       Name: prefabs/gamescenes/level2_scene2
       Dependencies:
-        Dependency_0: images/magiccircle/circle
-        Dependency_1: images/shotgunhud
-        Dependency_2: prefabs/player
-    Info_46:
+        Dependency_0: animations/animator/bluetree
+        Dependency_1: images/magiccircle/circle
+        Dependency_2: images/shotgunhud
+        Dependency_3: prefabs/player
+    Info_107:
       Name: prefabs/ghost
-      Dependencies: {}
-    Info_47:
+      Dependencies:
+        Dependency_0: animations/animator/ghost
+    Info_108:
       Name: prefabs/pathgraphscanner
       Dependencies: {}
-    Info_48:
+    Info_109:
       Name: prefabs/player
-      Dependencies: {}
-    Info_49:
+      Dependencies:
+        Dependency_0: animations/animator/player
+        Dependency_1: prefabs/playerdie
+    Info_110:
+      Name: prefabs/playerdie
+      Dependencies:
+        Dependency_0: animations/animator/playerdie
+    Info_111:
       Name: prefabs/publicobjectpool
       Dependencies: {}
-    Info_50:
+    Info_112:
       Name: prefabs/purplefire
-      Dependencies: {}
-    Info_51:
+      Dependencies:
+        Dependency_0: animations/animator/purplefire
+    Info_113:
       Name: prefabs/redcircle
       Dependencies:
         Dependency_0: images/magiccircle/circle
         Dependency_1: prefabs/player
-    Info_52:
+    Info_114:
       Name: prefabs/redfire
-      Dependencies: {}
-    Info_53:
+      Dependencies:
+        Dependency_0: animations/animator/redfire
+    Info_115:
       Name: prefabs/redpumpkin
       Dependencies:
-        Dependency_0: prefabs/redpumpkinfire
-    Info_54:
+        Dependency_0: animations/animator/redpumpkin
+    Info_116:
       Name: prefabs/redpumpkinfire
-      Dependencies: {}
-    Info_55:
+      Dependencies:
+        Dependency_0: animations/animator/redpumpkinfire
+    Info_117:
       Name: prefabs/redtree
-      Dependencies: {}
-    Info_56:
+      Dependencies:
+        Dependency_0: animations/animator/redtree
+    Info_118:
       Name: prefabs/shotgun
       Dependencies:
-        Dependency_0: images/shotgunhud
-    Info_57:
+        Dependency_0: animations/animator/shotgun
+        Dependency_1: images/shotgunhud
+    Info_119:
       Name: prefabs/shotgun_bullet
       Dependencies: {}
-    Info_58:
+    Info_120:
+      Name: prefabs/teleportanim
+      Dependencies:
+        Dependency_0: animations/animator/teleport
+    Info_121:
       Name: scenes/launch
       Dependencies: {}
-    Info_59:
+    Info_122:
       Name: scenes/main
       Dependencies:
-        Dependency_0: prefabs/bluepumpkin
-        Dependency_1: prefabs/enemy
-        Dependency_2: prefabs/ghost
-        Dependency_3: prefabs/redpumpkin
-    Info_60:
+        Dependency_0: fonts/vonwaonbitmap-16px
+        Dependency_1: images/ui/background
+        Dependency_2: images/ui/heart
+        Dependency_3: images/ui/heart-empty
+        Dependency_4: prefabs/bluepumpkin
+        Dependency_5: prefabs/enemy
+        Dependency_6: prefabs/ghost
+        Dependency_7: prefabs/redpumpkin
+    Info_123:
       Name: scenes/menu
+      Dependencies:
+        Dependency_0: fonts/vonwaonbitmap-16px
+        Dependency_1: images/ui/2
+        Dependency_2: images/ui/darkstar1
+        Dependency_3: images/ui/iconback1
+        Dependency_4: images/ui/star
+        Dependency_5: videos/videotexture
+    Info_124:
+      Name: scenes/menu1
       Dependencies: {}
-    Info_61:
+    Info_125:
       Name: scenes/test
       Dependencies:
         Dependency_0: images/magiccircle/magic1
@@ -248,3 +497,6 @@ AssetBundleManifest:
         Dependency_9: prefabs/redpumpkin
         Dependency_10: prefabs/redpumpkinfire
         Dependency_11: prefabs/redtree
+    Info_126:
+      Name: videos/videotexture
+      Dependencies: {}

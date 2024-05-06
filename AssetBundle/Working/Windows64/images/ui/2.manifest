@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 802516795
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 152f8e3d4bf6de37a894fb23eb3792d1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 152f8e3d4bf6de37a894fb23eb3792d1
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/UI/2.png
+Dependencies: []

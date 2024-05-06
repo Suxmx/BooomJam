@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1395052898
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 20b794f1fcf897a4e7ff8e3ccf78c4d4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 20b794f1fcf897a4e7ff8e3ccf78c4d4
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animator/ShotGun.controller
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animation/player/shotgun/shotgunfire
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animation/player/shotgun/shotgunnormal

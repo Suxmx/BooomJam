@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2958462931
+CRC: 830995311
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c772e23142c04a4e1e2317f5e3e9f337
+    Hash: bc1c296e29093feea0975c85a5da7429
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 12d3b8e559d2472191910a81a2471fd2
+    Hash: dce14b203a1db215a692e2ea83316ebb
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: c772e23142c04a4e1e2317f5e3e9f337
+    Hash: bc1c296e29093feea0975c85a5da7429
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -53,17 +53,21 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: f5d9d23a2f9745688ce0b2680558b969, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: db23eee826d144e3ab11d140deafe833, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e7e9358a50c37374594b0eb77f882c93, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 31b684a576ef4a6eae3df5c64e8027a1, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 8c6ee039a0cf4dca8299c140d69c54cc, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: e169fd68b6c58b243b51bde90e19a3bf, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 5ea0ab458d5195944a9186a7fd2c08f4, type: 3}
+  Script: {fileID: 11500000, guid: 327047c3d8cc481f8e0b45e9e0ed8255, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
 - Class: 114
@@ -77,6 +81,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 4bde068108c74f3897f63e9384662766, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
@@ -85,6 +91,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
 - Class: 115
+  Script: {instanceID: 0}
+- Class: 128
   Script: {instanceID: 0}
 - Class: 157
   Script: {instanceID: 0}
@@ -104,6 +112,10 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/GameMain/Scenes/Main.unity
 Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/fonts/vonwaonbitmap-16px
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/ui/background
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/ui/heart
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/ui/heart-empty
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/prefabs/bluepumpkin
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/prefabs/enemy
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/prefabs/ghost

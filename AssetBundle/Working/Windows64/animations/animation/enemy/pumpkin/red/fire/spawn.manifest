@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 2883518597
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d136dc5bca10c9af5d7431bdd4586705
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: d136dc5bca10c9af5d7431bdd4586705
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Enemy/Pumpkin/Red/Fire/Spawn.anim
+Dependencies: []

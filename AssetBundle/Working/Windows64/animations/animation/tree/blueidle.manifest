@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 3312862710
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a4a28d1cb28e0b284562a18c23632322
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: a4a28d1cb28e0b284562a18c23632322
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Tree/BlueIdle.anim
+Dependencies: []

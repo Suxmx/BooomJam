@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 3745864985
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 59a877daf122e44a1857e5cfe4423b5f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8becd547c702b21343d9309dc05a5f64
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 59a877daf122e44a1857e5cfe4423b5f
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Fonts/VonwaonBitmap-12px.ttf
+Dependencies: []

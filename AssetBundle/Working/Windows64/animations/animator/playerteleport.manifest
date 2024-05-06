@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1185610083
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 06601cb402fef0a014407194a07b8e72
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 06601cb402fef0a014407194a07b8e72
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animator/PlayerTeleport.controller
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animation/player/teleport

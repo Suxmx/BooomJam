@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1498514410
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 81232294ad84892e4f0208c9466da2ca
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 81232294ad84892e4f0208c9466da2ca
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animator/PurpleFire.controller
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animation/fire/redidle

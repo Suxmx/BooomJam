@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 3771357924
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ec588f6eb11e24a1f4b6ad8b6ca13200
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a8cb3a612dd51145548641678a37788
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: ec588f6eb11e24a1f4b6ad8b6ca13200
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Player/ShotGun/ShotGunFire.anim
+Dependencies: []

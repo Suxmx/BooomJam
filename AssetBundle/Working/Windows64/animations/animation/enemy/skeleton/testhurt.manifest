@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3692787838
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7e822ea229bf14b3ccd90e5e83c8f793
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: af57576da81d5d3ce45807ac11234de6
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 7e822ea229bf14b3ccd90e5e83c8f793
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Animations/Animation/Enemy/Skeleton/TestHurt.anim
+Dependencies: []
