@@ -46,7 +46,7 @@ namespace GameMain
             }
         }
         
-        public virtual void RecycleSelf()
+        public override void RecycleSelf()
         {
             if (recycled) return;
             if (isRed)

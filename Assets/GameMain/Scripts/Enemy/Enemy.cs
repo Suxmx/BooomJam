@@ -65,7 +65,7 @@ namespace GameMain
 
         public Action<object> RecycleAction { get; set; }
 
-        public void RecycleSelf()
+        public virtual void RecycleSelf()
         {
             if (!recycled)
             {

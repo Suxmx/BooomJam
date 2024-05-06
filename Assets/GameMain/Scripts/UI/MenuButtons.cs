@@ -6,13 +6,9 @@ namespace GameMain.Scripts.UI
 {
     public class MenuButtons : MonoBehaviour
     {
-        [SerializeField] private MenuVideo Video;
-
         private void Awake()
         {
-            transform.Find("Return").GetComponent<Button>().onClick.AddListener(() => { Video.Replay(); });
-            transform.Find("Exit").GetComponent<Button>().onClick.AddListener(Exit);
-            transform.Find("ReturnMenu").GetComponent<Button>().onClick.AddListener(() => { Video.Replay(); });
+            GetComponent<Button>().onClick.AddListener(Exit);
         }
 
         private void Exit()
