@@ -18,9 +18,12 @@ namespace GameMain
         protected Animator m_Animator;
         protected Rigidbody2D m_Rigidbody;
         protected CapsuleCollider2D m_CapsuleCollider2D;
+        protected Collider2D m_Collider;
         protected SpriteRenderer m_SpriteRenderer;
         protected bool spawnSuccess = false;
         protected bool recycled=false;
+        protected EnemySpawner m_Spawner;
+        protected string m_Name;
 
         protected Player player => GameBase.Instance.GetPlayer();
         public float m_IdleDist = 1;
@@ -38,7 +41,9 @@ namespace GameMain
         public void OnInit(object userData) 
         {
             //TODO:用EnemyData读取数据
-            m_StatusInfo = new CharacterStatusInfo(10, 2);
+            m_Collider = GetComponent<Collider2D>();
+            m_Spawner = (EnemySpawner)userData;
+            m_StatusInfo = new CharacterStatusInfo(1, 2);
             m_AIPath = GetComponent<AIPath>();
             m_Animator = GetComponent<Animator>();
             m_AIDestinationSetter = GetComponent<AIDestinationSetter>();
@@ -50,12 +55,12 @@ namespace GameMain
 
         public virtual void OnShow(object userData)
         {
+            m_Collider.enabled = false;
             SetAIPathTarget(GameBase.Instance.GetPlayer().transform);
             DisableAIPath();
             PlayAnim("Spawn");
             spawnSuccess = false;
             recycled = false;
-            m_CapsuleCollider2D.enabled = true;
         }
 
         public Action<object> RecycleAction { get; set; }
@@ -65,15 +70,26 @@ namespace GameMain
             if (!recycled)
             {
                 recycled = true;
-                gameObject.SetActive(false);
-                RecycleAction(this);
+                m_Spawner.Unspawn(this);
             }
         }
+
+        public void SetName(string name)
+        {
+            m_Name = name;
+        }
+
+        public string GetName()
+        {
+            return m_Name;
+        }
+        
 
         public void OnSpawnSuccess()
         {
             spawnSuccess = true;
             EnableAIPath();
+            m_Collider.enabled = true;
         }
 
         /// <summary>

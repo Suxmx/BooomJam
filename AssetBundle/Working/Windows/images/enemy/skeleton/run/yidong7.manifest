@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 209501889
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2ca574be3a4ae013ddb6ae118c1f6f94
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 2ca574be3a4ae013ddb6ae118c1f6f94
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/Enemy/Skeleton/Run/yidong7.png
+Dependencies: []

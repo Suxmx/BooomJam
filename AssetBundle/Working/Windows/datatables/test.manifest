@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 604713637
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9f64b6a81a7fdef2e2a7e03bc25636c4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 9f64b6a81a7fdef2e2a7e03bc25636c4
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/DataTables/Test.csv
+Dependencies: []

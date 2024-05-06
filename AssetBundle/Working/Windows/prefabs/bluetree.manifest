@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 2452173194
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 16b2be1e0e354505f4333930738e6c90
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: bb231daf30ccc959632492cfc9f7beb4
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 16b2be1e0e354505f4333930738e6c90
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 58
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Prefabs/BlueTree.prefab
+Dependencies: []

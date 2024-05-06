@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3012667427
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e96832c37fea1c5a42671c534c5139a7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: e96832c37fea1c5a42671c534c5139a7
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/HpUI.png
+Dependencies: []

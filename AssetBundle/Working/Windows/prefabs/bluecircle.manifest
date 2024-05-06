@@ -1,0 +1,37 @@
+ManifestFileVersion: 0
+CRC: 4008499367
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c1ebaa47555101755051b1e9fdd976cb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: a0debdb36b6e414a59e1738175800d1d
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: c1ebaa47555101755051b1e9fdd976cb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 58
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0246de55e87430e4f932c1e8603ccd40, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Prefabs/BlueCircle.prefab
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/magiccircle/circle
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/shotgunhud
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/prefabs/player

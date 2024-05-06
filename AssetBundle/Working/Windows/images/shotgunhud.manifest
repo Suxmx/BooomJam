@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3373268346
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4eef70bb2f5af8cd3f15cba730a89f8e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 4eef70bb2f5af8cd3f15cba730a89f8e
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/ShotGunHUD.png
+Dependencies: []

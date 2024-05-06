@@ -27,6 +27,11 @@ namespace GameMain
             LoadPlayer();
             LoadGameScene(procedureOwner.GetData<VarInt32>("Level"));
             LoadPathGraphScanner();
+            var pools=GameEntry.ObjectPool.GetAllObjectPools();
+            foreach (var pool in pools)
+            {
+                GameEntry.ObjectPool.DestroyObjectPool(pool);
+            }
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)

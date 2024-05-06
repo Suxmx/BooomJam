@@ -1,7 +1,250 @@
 ManifestFileVersion: 0
-CRC: 2573579494
+CRC: 1818580586
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: configs/test
+      Name: configs/defaultconfig
       Dependencies: {}
+    Info_1:
+      Name: datatables/entity
+      Dependencies: {}
+    Info_2:
+      Name: datatables/level
+      Dependencies: {}
+    Info_3:
+      Name: datatables/player
+      Dependencies: {}
+    Info_4:
+      Name: datatables/scene
+      Dependencies: {}
+    Info_5:
+      Name: datatables/test
+      Dependencies: {}
+    Info_6:
+      Name: datatables/uiform
+      Dependencies: {}
+    Info_7:
+      Name: datatables/weapon
+      Dependencies: {}
+    Info_8:
+      Name: images/bowhud
+      Dependencies: {}
+    Info_9:
+      Name: images/bullet
+      Dependencies: {}
+    Info_10:
+      Name: images/enemy/skeleton/run/yidong1
+      Dependencies: {}
+    Info_11:
+      Name: images/enemy/skeleton/run/yidong10
+      Dependencies: {}
+    Info_12:
+      Name: images/enemy/skeleton/run/yidong11
+      Dependencies: {}
+    Info_13:
+      Name: images/enemy/skeleton/run/yidong12
+      Dependencies: {}
+    Info_14:
+      Name: images/enemy/skeleton/run/yidong13
+      Dependencies: {}
+    Info_15:
+      Name: images/enemy/skeleton/run/yidong14
+      Dependencies: {}
+    Info_16:
+      Name: images/enemy/skeleton/run/yidong15
+      Dependencies: {}
+    Info_17:
+      Name: images/enemy/skeleton/run/yidong16
+      Dependencies: {}
+    Info_18:
+      Name: images/enemy/skeleton/run/yidong2
+      Dependencies: {}
+    Info_19:
+      Name: images/enemy/skeleton/run/yidong3
+      Dependencies: {}
+    Info_20:
+      Name: images/enemy/skeleton/run/yidong4
+      Dependencies: {}
+    Info_21:
+      Name: images/enemy/skeleton/run/yidong5
+      Dependencies: {}
+    Info_22:
+      Name: images/enemy/skeleton/run/yidong6
+      Dependencies: {}
+    Info_23:
+      Name: images/enemy/skeleton/run/yidong7
+      Dependencies: {}
+    Info_24:
+      Name: images/enemy/skeleton/run/yidong8
+      Dependencies: {}
+    Info_25:
+      Name: images/enemy/skeleton/run/yidong9
+      Dependencies: {}
+    Info_26:
+      Name: images/hpui
+      Dependencies: {}
+    Info_27:
+      Name: images/magiccircle/circle
+      Dependencies:
+        Dependency_0: images/magiccircle/fillshader
+    Info_28:
+      Name: images/magiccircle/fillshader
+      Dependencies: {}
+    Info_29:
+      Name: images/magiccircle/magic1
+      Dependencies: {}
+    Info_30:
+      Name: images/shotgun
+      Dependencies: {}
+    Info_31:
+      Name: images/shotgunhud
+      Dependencies: {}
+    Info_32:
+      Name: prefabs/bluecircle
+      Dependencies:
+        Dependency_0: images/magiccircle/circle
+        Dependency_1: images/shotgunhud
+        Dependency_2: prefabs/player
+    Info_33:
+      Name: prefabs/bluepumpkin
+      Dependencies:
+        Dependency_0: prefabs/bluepumpkinfire
+    Info_34:
+      Name: prefabs/bluepumpkinfire
+      Dependencies: {}
+    Info_35:
+      Name: prefabs/bluetree
+      Dependencies: {}
+    Info_36:
+      Name: prefabs/bow
+      Dependencies:
+        Dependency_0: images/bowhud
+    Info_37:
+      Name: prefabs/bow_bullet
+      Dependencies: {}
+    Info_38:
+      Name: prefabs/bulletexplode
+      Dependencies: {}
+    Info_39:
+      Name: prefabs/enemy
+      Dependencies:
+        Dependency_0: images/enemy/skeleton/run/yidong1
+        Dependency_1: images/enemy/skeleton/run/yidong10
+        Dependency_2: images/enemy/skeleton/run/yidong11
+        Dependency_3: images/enemy/skeleton/run/yidong12
+        Dependency_4: images/enemy/skeleton/run/yidong13
+        Dependency_5: images/enemy/skeleton/run/yidong14
+        Dependency_6: images/enemy/skeleton/run/yidong15
+        Dependency_7: images/enemy/skeleton/run/yidong16
+        Dependency_8: images/enemy/skeleton/run/yidong2
+        Dependency_9: images/enemy/skeleton/run/yidong3
+        Dependency_10: images/enemy/skeleton/run/yidong4
+        Dependency_11: images/enemy/skeleton/run/yidong5
+        Dependency_12: images/enemy/skeleton/run/yidong6
+        Dependency_13: images/enemy/skeleton/run/yidong7
+        Dependency_14: images/enemy/skeleton/run/yidong8
+        Dependency_15: images/enemy/skeleton/run/yidong9
+    Info_40:
+      Name: prefabs/gamescenes/level0_scene1
+      Dependencies:
+        Dependency_0: images/magiccircle/circle
+        Dependency_1: images/shotgunhud
+        Dependency_2: prefabs/player
+    Info_41:
+      Name: prefabs/gamescenes/level0_scene2
+      Dependencies:
+        Dependency_0: images/magiccircle/circle
+        Dependency_1: images/shotgunhud
+        Dependency_2: prefabs/player
+    Info_42:
+      Name: prefabs/gamescenes/level1_scene1
+      Dependencies:
+        Dependency_0: images/magiccircle/circle
+        Dependency_1: images/shotgunhud
+        Dependency_2: prefabs/player
+    Info_43:
+      Name: prefabs/gamescenes/level1_scene2
+      Dependencies:
+        Dependency_0: images/magiccircle/circle
+        Dependency_1: images/shotgunhud
+        Dependency_2: prefabs/player
+    Info_44:
+      Name: prefabs/gamescenes/level2_scene1
+      Dependencies:
+        Dependency_0: images/magiccircle/circle
+        Dependency_1: images/shotgunhud
+        Dependency_2: prefabs/player
+    Info_45:
+      Name: prefabs/gamescenes/level2_scene2
+      Dependencies:
+        Dependency_0: images/magiccircle/circle
+        Dependency_1: images/shotgunhud
+        Dependency_2: prefabs/player
+    Info_46:
+      Name: prefabs/ghost
+      Dependencies: {}
+    Info_47:
+      Name: prefabs/pathgraphscanner
+      Dependencies: {}
+    Info_48:
+      Name: prefabs/player
+      Dependencies: {}
+    Info_49:
+      Name: prefabs/publicobjectpool
+      Dependencies: {}
+    Info_50:
+      Name: prefabs/purplefire
+      Dependencies: {}
+    Info_51:
+      Name: prefabs/redcircle
+      Dependencies:
+        Dependency_0: images/magiccircle/circle
+        Dependency_1: prefabs/player
+    Info_52:
+      Name: prefabs/redfire
+      Dependencies: {}
+    Info_53:
+      Name: prefabs/redpumpkin
+      Dependencies:
+        Dependency_0: prefabs/redpumpkinfire
+    Info_54:
+      Name: prefabs/redpumpkinfire
+      Dependencies: {}
+    Info_55:
+      Name: prefabs/redtree
+      Dependencies: {}
+    Info_56:
+      Name: prefabs/shotgun
+      Dependencies:
+        Dependency_0: images/shotgunhud
+    Info_57:
+      Name: prefabs/shotgun_bullet
+      Dependencies: {}
+    Info_58:
+      Name: scenes/launch
+      Dependencies: {}
+    Info_59:
+      Name: scenes/main
+      Dependencies:
+        Dependency_0: prefabs/bluepumpkin
+        Dependency_1: prefabs/enemy
+        Dependency_2: prefabs/ghost
+        Dependency_3: prefabs/redpumpkin
+    Info_60:
+      Name: scenes/menu
+      Dependencies: {}
+    Info_61:
+      Name: scenes/test
+      Dependencies:
+        Dependency_0: images/magiccircle/magic1
+        Dependency_1: prefabs/bluecircle
+        Dependency_2: prefabs/bluepumpkin
+        Dependency_3: prefabs/bluepumpkinfire
+        Dependency_4: prefabs/bluetree
+        Dependency_5: prefabs/enemy
+        Dependency_6: prefabs/purplefire
+        Dependency_7: prefabs/redcircle
+        Dependency_8: prefabs/redfire
+        Dependency_9: prefabs/redpumpkin
+        Dependency_10: prefabs/redpumpkinfire
+        Dependency_11: prefabs/redtree

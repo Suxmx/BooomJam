@@ -2,12 +2,132 @@
 <UnityGameFramework>
   <ResourceCollection>
     <Resources>
-      <Resource Name="Configs/Test" LoadType="0" Packed="True" />
+      <Resource Name="Configs/DefaultConfig" LoadType="0" Packed="False" />
+      <Resource Name="DataTables/Entity" LoadType="0" Packed="False" />
+      <Resource Name="DataTables/Level" LoadType="0" Packed="False" />
+      <Resource Name="DataTables/Player" LoadType="0" Packed="False" />
+      <Resource Name="DataTables/Scene" LoadType="0" Packed="False" />
+      <Resource Name="DataTables/Test" LoadType="0" Packed="False" />
+      <Resource Name="DataTables/UIForm" LoadType="0" Packed="False" />
+      <Resource Name="DataTables/Weapon" LoadType="0" Packed="False" />
+      <Resource Name="Images/BowHUD" LoadType="0" Packed="False" />
+      <Resource Name="Images/Bullet" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong1" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong10" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong11" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong12" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong13" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong14" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong15" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong16" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong2" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong3" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong4" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong5" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong6" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong7" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong8" LoadType="0" Packed="False" />
+      <Resource Name="Images/Enemy/Skeleton/Run/yidong9" LoadType="0" Packed="False" />
+      <Resource Name="Images/HpUI" LoadType="0" Packed="False" />
+      <Resource Name="Images/MagicCircle/Circle" LoadType="0" Packed="False" />
+      <Resource Name="Images/MagicCircle/FillShader" LoadType="0" Packed="False" />
+      <Resource Name="Images/MagicCircle/magic1" LoadType="0" Packed="False" />
+      <Resource Name="Images/ShotGun" LoadType="0" Packed="False" />
+      <Resource Name="Images/ShotGunHUD" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/BlueCircle" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/BluePumpkin" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/BluePumpkinFire" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/BlueTree" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/Bow" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/Bow_Bullet" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/BulletExplode" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/Enemy" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/GameScenes/Level0_Scene1" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/GameScenes/Level0_Scene2" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/GameScenes/Level1_Scene1" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/GameScenes/Level1_Scene2" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/GameScenes/Level2_Scene1" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/GameScenes/Level2_Scene2" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/Ghost" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/PathGraphScanner" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/Player" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/PublicObjectPool" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/PurpleFire" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/RedCircle" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/RedFire" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/RedPumpkin" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/RedPumpkinFire" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/RedTree" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/ShotGun" LoadType="0" Packed="False" />
+      <Resource Name="Prefabs/ShotGun_Bullet" LoadType="0" Packed="False" />
+      <Resource Name="Scenes/Launch" LoadType="0" Packed="False" />
+      <Resource Name="Scenes/Main" LoadType="0" Packed="False" />
+      <Resource Name="Scenes/Menu" LoadType="0" Packed="False" />
+      <Resource Name="Scenes/Test" LoadType="0" Packed="False" />
     </Resources>
     <Assets>
-      <Asset Guid="1d969f5eb70d84447aafa6963865d198" ResourceName="Configs/Test" />
-      <Asset Guid="bb470d1c6cec4794f90f281f7cbe89a1" ResourceName="Configs/Test" />
-      <Asset Guid="dc6288772a0d5384085cfada0092d37f" ResourceName="Configs/Test" />
+      <Asset Guid="03675f19acbc8524b9f435521d9735b0" ResourceName="Prefabs/Enemy" />
+      <Asset Guid="04d9b3546dda567479d62ad6026e24ca" ResourceName="Prefabs/GameScenes/Level1_Scene1" />
+      <Asset Guid="086b9e8d314e5b94584db5063c9365f7" ResourceName="Scenes/Menu" />
+      <Asset Guid="11f3fc0b50877644fac8f94afdb16637" ResourceName="Images/ShotGunHUD" />
+      <Asset Guid="16c5f12d47d60c54cbb702b19a558093" ResourceName="Scenes/Main" />
+      <Asset Guid="248c4fb06582a1044b5bdd03302efa84" ResourceName="Images/Bullet" />
+      <Asset Guid="2578777abf771b848a6ba65485480e08" ResourceName="Images/MagicCircle/Circle" />
+      <Asset Guid="2cbf00628c9ed9e4bbdbefbbbd19b663" ResourceName="Prefabs/ShotGun" />
+      <Asset Guid="2f84275dba548924e8785dd0d591a5a7" ResourceName="Images/Enemy/Skeleton/Run/yidong8" />
+      <Asset Guid="32eccce7e201cee4ab42f91cff5dd49b" ResourceName="Configs/DefaultConfig" />
+      <Asset Guid="38a1ce9772ff8d24ea7edb20d2da8380" ResourceName="Images/Enemy/Skeleton/Run/yidong13" />
+      <Asset Guid="39a9d25f5664d3c4fb4b4030ef7a793f" ResourceName="Prefabs/ShotGun_Bullet" />
+      <Asset Guid="3aea744ad1b3e344ea56a17ac3a3845a" ResourceName="Prefabs/PublicObjectPool" />
+      <Asset Guid="3cfbb04fc874e9e4fa59a69ef3a5b6bc" ResourceName="Prefabs/RedPumpkin" />
+      <Asset Guid="3fab90d77aa3ce547bd07babbf9fd71f" ResourceName="Prefabs/PathGraphScanner" />
+      <Asset Guid="5a310466cbea7a74eae484f70c0f85e7" ResourceName="Images/Enemy/Skeleton/Run/yidong11" />
+      <Asset Guid="624682d1e79dfab45a1e6cffdda83b3d" ResourceName="Images/HpUI" />
+      <Asset Guid="66a7eee2ef767ea47a16068f9535dca8" ResourceName="Prefabs/GameScenes/Level0_Scene2" />
+      <Asset Guid="66c75347ed1ac324f888f5ecd9d3f531" ResourceName="DataTables/Scene" />
+      <Asset Guid="67e1f955e96d93a4c9bd25bf880e7673" ResourceName="DataTables/UIForm" />
+      <Asset Guid="67ed33ae05d05ab4fa0b0b87ecac6199" ResourceName="Prefabs/Ghost" />
+      <Asset Guid="6c0ebb89d6bdcd646a277887de92a98a" ResourceName="DataTables/Entity" />
+      <Asset Guid="6eec880a2b6b7c34d8ff815ac55c53c7" ResourceName="Prefabs/BulletExplode" />
+      <Asset Guid="733f594e319d0ca479634bb556fc2d3b" ResourceName="Prefabs/GameScenes/Level1_Scene2" />
+      <Asset Guid="758ea2fc40ef27c41910580db069a557" ResourceName="Images/Enemy/Skeleton/Run/yidong12" />
+      <Asset Guid="79400c779f203fd468006ddf82dd9bcc" ResourceName="Prefabs/GameScenes/Level0_Scene1" />
+      <Asset Guid="7a28717095763354685b1ddfd463c1ba" ResourceName="Prefabs/BlueCircle" />
+      <Asset Guid="819a68773a0e5854ca930382dce47ded" ResourceName="Prefabs/RedFire" />
+      <Asset Guid="8338c75f8c1068c4aa80c375374363c2" ResourceName="Images/Enemy/Skeleton/Run/yidong4" />
+      <Asset Guid="868f8ab3b83db4a48a91c358f98a8518" ResourceName="Images/Enemy/Skeleton/Run/yidong16" />
+      <Asset Guid="8891f79ca0c89b04da39e1c622dc60d8" ResourceName="Scenes/Test" />
+      <Asset Guid="8c8f97164061cc84f9c28145c3839b53" ResourceName="Prefabs/RedPumpkinFire" />
+      <Asset Guid="8cb5d28b1017bf04eb460fcb3f819d38" ResourceName="Images/Enemy/Skeleton/Run/yidong5" />
+      <Asset Guid="9752b6efbd1f3524d8b015d30b23ce99" ResourceName="Images/MagicCircle/FillShader" />
+      <Asset Guid="9b144b61d4aaac74ca60c40508155094" ResourceName="Prefabs/Bow_Bullet" />
+      <Asset Guid="9c4104c99dd49ad46b1e3f24661f042d" ResourceName="Images/Enemy/Skeleton/Run/yidong6" />
+      <Asset Guid="9eee6e138c99724419d27a194d81d26a" ResourceName="DataTables/Player" />
+      <Asset Guid="9ff69d9914ba790468a6cb0d224bb89d" ResourceName="Images/Enemy/Skeleton/Run/yidong9" />
+      <Asset Guid="a2ec18d7eab6a954fb54163e07e17e3b" ResourceName="Prefabs/GameScenes/Level2_Scene2" />
+      <Asset Guid="a7237355af44b184a81e842d5684ceec" ResourceName="Prefabs/Player" />
+      <Asset Guid="ad12f67df9d4f5648bda12f7b0f4cc8a" ResourceName="Prefabs/RedCircle" />
+      <Asset Guid="add050c35ee428a40980371f4e999250" ResourceName="Images/Enemy/Skeleton/Run/yidong3" />
+      <Asset Guid="b13a822eddca8334cb5708d41f3f261c" ResourceName="DataTables/Level" />
+      <Asset Guid="b3dd3c230cd239e49b5f1c0367095bb1" ResourceName="Images/Enemy/Skeleton/Run/yidong14" />
+      <Asset Guid="b8d06e07e30a973428fa97580034485b" ResourceName="DataTables/Test" />
+      <Asset Guid="b8ff3267204440d4da5f1a6f79e9baf1" ResourceName="Prefabs/PurpleFire" />
+      <Asset Guid="ba5b1788bea374a4cbdf75f981055201" ResourceName="DataTables/Weapon" />
+      <Asset Guid="bafb9159bdf2f074bbab3b8dcb804e85" ResourceName="Prefabs/BluePumpkin" />
+      <Asset Guid="c3acb57701a4d7043958585d619d6786" ResourceName="Prefabs/GameScenes/Level2_Scene1" />
+      <Asset Guid="c518f0d069522ba4aa842c672048dafa" ResourceName="Images/MagicCircle/magic1" />
+      <Asset Guid="cb11ffbf02937e141b9e2a155a01f195" ResourceName="Images/BowHUD" />
+      <Asset Guid="ce5c4e1f6fd53e145b52cf78555ac57f" ResourceName="Images/ShotGun" />
+      <Asset Guid="d12ce70fdcef7e546bd4deb2fc7a0ddc" ResourceName="Prefabs/RedTree" />
+      <Asset Guid="d9b4139ec64f6cb4e8a74a0d9948adc4" ResourceName="Images/Enemy/Skeleton/Run/yidong2" />
+      <Asset Guid="da107ae9236cc3142b53df7a86b196f5" ResourceName="Scenes/Launch" />
+      <Asset Guid="de45b46aca2e13f4fac2d65bd57e4bc2" ResourceName="Images/Enemy/Skeleton/Run/yidong1" />
+      <Asset Guid="e1ba6c646ba03d54a925bb1624b61922" ResourceName="Images/Enemy/Skeleton/Run/yidong15" />
+      <Asset Guid="e2175d6671a140e4f9be0bbd704a9350" ResourceName="Images/Enemy/Skeleton/Run/yidong7" />
+      <Asset Guid="e878efcf97f1d1247a04f8f83417bc84" ResourceName="Prefabs/BluePumpkinFire" />
+      <Asset Guid="e921923b515f00a4bae19e9485c86135" ResourceName="Prefabs/BlueTree" />
+      <Asset Guid="f1a29ba99c075204ab07cd97c0f426ae" ResourceName="Images/Enemy/Skeleton/Run/yidong10" />
+      <Asset Guid="f96fddf388c33d940b6a502259795eec" ResourceName="Prefabs/Bow" />
     </Assets>
   </ResourceCollection>
 </UnityGameFramework>

@@ -7,6 +7,7 @@ namespace GameMain
         private bool invincible;
         private int m_OwnerGameSceneIndex;
         
+        
         public override void OnAttacked(AttackData data)
         {
             if (invincible) return;
@@ -24,6 +25,8 @@ namespace GameMain
             {
                 Hide();
             }
+
+            GameBase.Instance.OnChangeGameScene += OnGameSceneChange;
         }
 
         private void OnGameSceneChange(int index)
@@ -40,12 +43,14 @@ namespace GameMain
 
         private void Show()
         {
+            m_Collider.enabled = true;
             m_SpriteRenderer.color = Color.white;
             invincible = false;
         }
 
         private void Hide()
         {
+            m_Collider.enabled = false;
             m_SpriteRenderer.color = new Color(1, 1, 1, 0.4f);
             invincible = true;
         }

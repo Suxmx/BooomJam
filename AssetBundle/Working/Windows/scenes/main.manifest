@@ -1,0 +1,110 @@
+ManifestFileVersion: 0
+CRC: 1540856041
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6d7e7e5e1bef10078960b1c274f258ce
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 12d3b8e559d2472191910a81a2471fd2
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 6d7e7e5e1bef10078960b1c274f258ce
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 61
+  Script: {instanceID: 0}
+- Class: 70
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 104
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f5d9d23a2f9745688ce0b2680558b969, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 31b684a576ef4a6eae3df5c64e8027a1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8c6ee039a0cf4dca8299c140d69c54cc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e169fd68b6c58b243b51bde90e19a3bf, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5ea0ab458d5195944a9186a7fd2c08f4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4bde068108c74f3897f63e9384662766, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 157
+  Script: {instanceID: 0}
+- Class: 196
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Scenes/Main.unity
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/prefabs/bluepumpkin
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/prefabs/enemy
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/prefabs/ghost
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/prefabs/redpumpkin

@@ -81,7 +81,7 @@ namespace GameMain
             m_AstarPath.data.graphs = new[] { m_Graphs[0] };
             //生成对象池
             m_PublicObjectPool = Object.Instantiate(data.Prefabs["PublicObjectPool"]).GetComponent<PublicObjectPool>();
-            m_PublicObjectPool.RegisterTemplate("BulletExplode",data.Prefabs["BulletExplode"]);
+            m_PublicObjectPool.RegisterTemplate("BulletExplode", data.Prefabs["BulletExplode"]);
         }
 
         #endregion
@@ -91,6 +91,10 @@ namespace GameMain
             ChangeScene();
         }
 
+        public int GetGameSceneIndex()
+        {
+            return m_CurrentGameSceneIndex;
+        }
 
         protected void ChangeScene()
         {
@@ -108,6 +112,11 @@ namespace GameMain
                 m_CurrentGameScene.OnChangeSceneToThis();
                 OnChangeGameScene?.Invoke(m_CurrentGameSceneIndex);
             }
+        }
+
+        public void ReturnMenu()
+        {
+            (GameEntry.Procedure.CurrentProcedure as ProcedureMainGame).ReturnToMenu();
         }
 
 

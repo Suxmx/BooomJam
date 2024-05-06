@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 917131161
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 24cbadaec897896b4c18a23033010932
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c1f3eceaff1d8e80fb1e752adb34a586
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 24cbadaec897896b4c18a23033010932
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: f9d725b0ce57f7c4489346d8c925659d, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Prefabs/PublicObjectPool.prefab
+Dependencies: []

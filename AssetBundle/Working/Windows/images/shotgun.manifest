@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 180651279
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0436468cc7aee4d3573841b8bb2783e5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 0436468cc7aee4d3573841b8bb2783e5
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/ShotGun.png
+Dependencies: []

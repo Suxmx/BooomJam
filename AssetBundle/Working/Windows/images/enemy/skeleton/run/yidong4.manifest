@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1817874518
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 47b8d0fa30cfced58356091ffa05b30b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 47b8d0fa30cfced58356091ffa05b30b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/Enemy/Skeleton/Run/yidong4.png
+Dependencies: []

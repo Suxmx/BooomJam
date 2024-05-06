@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,8 +20,13 @@ namespace MyTimer
         private CountdownTimer m_timer;
         private Vector2 m_magicCirclePosition;
         private Material m_material;
-        
-        
+
+
+        private void OnDestroy()
+        {
+            m_timer.Paused = true;
+        }
+
         private void Start()
         {
             m_magicCirclePosition = new Vector2(directionX,directionY);

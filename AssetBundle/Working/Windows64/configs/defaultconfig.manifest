@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 981722730
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f064cdba7b853785b38ede0969a7f490
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: f064cdba7b853785b38ede0969a7f490
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Configs/DefaultConfig.csv
+Dependencies: []

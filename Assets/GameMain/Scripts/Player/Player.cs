@@ -18,6 +18,9 @@ namespace GameMain
             Bow
         }
 
+//赶进度
+        [SerializeField] private GameObject DieAnim;
+
         private SpriteRenderer m_SpriteRenderer;
         private Animator m_Animator;
         private Rigidbody2D m_Rigidbody;
@@ -31,7 +34,7 @@ namespace GameMain
         private CountdownTimer m_ChangeSceneTimer;
         private Coroutine m_IRecoil;
         private Coroutine m_IMoveTowards;
-        private EWeapon m_CurrentWeaponState=EWeapon.ShotGun;
+        private EWeapon m_CurrentWeaponState = EWeapon.ShotGun;
         public Lock m_InvincibleLock;
         private int m_CurrentWeaponIndex;
         private int m_ObstacleMask;
@@ -142,25 +145,18 @@ namespace GameMain
             if (Input.GetMouseButton(0))
             {
                 m_CurrentWeapon.Charge(deltaTime);
-                if (m_HpImage)
-                {
-                    m_HpImage.fillAmount = m_CurrentWeapon.GetChargePercent();
-                    if (Mathf.Abs(m_HpImage.fillAmount - 1) < 1e-5)
-                    {
-                        m_HpImage.color = new Color(0, 1, 0, 1);
-                    }
-                }
             }
 
             if (Input.GetMouseButtonUp(0))
             {
+                // var teleport=Instantiate(TeleportAnim);
+                // Vector3 angles = m_CurrentWeapon.transform.eulerAngles;
+                // angles.z += 180;
+                // teleport.transform.eulerAngles =angles;
+                // teleport.transform.position = transform.position;
+                // transform.localScale=new Vector3(1,)
                 if (m_CurrentWeapon != null)
                     m_CurrentWeapon.Fire(this);
-                if (m_HpImage)
-                {
-                    m_HpImage.fillAmount = 0;
-                    m_HpImage.color = new Color(1, 0, 0, 1);
-                }
             }
         }
 
@@ -216,6 +212,7 @@ namespace GameMain
                 SafeTranslate(Vector3.up / 60 * 0.5f);
                 yield return new WaitForFixedUpdate();
             }
+
             PlayAnim(EPlayerAnim.RecoilToIdle);
         }
 
@@ -256,10 +253,21 @@ namespace GameMain
             }
         }
 
+        protected void OnDead()
+        {
+            Instantiate(DieAnim, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+        }
         public void OnAttacked(AttackData data)
         {
             if (Invincible) return;
             m_PlayerStatusInfo.Hp -= data.Damage;
+            Log.Info($"Player Hp:{m_PlayerStatusInfo.Hp}");
+            if (m_PlayerStatusInfo.IsDead)
+            {
+                OnDead();
+                return;
+            }
             m_InvincibleLock++;
             m_InvincibleTimer.Restart();
             Collider2D[] targetEnemies = Physics2D.OverlapCircleAll(transform.position,

@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 4103139307
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c45f07f5cfd030e59e01227b3d702d3b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: bb231daf30ccc959632492cfc9f7beb4
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: c45f07f5cfd030e59e01227b3d702d3b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 58
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Prefabs/RedFire.prefab
+Dependencies: []

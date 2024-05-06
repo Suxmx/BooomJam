@@ -1,0 +1,53 @@
+ManifestFileVersion: 0
+CRC: 1337496521
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8a46ad2010c8f33c920adef86a475bc2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 493ca34b3aeb8de16c8989d6964b309a
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 8a46ad2010c8f33c920adef86a475bc2
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 598c392679c6485d85a4ae9ddd06662a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e903d17115264e27b9419588df9d1939, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+Assets:
+- Assets/GameMain/Prefabs/Bow.prefab
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/bowhud

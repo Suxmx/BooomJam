@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3475478620
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4ea2c869ca6ebcc7d95230f7277a058b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 4ea2c869ca6ebcc7d95230f7277a058b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Images/MagicCircle/magic1.png
+Dependencies: []

@@ -1,0 +1,73 @@
+ManifestFileVersion: 0
+CRC: 3891063339
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a0a231a572ddd75ca670d11c0a41c162
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ba25c3d6f84b438889c16f9f0ed378b7
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: a0a231a572ddd75ca670d11c0a41c162
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ef109a45ce1546859b29ed2637574bb6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b7f59e54f2bfd184b9dd451a678d089b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a98005bf7d784f7295a285c9a989e749, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Cinemachine
+  ClassName: Cinemachine.CinemachineImpulseDefinition
+- AssemblyName: Cinemachine
+  ClassName: Cinemachine.CinemachineImpulseManager/EnvelopeDefinition
+- AssemblyName: Cinemachine
+  ClassName: Cinemachine.NoiseSettings/NoiseParams
+- AssemblyName: Cinemachine
+  ClassName: Cinemachine.NoiseSettings/TransformNoiseParams
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+Assets:
+- Assets/GameMain/Prefabs/ShotGun.prefab
+Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/shotgunhud
