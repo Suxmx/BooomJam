@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 238922285
+CRC: 4005453505
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -511,7 +511,6 @@ AssetBundleManifest:
         Dependency_2: images/ui/darkstar1
         Dependency_3: images/ui/iconback1
         Dependency_4: images/ui/star
-        Dependency_5: videos/videotexture
     Info_133:
       Name: scenes/menu1
       Dependencies: {}
@@ -530,6 +529,3 @@ AssetBundleManifest:
         Dependency_9: prefabs/redpumpkin
         Dependency_10: prefabs/redpumpkinfire
         Dependency_11: prefabs/redtree
-    Info_135:
-      Name: videos/videotexture
-      Dependencies: {}

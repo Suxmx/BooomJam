@@ -137,7 +137,6 @@
       <Resource Name="Scenes/Menu" LoadType="0" Packed="True" />
       <Resource Name="Scenes/Menu1" LoadType="0" Packed="False" />
       <Resource Name="Scenes/Test" LoadType="0" Packed="True" />
-      <Resource Name="Videos/VideoTexture" LoadType="0" Packed="False" />
     </Resources>
     <Assets>
       <Asset Guid="03675f19acbc8524b9f435521d9735b0" ResourceName="Prefabs/Enemy" />
@@ -197,7 +196,6 @@
       <Asset Guid="7b727806216d05944a016c87344825b9" ResourceName="Images/UI/background" />
       <Asset Guid="7f52aa9f3059f1941b147065ffb13f79" ResourceName="Animations/Animation/Player/ShotGun/ShotGunFire" />
       <Asset Guid="7fa4db74fbe8f414d9f698423219f248" ResourceName="Audios/SF/shotgun1" />
-      <Asset Guid="80a96c858b66c4248b7ba74f8318be5f" ResourceName="Videos/VideoTexture" />
       <Asset Guid="819a68773a0e5854ca930382dce47ded" ResourceName="Prefabs/RedFire" />
       <Asset Guid="8338c75f8c1068c4aa80c375374363c2" ResourceName="Images/Enemy/Skeleton/Run/yidong4" />
       <Asset Guid="8540fa239e412bd42828271b3d6bc515" ResourceName="Animations/Animation/Player/TeleportAnim" />

@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1248010814
+CRC: 1128886594
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8128ab47932a31a4fa7da1bb72e22f86
+    Hash: 3c2e62ee338ddaf052991df3a63fff40
   TypeTreeHash:
     serializedVersion: 2
     Hash: 7955ca552b3bd24b8a1dc98b9df26939
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 8128ab47932a31a4fa7da1bb72e22f86
+    Hash: 3c2e62ee338ddaf052991df3a63fff40
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -91,4 +91,3 @@ Dependencies:
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/darkstar1
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/iconback1
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/star
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/videos/videotexture
