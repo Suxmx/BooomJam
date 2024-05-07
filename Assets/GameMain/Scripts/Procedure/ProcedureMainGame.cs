@@ -28,7 +28,7 @@ namespace GameMain
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
-            m_GameBase.Update();
+            m_GameBase.Update(elapseSeconds);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)

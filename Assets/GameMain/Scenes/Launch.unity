@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_SoundGroups.Array.data[2].m_AgentHelperCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11413340, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 3}
+      propertyPath: m_SoundGroups.Array.data[1].m_AvoidBeingReplacedBySamePriority
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11463816, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 3}
       propertyPath: m_Enabled
       value: 1

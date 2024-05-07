@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using GameMain.Scripts.Player.Weapons.ObjectPool;
 using MyTimer;
@@ -29,6 +30,7 @@ namespace GameMain
         private void OnDestroy()
         {
             m_SpawnTimer.Paused = true;
+            StopAllCoroutines();
         }
 
         private void Awake()
@@ -74,6 +76,20 @@ namespace GameMain
                     e.transform.position = RandomPosition();
                     ((Ghost)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
                     break;
+            }
+        }
+
+        public void SpawnPlentyEnemy(int num)
+        {
+            StartCoroutine(ISpawnPlentyEnemy(num));
+        }
+
+        private IEnumerator ISpawnPlentyEnemy(int num)
+        {
+            for (int i = 1; i <= num; i++)
+            {
+                SpawnTestEnemy();
+                yield return new WaitForSeconds(0.3f);
             }
         }
 

@@ -28,9 +28,9 @@ namespace GameMain
 
         private void InitLevelScore()
         {
-            GameEntry.Setting.SetInt("Level1Score",1);
-            GameEntry.Setting.SetInt("Level2Score",2);
-            GameEntry.Setting.SetInt("Level3Score",3);
+            GameEntry.Setting.SetInt("Level1Score",0);
+            GameEntry.Setting.SetInt("Level2Score",0);
+            GameEntry.Setting.SetInt("Level3Score",0);
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)

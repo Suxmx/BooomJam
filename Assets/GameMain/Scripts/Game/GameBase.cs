@@ -60,6 +60,9 @@ namespace GameMain
         protected GameScene m_CurrentGameScene => m_GameScenes[m_CurrentGameSceneIndex];
         protected AstarPath m_AstarPath;
         protected PauseUI m_PauseUI;
+        protected EnemySpawner m_Spawner;
+        protected List<FMagicCircleData> m_MagicCircleDatas=new();
+        protected float m_Timer = 0f;
 
 
         #region Initialize
@@ -97,10 +100,24 @@ namespace GameMain
             Transform canvas = GameObject.Find("Canvas").transform;
             m_PauseUI = canvas.Find("PausePage").GetComponent<PauseUI>();
             canvas.Find("Pause").GetComponent<Button>().onClick.AddListener(PauseGame);
+            m_Spawner = GameObject.Find("Spawner").GetComponent<EnemySpawner>();
+            //初始化魔法阵
+            foreach (var scene in m_GameScenes)
+            {
+                foreach (var d in scene.MagicCircleDatas)
+                {
+                    d.circle.transform.parent = null;
+                    m_MagicCircleDatas.Add(d);
+                }
+            }
         }
 
         #endregion
 
+        public EnemySpawner GetSpawner()
+        {
+            return m_Spawner;
+        }
         public void PauseGame()
         {
             Time.timeScale = 0f;
@@ -115,8 +132,17 @@ namespace GameMain
             Pause = false;
         }
 
-        public virtual void Update()
+        public virtual void Update(float dT)
         {
+            m_Timer += dT;
+            foreach (var data in m_MagicCircleDatas)
+            {
+                if (m_Timer > data.ShowTime && !data.hasShowed)
+                {
+                    data.circle.gameObject.SetActive(true);
+                    data.hasShowed = true;
+                }
+            }
             ChangeScene();
         }
 

@@ -32,7 +32,6 @@ namespace GameMain
         public void OnTimerComplete()
         {
             m_Pool.UnSpawn(gameObject);
-            m_timer.Paused = true;
         }
 
         public void OnGameScene(int index)
