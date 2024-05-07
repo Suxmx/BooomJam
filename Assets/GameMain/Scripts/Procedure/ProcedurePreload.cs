@@ -23,14 +23,16 @@ namespace GameMain
             GameEntry.Event.Subscribe(LoadDataTableFailureEventArgs.EventId, OnLoadDataTableFailure);
             
             PreloadData();
-            InitLevelScore();
+            InitGameSettings();
+            
         }
 
-        private void InitLevelScore()
+        private void InitGameSettings()
         {
             GameEntry.Setting.SetInt("Level1Score",0);
             GameEntry.Setting.SetInt("Level2Score",0);
             GameEntry.Setting.SetInt("Level3Score",0);
+            GameEntry.Setting.SetBool("VideoPlayed",false);
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)

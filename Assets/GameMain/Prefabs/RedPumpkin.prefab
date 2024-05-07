@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 2244318919581102637}
   - component: {fileID: 1201322254518558599}
   - component: {fileID: 67737183137304107}
-  - component: {fileID: 5913314373996444643}
   - component: {fileID: 6992163967458358867}
+  - component: {fileID: 5345787091142493180}
   m_Layer: 7
   m_Name: RedPumpkin
   m_TagString: Enemy
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.48
+  radius: 0.82
   height: 0.99
   canMove: 1
   maxSpeed: 4
@@ -217,22 +217,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &5913314373996444643
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8228620636411619983}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.054726977, y: -0.23020352}
-  m_Size: {x: 1.1089042, y: 0.9204153}
-  m_Direction: 1
 --- !u!114 &6992163967458358867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,3 +233,19 @@ MonoBehaviour:
   m_TrackDist: 3
   isRed: 1
   isBlue: 0
+--- !u!58 &5345787091142493180
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228620636411619983}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.31030828}
+  serializedVersion: 2
+  m_Radius: 0.54120076

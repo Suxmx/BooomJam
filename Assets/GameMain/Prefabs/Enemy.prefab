@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7650130933160681314}
   - component: {fileID: 7324015858266501832}
   - component: {fileID: 8502641324559229796}
-  - component: {fileID: 2819118884786804396}
+  - component: {fileID: 5043168442650992814}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.37
+  radius: 0.71
   height: 0.39
   canMove: 1
   maxSpeed: 4
@@ -231,8 +231,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &2819118884786804396
-CapsuleCollider2D:
+--- !u!58 &5043168442650992814
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -244,6 +244,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010312557, y: 0.062133312}
-  m_Size: {x: 0.5421856, y: 1.1102006}
-  m_Direction: 0
+  m_Offset: {x: 0.045987934, y: 0.037872553}
+  serializedVersion: 2
+  m_Radius: 0.4010317

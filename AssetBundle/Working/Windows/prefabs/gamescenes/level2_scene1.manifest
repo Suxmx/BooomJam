@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 4218334176
+CRC: 147152649
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7a11b36889636f8761ec97c7c3c0a7de
+    Hash: 7873cb3bf15527ab70126f32c495d0c4
   TypeTreeHash:
     serializedVersion: 2
     Hash: a75235ed2ae9f4e4698b39be78c0f8e0
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 7a11b36889636f8761ec97c7c3c0a7de
+    Hash: 7873cb3bf15527ab70126f32c495d0c4
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -44,12 +44,11 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers: []
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: GameMain.FMagicCircleData
 Assets:
 - Assets/GameMain/Prefabs/GameScenes/Level2_Scene1.prefab
 Dependencies:
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animator/player
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/animations/animator/redtree
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/magiccircle/circle
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/shotgunhud
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/prefabs/playerdie

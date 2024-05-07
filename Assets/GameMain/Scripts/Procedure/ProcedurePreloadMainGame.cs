@@ -35,6 +35,7 @@ namespace GameMain
                 if (pool.FullName.Contains("SelfCreated_"))
                     GameEntry.ObjectPool.DestroyObjectPool(pool);
             }
+            
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)

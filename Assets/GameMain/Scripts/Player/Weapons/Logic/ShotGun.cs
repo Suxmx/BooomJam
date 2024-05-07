@@ -101,7 +101,7 @@ namespace GameMain
             for (int i = 1; i <= bulletNum; i++)
             {
                 BulletData data = new BulletData(GameEntry.Entity.GenerateSerialId(), (int)EWeapon.Bullet, false,
-                    Damage, m_BulletSpeed, 5, scaleFactor);
+                    Damage, m_BulletSpeed, 0.2f, scaleFactor);
                 data.Position = m_Muzzle.position;
                 Vector2 d;
                 if (bulletNum % 2 == 0)

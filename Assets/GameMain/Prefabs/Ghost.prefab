@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 7650130933160681314}
   - component: {fileID: 7324015858266501832}
   - component: {fileID: 8502641324559229796}
-  - component: {fileID: 5888181565896223471}
   - component: {fileID: -2853925278751195314}
+  - component: {fileID: 2628218703898566277}
   m_Layer: 7
   m_Name: Ghost
   m_TagString: Enemy
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.36
+  radius: 0.61
   height: 0.99
   canMove: 1
   maxSpeed: 4
@@ -217,22 +217,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &5888181565896223471
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521919995565279168}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.061078846, y: 0.08196336}
-  m_Size: {x: 0.58823955, y: 1.0067307}
-  m_Direction: 0
 --- !u!114 &-2853925278751195314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,3 +231,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IdleDist: 1
   m_TrackDist: 3
+--- !u!58 &2628218703898566277
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521919995565279168}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03279367, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.38926688

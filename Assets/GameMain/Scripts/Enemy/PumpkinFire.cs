@@ -71,6 +71,8 @@ namespace GameMain
                     .OnAttacked(new AttackData(1, transform.position - other.transform.position));
                 m_timer.Paused = true;
                 m_Pool.UnSpawn(gameObject);
+                if (!other.GetComponent<Player>().Invincible)
+                    GameBase.Instance.NoFireDamage = false;
             }
         }
     }

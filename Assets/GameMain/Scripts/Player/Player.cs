@@ -42,7 +42,7 @@ namespace GameMain
         private int m_ObstacleMask;
         public bool m_IsMovingToward = false;
 
-        private bool Invincible
+        public bool Invincible
         {
             get { return !m_InvincibleLock.Unlocked; }
         }
@@ -264,6 +264,7 @@ namespace GameMain
             GameEntry.Sound.PlaySoundM("die");
             Instantiate(DieAnim, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
+            FindObjectOfType<CountDownUI>().Pause();
         }
         public void OnAttacked(AttackData data)
         {
@@ -288,5 +289,7 @@ namespace GameMain
             CauseRecoil(new RecoilData(data.AttackDirection, 0.2f, 0));
             GameEntry.Sound.PlaySoundM("hurt");
         }
+
+        public int GetHp() => m_PlayerStatusInfo.Hp;
     }
 }

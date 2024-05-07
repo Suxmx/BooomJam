@@ -57,25 +57,55 @@ namespace GameMain
             // var e=m_EnemyPool.Spawn();
             // e.transform.position = RandomPosition();
             //
-            int rand = Random.Range(1, GameBase.Instance.Level >= 3 ? 4 : 3);
+            int rand = Random.Range(1, 100);
             Enemy e;
-            switch (rand)
+            switch (GameBase.Instance.Level)
             {
                 case 1:
-                    e = Spawn("Bone");
-                    e.transform.position = RandomPosition();
-                    break;
                 case 2:
-                    e = Spawn("Ghost");
-                    e.transform.position = RandomPosition();
-                    ((Ghost)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
+                    if (rand >= 1 && rand <= 20)
+                    {
+                        SpawnGhost();
+                    }
+                    else
+                    {
+                        SpawnBone();
+                    }
+
                     break;
                 case 3:
-                    int pumpkinRand = Random.Range(0, 2);
-                    e = pumpkinRand == 0 ? Spawn("BluePumpkin") : Spawn("RedPumpkin");
-                    e.transform.position = RandomPosition();
-                    ((Pumpkin)e).Init(pumpkinRand, GameBase.Instance.GetGameSceneIndex());
+                    if (rand >= 1 && rand <= 20)
+                    {
+                        SpawnGhost();
+                    }
+                    else if (rand >= 20 && rand <= 40)
+                    {
+                        SpawnPumpkin();
+                    }
+                    else SpawnBone();
+
                     break;
+            }
+
+            void SpawnBone()
+            {
+                e = Spawn("Bone");
+                e.transform.position = RandomPosition();
+            }
+
+            void SpawnGhost()
+            {
+                e = Spawn("Ghost");
+                e.transform.position = RandomPosition();
+                ((Ghost)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
+            }
+
+            void SpawnPumpkin()
+            {
+                int pumpkinRand = Random.Range(0, 2);
+                e = pumpkinRand == 0 ? Spawn("BluePumpkin") : Spawn("RedPumpkin");
+                e.transform.position = RandomPosition();
+                ((Pumpkin)e).Init(pumpkinRand, GameBase.Instance.GetGameSceneIndex());
             }
         }
 
@@ -130,7 +160,7 @@ namespace GameMain
             float x = Random.Range(m_SpawnBounds.min.x, m_SpawnBounds.max.x);
             float y = Random.Range(m_SpawnBounds.min.y, m_SpawnBounds.max.y);
             var pos = new Vector2(x, y);
-            if (Vector2.Distance(pos, GameBase.Instance.GetPlayer().transform.position) < 1f)
+            if (Vector2.Distance(pos, GameBase.Instance.GetPlayer().transform.position) < 1.5f)
                 return RandomPosition();
             return pos;
         }

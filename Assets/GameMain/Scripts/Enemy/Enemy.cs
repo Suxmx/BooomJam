@@ -17,7 +17,6 @@ namespace GameMain
         protected CharacterStatusInfo m_StatusInfo;
         protected Animator m_Animator;
         protected Rigidbody2D m_Rigidbody;
-        protected CapsuleCollider2D m_CapsuleCollider2D;
         protected Collider2D m_Collider;
         protected SpriteRenderer m_SpriteRenderer;
         protected bool spawnSuccess = false;
@@ -50,7 +49,6 @@ namespace GameMain
             m_AIPath.maxSpeed = m_StatusInfo.MoveSpeed;
             m_SpriteRenderer = GetComponent<SpriteRenderer>();
             m_Rigidbody = GetComponent<Rigidbody2D>();
-            m_CapsuleCollider2D = GetComponent<CapsuleCollider2D>();
         }
 
         public virtual void OnShow(object userData)
@@ -69,6 +67,7 @@ namespace GameMain
         {
             if (!recycled)
             {
+                GameBase.Instance.OnEnemyDie();
                 recycled = true;
                 m_Spawner.Unspawn(this);
             }

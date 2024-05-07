@@ -34,7 +34,7 @@ namespace MyTimer
             m_timer = new CountdownTimer();
             m_timer.OnComplete += OnTimerComplete;
             m_timer.OnTick += CircleChange;
-            m_timer.Initialize(timeLimit, true);
+            m_timer.Initialize(10, true);
 
             float newScale = radius;
             transform.localScale = new Vector2(newScale, newScale);
@@ -85,6 +85,7 @@ namespace MyTimer
         private void OnTimerComplete()
         {
             GameBase.Instance.GetSpawner().SpawnPlentyEnemy(10);
+            GameBase.Instance.NoMagicCircleTriggered = false;
             Destroy(gameObject);
         }
     }

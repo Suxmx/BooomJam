@@ -6,6 +6,7 @@ using GameFramework.Resource;
 using GameMain.Scripts.UI;
 using MyTimer;
 using Pathfinding;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -31,11 +32,7 @@ namespace GameMain
         public static GameBase Instance;
         public UnityAction<int> OnChangeGameScene;
 
-        public bool Pause
-        {
-            get;
-            protected set;
-        }
+        public bool Pause { get; protected set; }
 
         public GameBase(GameMode gameMode)
         {
@@ -45,11 +42,35 @@ namespace GameMain
         public GameBase(GameMode gameMode, int level)
         {
             GameMode = gameMode;
-            Level = level+1;
+            Level = level + 1;
         }
 
         public GameMode GameMode { get; }
         public int Level { get; set; }
+        protected int m_Combo;
+
+        protected int Combo
+        {
+            get => m_Combo;
+            set
+            {
+                m_Combo = value;
+                m_ComboText.text = $"{value.ToString()}\n<size=30>combo</size>";
+            }
+        }
+
+        public int Score
+        {
+            get { return m_Score; }
+            protected set
+            {
+                m_Score = value;
+                m_ScoreText.text = $"Score:{value.ToString()}";
+            }
+        }
+
+        protected int m_Score = 0;
+        protected int m_ScoreFactor = 1;
 
         protected bool m_Inited;
         protected Player m_Player;
@@ -60,9 +81,15 @@ namespace GameMain
         protected GameScene m_CurrentGameScene => m_GameScenes[m_CurrentGameSceneIndex];
         protected AstarPath m_AstarPath;
         protected PauseUI m_PauseUI;
+        protected SettleUI m_SettleUI;
+        protected TextMeshProUGUI m_ScoreText;
+        protected TextMeshProUGUI m_ComboText;
         protected EnemySpawner m_Spawner;
-        protected List<FMagicCircleData> m_MagicCircleDatas=new();
+        protected List<FMagicCircleData> m_MagicCircleDatas = new();
         protected float m_Timer = 0f;
+        protected float m_LastEnemyDie = 0f;
+        public bool NoMagicCircleTriggered;
+        public bool NoFireDamage;
 
 
         #region Initialize
@@ -110,6 +137,13 @@ namespace GameMain
                     m_MagicCircleDatas.Add(d);
                 }
             }
+
+            //找到分数UI
+            m_ScoreText = GameObject.Find("ScoreText").GetComponentInChildren<TextMeshProUGUI>();
+            m_SettleUI = canvas.Find("StarPanel").GetComponent<SettleUI>();
+            m_ComboText = GameObject.Find("ComboText").GetComponent<TextMeshProUGUI>();
+            NoMagicCircleTriggered = true;
+            NoFireDamage = true;
         }
 
         #endregion
@@ -118,6 +152,7 @@ namespace GameMain
         {
             return m_Spawner;
         }
+
         public void PauseGame()
         {
             Time.timeScale = 0f;
@@ -135,6 +170,8 @@ namespace GameMain
         public virtual void Update(float dT)
         {
             m_Timer += dT;
+            float comboInterval = m_Timer - m_LastEnemyDie;
+            if (comboInterval >= 3f) Combo = 1;
             foreach (var data in m_MagicCircleDatas)
             {
                 if (m_Timer > data.ShowTime && !data.hasShowed)
@@ -143,6 +180,7 @@ namespace GameMain
                     data.hasShowed = true;
                 }
             }
+
             ChangeScene();
         }
 
@@ -183,6 +221,39 @@ namespace GameMain
         public PublicObjectPool GetObjectPool()
         {
             return m_PublicObjectPool;
+        }
+
+        public void OnEnemyDie()
+        {
+            float interval = m_Timer - m_LastEnemyDie;
+            m_LastEnemyDie = m_Timer;
+            Combo = interval <= 3f ? Combo + 1 : 1;
+            Score += Combo  * 10;
+        }
+
+        public static Dictionary<int, int> scoreDict = new() { { 1, 1000 }, { 2, 1200 }, { 3, 1500 } };
+
+        public void OnWin()
+        {
+            Time.timeScale = 0f;
+            m_SettleUI.gameObject.SetActive(true);
+            List<bool> stars = new();
+            stars.Add(true);
+            stars.Add(Score >= scoreDict[Level]);
+            switch (Level)
+            {
+                case 1:
+                    stars.Add(m_Player.GetHp() >= 5);
+                    break;
+                case 2:
+                    stars.Add(NoMagicCircleTriggered);
+                    break;
+                case 3:
+                    stars.Add(NoFireDamage);
+                    break;
+            }
+
+            m_SettleUI.SetStar(stars);
         }
     }
 }

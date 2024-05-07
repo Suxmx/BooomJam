@@ -13,14 +13,25 @@ namespace GameMain.Scripts.UI
 
         private void Awake()
         {
+            if (GameEntry.Setting.GetBool("VideoPlayed") == true)
+            {
+                OpenSelectPanel();
+                return;
+            }
             m_VideoPlayer = GetComponent<VideoPlayer>();
             m_VideoPlayer.loopPointReached += OnPlayEnd;
         }
 
         private void OnPlayEnd(VideoPlayer player)
         {
+            GameEntry.Setting.SetBool("VideoPlayed",true);
             var texture = RawImage.texture;
             (texture as RenderTexture).Release();
+            OpenSelectPanel();
+        }
+
+        private void OpenSelectPanel()
+        {
             RawImage.gameObject.SetActive(false);
             gameObject.SetActive(false);
             LevelMenu.gameObject.SetActive(true);

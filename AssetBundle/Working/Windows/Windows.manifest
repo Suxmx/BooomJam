@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 4005453505
+CRC: 2523178804
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -394,45 +394,32 @@ AssetBundleManifest:
       Name: prefabs/gamescenes/level0_scene1
       Dependencies:
         Dependency_0: animations/animator/redtree
-        Dependency_1: images/magiccircle/circle
     Info_111:
       Name: prefabs/gamescenes/level0_scene2
       Dependencies:
         Dependency_0: animations/animator/bluetree
-        Dependency_1: images/magiccircle/circle
-        Dependency_2: images/magiccircle/magic1
     Info_112:
       Name: prefabs/gamescenes/level1_scene1
       Dependencies:
-        Dependency_0: animations/animator/player
-        Dependency_1: animations/animator/redtree
-        Dependency_2: images/magiccircle/circle
-        Dependency_3: images/shotgunhud
-        Dependency_4: prefabs/playerdie
+        Dependency_0: animations/animator/redtree
+        Dependency_1: images/magiccircle/circle
     Info_113:
       Name: prefabs/gamescenes/level1_scene2
       Dependencies:
         Dependency_0: animations/animator/bluetree
-        Dependency_1: animations/animator/player
-        Dependency_2: images/magiccircle/circle
-        Dependency_3: images/shotgunhud
-        Dependency_4: prefabs/playerdie
+        Dependency_1: images/magiccircle/circle
+        Dependency_2: images/magiccircle/magic1
     Info_114:
       Name: prefabs/gamescenes/level2_scene1
       Dependencies:
-        Dependency_0: animations/animator/player
-        Dependency_1: animations/animator/redtree
-        Dependency_2: images/magiccircle/circle
-        Dependency_3: images/shotgunhud
-        Dependency_4: prefabs/playerdie
+        Dependency_0: animations/animator/redtree
+        Dependency_1: images/magiccircle/circle
     Info_115:
       Name: prefabs/gamescenes/level2_scene2
       Dependencies:
         Dependency_0: animations/animator/bluetree
-        Dependency_1: animations/animator/player
-        Dependency_2: images/magiccircle/circle
-        Dependency_3: images/shotgunhud
-        Dependency_4: prefabs/playerdie
+        Dependency_1: images/magiccircle/circle
+        Dependency_2: images/magiccircle/magic1
     Info_116:
       Name: prefabs/ghost
       Dependencies:
@@ -497,12 +484,14 @@ AssetBundleManifest:
         Dependency_0: fonts/vonwaonbitmap-16px
         Dependency_1: images/ui/background
         Dependency_2: images/ui/cross
-        Dependency_3: images/ui/heart
-        Dependency_4: images/ui/heart-empty
-        Dependency_5: prefabs/bluepumpkin
-        Dependency_6: prefabs/enemy
-        Dependency_7: prefabs/ghost
-        Dependency_8: prefabs/redpumpkin
+        Dependency_3: images/ui/darkstar1
+        Dependency_4: images/ui/heart
+        Dependency_5: images/ui/heart-empty
+        Dependency_6: images/ui/star
+        Dependency_7: prefabs/bluepumpkin
+        Dependency_8: prefabs/enemy
+        Dependency_9: prefabs/ghost
+        Dependency_10: prefabs/redpumpkin
     Info_132:
       Name: scenes/menu
       Dependencies:
