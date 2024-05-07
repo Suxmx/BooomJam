@@ -8,6 +8,7 @@ using MyTimer;
 using Pathfinding;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using UnityGameFramework.Runtime;
 
 namespace GameMain
@@ -29,6 +30,12 @@ namespace GameMain
     {
         public static GameBase Instance;
         public UnityAction<int> OnChangeGameScene;
+
+        public bool Pause
+        {
+            get;
+            protected set;
+        }
 
         public GameBase(GameMode gameMode)
         {
@@ -52,6 +59,7 @@ namespace GameMain
         protected int m_CurrentGameSceneIndex;
         protected GameScene m_CurrentGameScene => m_GameScenes[m_CurrentGameSceneIndex];
         protected AstarPath m_AstarPath;
+        protected PauseUI m_PauseUI;
 
 
         #region Initialize
@@ -86,10 +94,26 @@ namespace GameMain
             m_PublicObjectPool.RegisterTemplate("BulletExplode", data.Prefabs["BulletExplode"]);
             m_PublicObjectPool.RegisterTemplate("BluePumpkinFire", data.Prefabs["BluePumpkinFire"]);
             m_PublicObjectPool.RegisterTemplate("RedPumpkinFire", data.Prefabs["RedPumpkinFire"]);
-            
+            Transform canvas = GameObject.Find("Canvas").transform;
+            m_PauseUI = canvas.Find("PausePage").GetComponent<PauseUI>();
+            canvas.Find("Pause").GetComponent<Button>().onClick.AddListener(PauseGame);
         }
 
         #endregion
+
+        public void PauseGame()
+        {
+            Time.timeScale = 0f;
+            m_PauseUI.gameObject.SetActive(true);
+            Pause = true;
+        }
+
+        public void ContinueGame()
+        {
+            Time.timeScale = 1f;
+            m_PauseUI.gameObject.SetActive(false);
+            Pause = false;
+        }
 
         public virtual void Update()
         {

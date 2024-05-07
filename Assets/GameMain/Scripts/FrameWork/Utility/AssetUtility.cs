@@ -12,18 +12,18 @@ namespace GameMain
         {
             return Utility.Text.Format("Assets/GameMain/DataTables/{0}.{1}", assetName,  "csv");
         }
-        public static string GetMusicAsset(string assetName)
+        public static string GetMusicAsset(string assetName,string suffix="mp3")
         {
-            return Utility.Text.Format("Assets/GameMain/Music/{0}.mp3", assetName);
+            return Utility.Text.Format("Assets/GameMain/Audios/Music/{0}.{1}", assetName,suffix);
         }
 
-        public static string GetSoundAsset(string assetName)
+        public static string GetSoundAsset(string assetName,string suffix="wav")
         {
-            return Utility.Text.Format("Assets/GameMain/Sounds/{0}.wav", assetName);
+            return Utility.Text.Format("Assets/GameMain/Audios/SF/{0}.{1}", assetName,suffix);
         }
-        public static string GetUISoundAsset(string assetName)
+        public static string GetUISoundAsset(string assetName,string suffix="wav")
         {
-            return Utility.Text.Format("Assets/GameMain/UI/UISounds/{0}.wav", assetName);
+            return Utility.Text.Format("Assets/GameMain/Audios/UI/{0}.{1}", assetName,suffix);
         }
         public static string GetSceneAsset(string assetName)
         {

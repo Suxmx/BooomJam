@@ -1,4 +1,5 @@
 ﻿using System;
+using GameFramework.Extensions.Sound;
 using GameFramework.Resource;
 using GameMain.Scripts.Player.Weapons.ObjectPool;
 using MyTimer;
@@ -81,6 +82,7 @@ namespace GameMain
             data.Position = m_Muzzle.position;
             data.Player = player;
             m_ArrowPool.Spawn(data);
+            GameEntry.Sound.PlaySoundM("bow");
         }
 
         public GameObject CreateObject()

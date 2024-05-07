@@ -22,6 +22,7 @@ namespace GameMain
             m_GameBase.Init((GameBaseData)data);
             GameBase.Instance = m_GameBase;
             m_Owner = procedureOwner;
+            GameEntry.Sound.PlayMusicM("fightmusic");
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)

@@ -38,6 +38,7 @@ namespace GameMain
 
         protected  virtual void Update()
         {
+            if (GameBase.Instance.Pause) return;
             ChangeDirection();
         }
 

@@ -14,6 +14,7 @@ namespace GameMain
         {
             base.OnEnter(procedureOwner);
             owner = procedureOwner;
+            GameEntry.Sound.PlayMusicM("menumusic", "wav");
         }
         
 

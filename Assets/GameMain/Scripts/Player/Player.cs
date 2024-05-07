@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using GameFramework.Event;
+using GameFramework.Extensions.Sound;
 using GameMain.Scripts.UI;
 using MyTimer;
 using UnityEngine;
@@ -99,6 +100,7 @@ namespace GameMain
 
         protected void Update()
         {
+            if (GameBase.Instance.Pause) return;
             GetMoveInput();
             GetFireInput(Time.deltaTime);
             Flip();
@@ -258,6 +260,8 @@ namespace GameMain
 
         protected void OnDead()
         {
+            GameEntry.Sound.StopMusic();
+            GameEntry.Sound.PlaySoundM("die");
             Instantiate(DieAnim, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
         }
@@ -282,6 +286,7 @@ namespace GameMain
             }
 
             CauseRecoil(new RecoilData(data.AttackDirection, 0.2f, 0));
+            GameEntry.Sound.PlaySoundM("hurt");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace GameMain
         {
             m_SpawnTimer.Paused = true;
         }
-        
+
         private void Awake()
         {
             m_SpawnBounds = GameObject.Find("EnemySpawnBound").GetComponent<BoxCollider2D>().bounds;
@@ -45,7 +45,7 @@ namespace GameMain
             {
                 m_Pools.Add(key, new Queue<GameObject>());
                 GameObject parent = new GameObject(key);
-                m_PoolParentDict.Add(key,parent.transform);
+                m_PoolParentDict.Add(key, parent.transform);
                 parent.transform.SetParent(transform);
             }
         }
@@ -55,7 +55,7 @@ namespace GameMain
             // var e=m_EnemyPool.Spawn();
             // e.transform.position = RandomPosition();
             //
-            int rand = Random.Range(1, 5);
+            int rand = Random.Range(1, 4);
             Enemy e;
             switch (rand)
             {
@@ -64,16 +64,12 @@ namespace GameMain
                     e.transform.position = RandomPosition();
                     break;
                 case 2:
-                    e = Spawn("BluePumpkin");
+                    int pumpkinRand = Random.Range(0, 2);
+                    e = pumpkinRand == 0 ? Spawn("BluePumpkin") : Spawn("RedPumpkin");
                     e.transform.position = RandomPosition();
-                    ((Pumpkin)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
+                    ((Pumpkin)e).Init(pumpkinRand, GameBase.Instance.GetGameSceneIndex());
                     break;
                 case 3:
-                    e = Spawn("RedPumpkin");
-                    e.transform.position = RandomPosition();
-                    ((Pumpkin)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
-                    break;
-                case 4:
                     e = Spawn("Ghost");
                     e.transform.position = RandomPosition();
                     ((Ghost)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
@@ -111,7 +107,7 @@ namespace GameMain
             enemy.gameObject.SetActive(false);
             m_Pools[enemy.GetName()].Enqueue(enemy.gameObject);
         }
-        
+
 
         private Vector2 RandomPosition()
         {

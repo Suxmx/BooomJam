@@ -1,5 +1,6 @@
 ﻿using Cinemachine;
 using GameFramework.Event;
+using GameFramework.Extensions.Sound;
 using GameFramework.ObjectPool;
 using GameFramework.Resource;
 using GameMain.Scripts.Player.Weapons.ObjectPool;
@@ -122,6 +123,14 @@ namespace GameMain
 
             var recoilData = new RecoilData(m_FireDirection, RecoilValue, m_Jump);
             player.CauseRecoil(recoilData,m_Source);
+            if (Random.Range(0, 1f) < 0.5f)
+            {
+                GameEntry.Sound.PlaySoundM("shotgun1","mp3");
+            }
+            else
+            {
+                GameEntry.Sound.PlaySoundM("shotgun2");
+            }
         }
 
         public GameObject CreateObject()

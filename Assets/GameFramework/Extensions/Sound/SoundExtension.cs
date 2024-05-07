@@ -12,7 +12,48 @@ namespace GameFramework.Extensions.Sound
     {
         private const float FadeVolumeDuration = 1f;
         private static int? s_MusicSerialId = null;
+        public static void PlayMusicM(this SoundComponent soundComponent, string assetsName,string suffix="wav")
+        {
+            PlaySoundParams playSoundParams = PlaySoundParams.Create();
+            playSoundParams.MuteInSoundGroup = false;
 
+            playSoundParams.Priority = 64;
+            playSoundParams.Loop = true;
+            playSoundParams.VolumeInSoundGroup = 1f;
+            playSoundParams.SpatialBlend = 0f;
+            s_MusicSerialId=GameEntry.Sound.PlaySound(AssetUtility.GetMusicAsset(assetsName,suffix), "Music", playSoundParams);
+        }
+
+        public static void StopMusicM(this SoundComponent soundComponent)
+        {
+            if (!s_MusicSerialId.HasValue)
+            {
+                return;
+            }
+
+            soundComponent.StopSound(s_MusicSerialId.Value, 0.3f);
+            s_MusicSerialId = null;
+        }
+        public static void PlaySoundM(this SoundComponent soundComponent, string assetsName,string suffix="wav")
+        {
+
+            PlaySoundParams playSoundParams = PlaySoundParams.Create();
+            playSoundParams.Priority = 30;
+            playSoundParams.Loop = false;
+            playSoundParams.VolumeInSoundGroup = 1f;
+            playSoundParams.SpatialBlend = 0f;
+            GameEntry.Sound.PlaySound(AssetUtility.GetSoundAsset(assetsName,suffix), "SoundEffect", playSoundParams);
+        }
+        public static void PlayUISoundM(this SoundComponent soundComponent, string assetsName,string suffix="wav")
+        {
+
+            PlaySoundParams playSoundParams = PlaySoundParams.Create();
+            playSoundParams.Priority = 30;
+            playSoundParams.Loop = false;
+            playSoundParams.VolumeInSoundGroup = 1f;
+            playSoundParams.SpatialBlend = 0f;
+            GameEntry.Sound.PlaySound(AssetUtility.GetUISoundAsset(assetsName,suffix), "UISoundEffect", playSoundParams);
+        }
         public static int? PlayMusic(this SoundComponent soundComponent, int musicId, object userData = null)
         {
             soundComponent.StopMusic();
