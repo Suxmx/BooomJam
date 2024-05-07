@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1634733155
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 00ddd22af00507516d990c029e68e19c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 00ddd22af00507516d990c029e68e19c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Audios/SF/hurt.wav
+Dependencies: []

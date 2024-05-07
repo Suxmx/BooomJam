@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3996103069
+CRC: 2382425873
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 72d2fad3c77b0e09fcc033d788794626
+    Hash: 789c55b70e6ed5fcd059450c874f1433
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c70e0fc0b99f53852a240bd0a5e41fd7
+    Hash: 9d019b8a1c8ce0fb8205963dc5439460
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 72d2fad3c77b0e09fcc033d788794626
+    Hash: 789c55b70e6ed5fcd059450c874f1433
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -35,4 +35,3 @@ Assets:
 - Assets/GameMain/Prefabs/RedCircle.prefab
 Dependencies:
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/magiccircle/circle
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/prefabs/player

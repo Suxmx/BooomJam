@@ -53,6 +53,15 @@
       <Resource Name="Animations/Animator/RedTree" LoadType="0" Packed="False" />
       <Resource Name="Animations/Animator/ShotGun" LoadType="0" Packed="False" />
       <Resource Name="Animations/Animator/Teleport" LoadType="0" Packed="False" />
+      <Resource Name="Audios/Music/fightmusic" LoadType="0" Packed="False" />
+      <Resource Name="Audios/Music/menumusic" LoadType="0" Packed="False" />
+      <Resource Name="Audios/SF/bow" LoadType="0" Packed="False" />
+      <Resource Name="Audios/SF/die" LoadType="0" Packed="False" />
+      <Resource Name="Audios/SF/hurt" LoadType="0" Packed="False" />
+      <Resource Name="Audios/SF/shotgun1" LoadType="0" Packed="False" />
+      <Resource Name="Audios/SF/shotgun2" LoadType="0" Packed="False" />
+      <Resource Name="Audios/UI/click1" LoadType="0" Packed="False" />
+      <Resource Name="Audios/UI/click2" LoadType="0" Packed="False" />
       <Resource Name="Configs/DefaultConfig" LoadType="0" Packed="False" />
       <Resource Name="DataTables/Entity" LoadType="0" Packed="False" />
       <Resource Name="DataTables/Level" LoadType="0" Packed="False" />
@@ -151,6 +160,7 @@
       <Asset Guid="2f84275dba548924e8785dd0d591a5a7" ResourceName="Images/Enemy/Skeleton/Run/yidong8" />
       <Asset Guid="31a952b081e484347bf297b5f77c103e" ResourceName="Fonts/VonwaonBitmap-12px" />
       <Asset Guid="32eccce7e201cee4ab42f91cff5dd49b" ResourceName="Configs/DefaultConfig" />
+      <Asset Guid="3341227006813a544b9947aab3c826e9" ResourceName="Audios/SF/die" />
       <Asset Guid="3365fffadb979f14f92be8484b54f1a9" ResourceName="Prefabs/TeleportAnim" />
       <Asset Guid="34dc2fb8046a0054bae1049bc62bf400" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Spawn" />
       <Asset Guid="3523db752d7c13b48af60b4ebd29c807" ResourceName="Animations/Animator/RedTree" />
@@ -186,6 +196,7 @@
       <Asset Guid="7a28717095763354685b1ddfd463c1ba" ResourceName="Prefabs/BlueCircle" />
       <Asset Guid="7b727806216d05944a016c87344825b9" ResourceName="Images/UI/background" />
       <Asset Guid="7f52aa9f3059f1941b147065ffb13f79" ResourceName="Animations/Animation/Player/ShotGun/ShotGunFire" />
+      <Asset Guid="7fa4db74fbe8f414d9f698423219f248" ResourceName="Audios/SF/shotgun1" />
       <Asset Guid="80a96c858b66c4248b7ba74f8318be5f" ResourceName="Videos/VideoTexture" />
       <Asset Guid="819a68773a0e5854ca930382dce47ded" ResourceName="Prefabs/RedFire" />
       <Asset Guid="8338c75f8c1068c4aa80c375374363c2" ResourceName="Images/Enemy/Skeleton/Run/yidong4" />
@@ -199,6 +210,7 @@
       <Asset Guid="9073f849cdb7475439c8fd2e3c6c2795" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Fire/Spawn" />
       <Asset Guid="93977874cccbbfa469bc04e303e4b4b3" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Move" />
       <Asset Guid="93be854115bd0e247a7666909e4fb218" ResourceName="Animations/Animation/Fire/Idle" />
+      <Asset Guid="96e7016a05384d5498414ebc4a9856cd" ResourceName="Audios/SF/hurt" />
       <Asset Guid="9752b6efbd1f3524d8b015d30b23ce99" ResourceName="Images/MagicCircle/FillShader" />
       <Asset Guid="9b144b61d4aaac74ca60c40508155094" ResourceName="Prefabs/Bow_Bullet" />
       <Asset Guid="9c4104c99dd49ad46b1e3f24661f042d" ResourceName="Images/Enemy/Skeleton/Run/yidong6" />
@@ -228,22 +240,26 @@
       <Asset Guid="c3acb57701a4d7043958585d619d6786" ResourceName="Prefabs/GameScenes/Level2_Scene1" />
       <Asset Guid="c518f0d069522ba4aa842c672048dafa" ResourceName="Images/MagicCircle/magic1" />
       <Asset Guid="c6afff566df7a3a49b542d7b6df71f9b" ResourceName="Animations/Animation/Enemy/Pumpkin/Blue/Fire/Spawn" />
+      <Asset Guid="c6d57006a68e9a642b5d2f63c04ef21e" ResourceName="Audios/UI/click2" />
       <Asset Guid="ca0e9b53ab7df304b91699d0e4e691a6" ResourceName="Animations/Animation/Fire/RedIdle" />
       <Asset Guid="cb11ffbf02937e141b9e2a155a01f195" ResourceName="Images/BowHUD" />
       <Asset Guid="ce5b43948cbe0d442b2efd92c337706d" ResourceName="Animations/Animator/PurpleFire" />
       <Asset Guid="ce5c4e1f6fd53e145b52cf78555ac57f" ResourceName="Images/ShotGun" />
+      <Asset Guid="d0381e4c75464004a86de7d273ea2d03" ResourceName="Audios/Music/menumusic" />
       <Asset Guid="d0f0241e44d809a4ab6c74a5ad75c765" ResourceName="Animations/Animator/RedPumpkin" />
       <Asset Guid="d102b8eb8b316294bb3975c5fc793f30" ResourceName="Animations/Animator/BluePumpkinFire" />
       <Asset Guid="d12ce70fdcef7e546bd4deb2fc7a0ddc" ResourceName="Prefabs/RedTree" />
       <Asset Guid="d14f3a7f341431b41abd9cbad7fa4c7c" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Die" />
       <Asset Guid="d49b9679169c25f40b94bfbbcec97003" ResourceName="Animations/Animation/Enemy/Pumpkin/Red/Fire/Idle" />
       <Asset Guid="d82b29ef3ea12da489b5ddfd8143f744" ResourceName="Animations/Animation/Player/Teleport" />
+      <Asset Guid="d9a507bc8ff3f5e4aab66adf4d587688" ResourceName="Audios/SF/bow" />
       <Asset Guid="d9aefc356736920449e401fc1d2ad76a" ResourceName="Animations/Animator/RedPumpkinFire" />
       <Asset Guid="d9b4139ec64f6cb4e8a74a0d9948adc4" ResourceName="Images/Enemy/Skeleton/Run/yidong2" />
       <Asset Guid="da107ae9236cc3142b53df7a86b196f5" ResourceName="Scenes/Launch" />
       <Asset Guid="db810ec31ff7b7f4f99e488e61a10c0e" ResourceName="Animations/Animation/Enemy/Pumpkin/Blue/Fire/Idle" />
       <Asset Guid="dda01b03ba14f344b9314af3efc63b53" ResourceName="Animations/Animation/Player/Explode" />
       <Asset Guid="de45b46aca2e13f4fac2d65bd57e4bc2" ResourceName="Images/Enemy/Skeleton/Run/yidong1" />
+      <Asset Guid="de5d578bd95375445909444c8091d9fe" ResourceName="Audios/UI/click1" />
       <Asset Guid="dee3ce7e06086d34d809929dd60deb27" ResourceName="Fonts/VonwaonBitmap-16px" />
       <Asset Guid="e163129f45d586843af5b17189137e43" ResourceName="Animations/Animation/Enemy/Ghost/Die" />
       <Asset Guid="e1ba6c646ba03d54a925bb1624b61922" ResourceName="Images/Enemy/Skeleton/Run/yidong15" />
@@ -252,8 +268,10 @@
       <Asset Guid="e8e2d283aade47546bed714f2583e374" ResourceName="Animations/Animation/Player/ShotGunIdle" />
       <Asset Guid="e921923b515f00a4bae19e9485c86135" ResourceName="Prefabs/BlueTree" />
       <Asset Guid="f1a29ba99c075204ab07cd97c0f426ae" ResourceName="Images/Enemy/Skeleton/Run/yidong10" />
+      <Asset Guid="f4516597901b3d047a0998bb2c0a1326" ResourceName="Audios/Music/fightmusic" />
       <Asset Guid="f4cb15df55b407e45972308fb900c7c1" ResourceName="Animations/Animation/Enemy/Pumpkin/Blue/Move" />
       <Asset Guid="f592687bd9073b24cbced7da38a41024" ResourceName="Images/UI/2" />
+      <Asset Guid="f5932960066e49947a88972008adef47" ResourceName="Audios/SF/shotgun2" />
       <Asset Guid="f5eb3d0f22d04824d87e3d259636954a" ResourceName="Animations/Animation/Enemy/Skeleton/Spawn" />
       <Asset Guid="f6c19f6eb6b1eeb4090f669b53617d98" ResourceName="Animations/Animation/Enemy/Skeleton/Run" />
       <Asset Guid="f797c458dd9d52d4b9fb85934a327586" ResourceName="Animations/Animation/Player/ShotGunRecoilToIdle" />

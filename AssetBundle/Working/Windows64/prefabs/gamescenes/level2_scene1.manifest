@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2319099523
+CRC: 994740971
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b3ba9088791ff5fa1539ea8dc5af4935
+    Hash: a22dbcea4fbd8ed6bde9d5b92a69d006
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f35a428853839f76c6acc75f2a6084e0
+    Hash: a75235ed2ae9f4e4698b39be78c0f8e0
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: b3ba9088791ff5fa1539ea8dc5af4935
+    Hash: a22dbcea4fbd8ed6bde9d5b92a69d006
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -48,7 +48,8 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/GameMain/Prefabs/GameScenes/Level2_Scene1.prefab
 Dependencies:
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animator/player
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animator/redtree
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/magiccircle/circle
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/shotgunhud
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/prefabs/player
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/prefabs/playerdie

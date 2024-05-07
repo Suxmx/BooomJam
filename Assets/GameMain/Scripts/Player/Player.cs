@@ -101,7 +101,7 @@ namespace GameMain
         protected void Update()
         {
             if (GameBase.Instance.Pause) return;
-            GetMoveInput();
+            // GetMoveInput();
             GetFireInput(Time.deltaTime);
             Flip();
         }

@@ -57,7 +57,7 @@ namespace GameMain
             // var e=m_EnemyPool.Spawn();
             // e.transform.position = RandomPosition();
             //
-            int rand = Random.Range(1, 4);
+            int rand = Random.Range(1, GameBase.Instance.Level >= 3 ? 4 : 3);
             Enemy e;
             switch (rand)
             {
@@ -66,15 +66,15 @@ namespace GameMain
                     e.transform.position = RandomPosition();
                     break;
                 case 2:
+                    e = Spawn("Ghost");
+                    e.transform.position = RandomPosition();
+                    ((Ghost)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
+                    break;
+                case 3:
                     int pumpkinRand = Random.Range(0, 2);
                     e = pumpkinRand == 0 ? Spawn("BluePumpkin") : Spawn("RedPumpkin");
                     e.transform.position = RandomPosition();
                     ((Pumpkin)e).Init(pumpkinRand, GameBase.Instance.GetGameSceneIndex());
-                    break;
-                case 3:
-                    e = Spawn("Ghost");
-                    e.transform.position = RandomPosition();
-                    ((Ghost)e).Init(Random.Range(0, 2), GameBase.Instance.GetGameSceneIndex());
                     break;
             }
         }

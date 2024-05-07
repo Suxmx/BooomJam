@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 126410061
+CRC: 3360629918
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c1213503a9c7e0f8512d7633ce1a4cf2
+    Hash: 3eafcd5630c7e3eca56a05f0aae61f32
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 302f368c7c56863fb1f3daf4afa670f6
+    Hash: 759824920336b4c357a6d85f2ded12ca
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: c1213503a9c7e0f8512d7633ce1a4cf2
+    Hash: 3eafcd5630c7e3eca56a05f0aae61f32
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -33,6 +33,8 @@ ClassTypes:
 - Class: 95
   Script: {instanceID: 0}
 - Class: 114
+  Script: {fileID: 11500000, guid: 0246de55e87430e4f932c1e8603ccd40, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: afe6663bd70c4a55aa725e123f95d9d4, type: 3}
 - Class: 115
   Script: {instanceID: 0}
@@ -40,8 +42,12 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers: []
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: GameMain.FMagicCircleData
 Assets:
 - Assets/GameMain/Prefabs/GameScenes/Level0_Scene2.prefab
 Dependencies:
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/animations/animator/bluetree
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/magiccircle/circle
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/magiccircle/magic1

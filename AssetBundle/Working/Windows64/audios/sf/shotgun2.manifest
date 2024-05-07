@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 2356799483
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fc160ce226ca24d81dcacf3a0f9f327b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: fc160ce226ca24d81dcacf3a0f9f327b
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Audios/SF/shotgun2.wav
+Dependencies: []

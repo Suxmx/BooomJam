@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 4015572589
+CRC: 3684073551
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f5fe0a86c78ead1f0f369066609745a7
+    Hash: 322aa2b4b8524dd60c99ef9df3f86b5b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: a0debdb36b6e414a59e1738175800d1d
+    Hash: 50ee92348ee65eb4e3301829a1d4e735
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: f5fe0a86c78ead1f0f369066609745a7
+    Hash: 322aa2b4b8524dd60c99ef9df3f86b5b
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -33,5 +33,4 @@ Assets:
 - Assets/GameMain/Prefabs/BlueCircle.prefab
 Dependencies:
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/magiccircle/circle
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/shotgunhud
-- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/prefabs/player
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows64/images/magiccircle/magic1

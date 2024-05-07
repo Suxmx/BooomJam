@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 2590526519
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3c48ef40635fd1f89e630849c93988c0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 3c48ef40635fd1f89e630849c93988c0
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Audios/SF/bow.wav
+Dependencies: []

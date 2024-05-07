@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3417994814
+CRC: 464470853
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8ce84a5f4be77cd412d3b60078646db9
+    Hash: 073477f8826a258771876d7d0fdbdf90
   TypeTreeHash:
     serializedVersion: 2
-    Hash: dce14b203a1db215a692e2ea83316ebb
+    Hash: 7ce037600222e7c2b87755eed280f8c5
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 8ce84a5f4be77cd412d3b60078646db9
+    Hash: 073477f8826a258771876d7d0fdbdf90
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -90,6 +90,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7bd3c50e689a448e8dee88f373a8ea48, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -114,6 +116,7 @@ Assets:
 Dependencies:
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/fonts/vonwaonbitmap-16px
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/background
+- D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/cross
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/heart
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/images/ui/heart-empty
 - D:/UnityProject/J-Jam/AssetBundle/Working/Windows/prefabs/bluepumpkin

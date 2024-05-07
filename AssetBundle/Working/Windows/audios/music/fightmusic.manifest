@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3890013912
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d84b5a1b3fe442ba30eefb67dfa71294
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: d84b5a1b3fe442ba30eefb67dfa71294
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Audios/Music/fightmusic.wav
+Dependencies: []

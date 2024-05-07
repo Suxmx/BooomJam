@@ -45,7 +45,7 @@ namespace GameMain
         public GameBase(GameMode gameMode, int level)
         {
             GameMode = gameMode;
-            Level = level;
+            Level = level+1;
         }
 
         public GameMode GameMode { get; }
@@ -69,7 +69,7 @@ namespace GameMain
 
         public virtual void Init(GameBaseData data)
         {
-            GameObject.Find($"Tip{Level + 1}").GetComponent<TipsUI>().Show();
+            GameObject.Find($"Tip{Level}").GetComponent<TipsUI>().Show();
             //生成初始化Player
             var player = Object.Instantiate(data.Prefabs["Player"]).GetComponent<Player>();
             player.Init(data.PlayerData);

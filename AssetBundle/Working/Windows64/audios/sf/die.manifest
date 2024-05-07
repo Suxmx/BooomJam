@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 78705139
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6cbf6a8942beb0f1e33867488642bd02
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 6cbf6a8942beb0f1e33867488642bd02
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Audios/SF/die.wav
+Dependencies: []
